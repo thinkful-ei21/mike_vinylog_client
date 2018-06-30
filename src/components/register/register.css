@@ -1,0 +1,62 @@
+.register-form {
+	margin: auto;
+	text-align: center;
+	background: white;
+	width: 320px;
+	padding: 20px 40px;
+	border-radius: 3px;
+}
+
+fieldset {
+  border: none;
+  margin: 0;
+  padding: 0;
+}
+
+legend {
+	font-size: 35px;
+	color: #666;
+	font-weight: 300;
+	margin-bottom: 30px;
+}
+
+form label, form input {
+	display: block;
+}
+
+label {
+	text-align: start;
+	margin: 10px 0;
+	font-size: 15px;
+	font-weight: 500;
+}
+
+input {
+	height: 21px;
+	width: 286px;
+	padding: 15px;
+	border: 2px solid #ccc;
+	border-radius: 3px;
+	font-size: 15px;
+}
+
+button {
+	width: 320px;
+	height: 55px;
+	padding: 15px;
+	background: #56BC5D;
+	color: white;
+	font-size: 18px;
+	margin: 20px 0;
+	border-radius: 3px;
+}
+
+button:hover {
+  background: darkgreen;
+}
+
+.login, .login a {
+	color: white;
+	text-align: center;
+	font-size: 15px;
+}
