@@ -16,43 +16,7 @@ export class RegisterForm extends React.Component {
     console.log(user);
     return this.props
       .dispatch(registerUser(user))
-  //    .then(() => this.props.dispatch(login(username, password)))
-    .then(res => {
-      if (!res.ok) {
-        if (
-          res.headers.has('content-type') &&
-          res.headers
-            .get('content-type')
-            .startsWith('application/json')
-        ) {
-          // It's a nice JSON error returned by us, so decode it
-          return res.json().then(err => Promise.reject(err));
-        }
-        // It's a less informative error returned by express
-        return Promise.reject({
-          code: res.status,
-          message: res.statusText
-        });
-      }
-      return;
-    })
-    .then(() => console.log('Submitted with values', values))
-    .catch(err => {
-      const {reason, message, location} = err;
-      if (reason === 'ValidationError') {
-        // Convert ValidationErrors into SubmissionErrors for Redux Form
-        return Promise.reject(
-          new SubmissionError({
-            [location]: message
-          })
-        );
-      }
-      return Promise.reject(
-        new SubmissionError({
-          _error: 'Error submitting message'
-        })
-      );
-    });
+      .then(() => this.props.dispatch(login(username, password)));
   }
 
   render() {
@@ -100,7 +64,7 @@ export class RegisterForm extends React.Component {
           component={Input}
           type="password"
           name="passwordConfirm"
-          validate={[required, matchesPassword]}
+          validate={[required, nonEmpty, matchesPassword]}
         />
         <button
           type="submit"
@@ -116,5 +80,6 @@ export class RegisterForm extends React.Component {
 export default reduxForm({
   form: 'register',
   onSubmitFail: (errors, dispatch) =>
-      dispatch(focus('register', Object.keys(errors)[0]))
+ //     dispatch(focus('register', Object.keys(errors)[0]))
+ console.log(errors)
 })(RegisterForm);
