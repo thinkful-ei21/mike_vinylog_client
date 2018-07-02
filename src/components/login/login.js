@@ -5,6 +5,7 @@ import Input from '../input';
 import {login} from '../../actions/auth-actions';
 import {required, nonEmpty} from '../../validators';
 import RegisterForm from '../register/register';
+import { Link } from 'react-router-dom';
 
 export class LoginForm extends React.Component {
     constructor(props) {
@@ -81,10 +82,8 @@ export class LoginForm extends React.Component {
                         Log in
                     </button>
                 </form>
-                <h5>Dont have an account yet?</h5>
-                <button onClick={(e) => this.goToSignUpPage(e)} >
-                    Sign Up
-                </button>
+                <h3>Dont have an account yet?</h3>
+                <Link to="/sign-up">Sign Up</Link>
                 </div>
             );
         }

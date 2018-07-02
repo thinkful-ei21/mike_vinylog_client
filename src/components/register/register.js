@@ -1,6 +1,6 @@
 import React from 'react';
 import './register.css';
-import {reduxForm, Field, SubmissionError, focus} from 'redux-form';
+import {reduxForm, Field, focus} from 'redux-form';
 import {registerUser} from '../../actions/user-actions';
 import {login} from '../../actions/auth-actions';
 import Input from '../input';
@@ -80,6 +80,5 @@ export class RegisterForm extends React.Component {
 export default reduxForm({
   form: 'register',
   onSubmitFail: (errors, dispatch) =>
-   //   dispatch(focus('register', Object.keys(errors)[0]))
-      console.log(errors)
+      dispatch(focus('register', Object.keys(errors)[0]))
 })(RegisterForm);

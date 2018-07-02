@@ -3,6 +3,7 @@ import {SET_AUTH_TOKEN, CLEAR_AUTH, AUTH_REQUEST, AUTH_SUCCESS, AUTH_ERROR } fro
   const initialState = {
     authToken: null, // authToken !== null does not mean it has been validated
     currentUser: null,
+    loggedIn: false,
     loading: false,
     error: null
 };
@@ -25,7 +26,7 @@ const authReducer = (state = initialState, action) => {
     case AUTH_REQUEST: 
       return {
         ...state,
-        loading: true, 
+        loading: true,
         error: null
     };
 
@@ -33,6 +34,7 @@ const authReducer = (state = initialState, action) => {
     return { 
       ...state,
       loading: false,
+      loggedIn: true,
       currentUser: action.currentUser,
       error: null
     };
@@ -41,6 +43,7 @@ const authReducer = (state = initialState, action) => {
     return { 
       ...state, 
       loading: false,
+      loggedIn: false,
       error: action.error
     };
 
