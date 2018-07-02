@@ -24,7 +24,8 @@ export class LoginForm extends React.Component {
     }
 
     onSubmit(values) {
-        return this.props.dispatch(login(values.username, values.password));
+        return this.props.dispatch(login(values.username, values.password))
+        .then(() => this.props.history.push('/home'));
     }
 
     render() {

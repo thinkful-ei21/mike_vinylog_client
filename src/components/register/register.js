@@ -16,7 +16,7 @@ export class RegisterForm extends React.Component {
     return this.props
       .dispatch(registerUser(user))
       .then(() => this.props.dispatch(login(username, password)))
-      .then(() => values = '');
+      .then(() => this.props.history.push('/home'));
   }
 
   render() {
