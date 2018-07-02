@@ -13,10 +13,10 @@ export class RegisterForm extends React.Component {
   onSubmit(values) {
     const {username, password} = values;
     const user = {username, password};
-    console.log(user);
     return this.props
       .dispatch(registerUser(user))
-      .then(() => this.props.dispatch(login(username, password)));
+      .then(() => this.props.dispatch(login(username, password)))
+      .then(() => values = '');
   }
 
   render() {
@@ -80,6 +80,6 @@ export class RegisterForm extends React.Component {
 export default reduxForm({
   form: 'register',
   onSubmitFail: (errors, dispatch) =>
- //     dispatch(focus('register', Object.keys(errors)[0]))
- console.log(errors)
+   //   dispatch(focus('register', Object.keys(errors)[0]))
+      console.log(errors)
 })(RegisterForm);

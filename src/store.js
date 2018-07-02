@@ -6,9 +6,6 @@ import {setAuthToken, refreshAuthToken} from './actions/auth-actions';
 
 const store = createStore(rootReducer, applyMiddleware(thunk));
 
-
-console.log(store.getState());
-
 // Hydrate the authToken from localStorage if it exist
 const authToken = loadAuthToken();
 if (authToken) {
