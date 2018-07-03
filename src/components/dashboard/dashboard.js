@@ -1,14 +1,14 @@
 import React from 'react';
 import './dashboard.css';
 
-const Dashboard = () => {
+const Dashboard = (props) => {
+  const user = props.user.username;
+  console.log(user);
   return (
   <div className='dashboard'>
-    <header className="dashboard-header">
-      <h1 className="dashboard-title">Welcome to Vinylog!</h1>
-    </header>
+  <h2>This is your dashboard</h2>
       <p className='dashboard-desc'>
-        To start your collection search for album title.
+       dashboard elements goes here
       </p>
   </div>
   )

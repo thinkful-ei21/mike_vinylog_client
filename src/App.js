@@ -6,6 +6,7 @@ import Register from './components/register/register';
 import Login from './components/login/login';
 import Dashboard from './components/dashboard/dashboard';
 import PrivateRoute from './components/private-route';
+import Header from './components/header/header';
 
 
 class App extends Component {
@@ -15,8 +16,9 @@ class App extends Component {
         <div className="App">
           <Route path="/" component={LandingPage} />
           <Route exact path="/" component={Login} />
-          <Route exact path="/sign-up" component={Register} /> 
-          <PrivateRoute exact path="/home" component={Dashboard} />
+          <Route exact path="/sign-up" component={Register} />
+          <PrivateRoute path="/" component={Header} />
+          <PrivateRoute  path="/home" component={Dashboard} />
         </div>
       </Router>
     );

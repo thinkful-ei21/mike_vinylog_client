@@ -39,7 +39,6 @@ const storeAuthInfo = (authToken, dispatch) => {
   const decodedToken = jwtDecode(authToken);
   dispatch(setAuthToken(authToken));
   dispatch(authSuccess(decodedToken.user));
-  console.log(decodedToken);
   //saveAuthToken(authToken);
   clearAuthToken(authToken);
 };
@@ -47,7 +46,6 @@ const storeAuthInfo = (authToken, dispatch) => {
 export const login = (username, password) => dispatch => {
 
   dispatch(authRequest());
-  console.log('got to login');
   return (
     fetch(`${API_BASE_URL}/api/auth/login`, {
       method: 'POST',
@@ -102,5 +100,5 @@ export const refreshAuthToken = () => (dispatch, getState) => {
     dispatch(authError(err));
     dispatch(clearAuth());
     clearAuthToken(authToken);
-    });
+  });
 };

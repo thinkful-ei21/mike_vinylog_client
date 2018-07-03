@@ -1,6 +1,7 @@
 import React from 'react';
 import './register.css';
 import {reduxForm, Field, focus} from 'redux-form';
+import { Link } from 'react-router-dom';
 import {registerUser} from '../../actions/user-actions';
 import {login} from '../../actions/auth-actions';
 import Input from '../input';
@@ -72,6 +73,7 @@ export class RegisterForm extends React.Component {
           Sign Up
         </button>
       </form>
+        <Link to="/">Return to Login page</Link>
     </div>
     );
   }
