@@ -30,15 +30,15 @@ onSubmit(values) {
 
 render() {
 
-    let successMessage;
+    // let successMessage;
 
-    if (this.props.submitSucceeded) {
-        successMessage = (
-        <div className="message message-success">
-            You're all logged in!
-        </div>
-        );
-    };
+    // if (this.props.submitSucceeded) {
+    //     successMessage = (
+    //     <div className="message message-success">
+    //         You're all logged in!
+    //     </div>
+    //     );
+    // };
 
     let errorMessage;
 
@@ -61,7 +61,7 @@ render() {
                     this.onSubmit(values)
                 )}>
                 <h3>Login</h3>
-                {successMessage}
+                {/* {successMessage} */}
                 {errorMessage}
                 <label htmlFor="username">Username</label>
                 <Field

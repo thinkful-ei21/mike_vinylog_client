@@ -1,5 +1,6 @@
 import React from 'react';
 import './dashboard.css';
+import {connect} from 'react-redux';
 
 const Dashboard = (props) => {
   const user = props.user.username;
@@ -14,4 +15,9 @@ const Dashboard = (props) => {
   )
 }
 
-export default Dashboard;
+const mapStateToProps = state => ({
+  currentUser: state.auth.currentUser,
+  loggedIn: state.auth.currentUser !== null,
+ })
+
+export default connect(mapStateToProps)(Dashboard);
