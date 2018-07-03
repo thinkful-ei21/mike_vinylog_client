@@ -3,6 +3,7 @@ import './search.css';
 import {connect} from 'react-redux';
 import Spinner from 'react-spinkit';
 import {searchAlbums} from '../../actions/search-actions';
+import { selectAlbum } from '../../actions/select-album';
 
 class Search extends React.Component {
 
@@ -16,16 +17,33 @@ class Search extends React.Component {
     }
 
     const allAlbums = this.props.albums;
+    
+    // console.log(allAlbums);
 
     // filter out duplicates
     const albums = [...new Set(allAlbums)];
 
     const album = this.props.albums.map((album, index) => (
-      <li className="album-search-results" 
-      key={index}>{album}</li>
+      <li className="album-search-results"
+        onClick={e => this.selectAlbum(album)}
+        key={index}>
+        <img src={album.thumb}/>
+        {album.title}
+        {album.genre}
+        {album.year}
+        {album.selected ? '[selected]':''}
+        </li>
     ));
 
+    if(album.selected) {
+      console.log(album.title);
+    }
+
     return <ul>{album}</ul>;
+}
+
+selectAlbum(album) {
+  this.props.dispatch(selectAlbum(album))
 }
 
 mainSearch(e){

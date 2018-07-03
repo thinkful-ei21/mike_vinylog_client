@@ -7,7 +7,7 @@ const searchQuery = query => {
     }
     return res.json();
   })
-  .then(data => data.results.map(item => item.title));
+  .then(data => data.results)
 }
 
 export default searchQuery;

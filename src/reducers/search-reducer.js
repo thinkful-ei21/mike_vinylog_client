@@ -1,5 +1,6 @@
 import { SEARCH_ALBUMS_REQUEST, SEARCH_ALBUMS_SUCCESS, SEARCH_ALBUMS_ERROR
 } from '../actions/search-actions';
+import { SELECT_ALBUM } from '../actions/select-album';
 
 const initialState = {
   albums: [],
@@ -32,6 +33,21 @@ export function searchReducer(state=initialState, action) {
           error: action.error
       }
   }
+  else if (action.type === SELECT_ALBUM) {
+      return {
+          ...state,
+          loading: false,
+          error: null,
+          albums: state.albums.map(album => {
+            if(album.id === action.album.id) {
+                return Object.assign({}, album, {selected: true})
+            } else {
+                return album;
+            }
+          })
+      }
+  }
+
   return state;
 }
 
