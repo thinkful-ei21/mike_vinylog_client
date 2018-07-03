@@ -3,6 +3,7 @@ import './header.css';
 import {connect} from 'react-redux';
 import {clearAuth} from '../../actions/auth-actions';
 import {clearAuthToken} from '../../local-storage';
+import Search from '../search-field/search';
 
 export class Header extends React.Component {
   logOut() {
@@ -25,10 +26,11 @@ export class Header extends React.Component {
 
     return (
       <div className='landing'>
-        <p>
-            Welcome {user}! To start your collection search for album title.
+      {logOutButton}
+        <h2>Welcome {user}!</h2>
+        <p>To start your collection,<br /> search by artist name to retrieve a list of albums.
         </p>
-        {logOutButton}
+        <Search />
       </div>
     )
   }

@@ -3,8 +3,9 @@
   padding: 15px;
   height: 30px;
   color: rgb(0, 0, 0);
+  position: relative;
+  top: 0;
+  right: 0;
 }
 
-button .logoutButton {
-  width: 30% !important;
-}
+
