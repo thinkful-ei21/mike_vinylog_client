@@ -2,8 +2,8 @@ import React from 'react';
 import './search.css';
 import {connect} from 'react-redux';
 import Spinner from 'react-spinkit';
-import {searchAlbums} from '../../actions/search-actions';
-import { selectAlbum } from '../../actions/select-album';
+import {searchTitles, searchAlbums } from '../../actions/search-actions';
+import { addAlbums } from '../../actions/add-album-actions';
 
 class Search extends React.Component {
 
@@ -16,40 +16,46 @@ class Search extends React.Component {
       return <strong>{this.props.error}</strong>;
     }
 
-    const allAlbums = this.props.albums;
+   const allAlbums = this.props.albums;
     
-    // console.log(allAlbums);
+     console.log(allAlbums);
 
-    // filter out duplicates
-    const albums = [...new Set(allAlbums)];
-
-    const album = this.props.albums.map((album, index) => (
+   const album = this.props.albums.map((album, index) => (
       <li className="album-search-results"
-        onClick={e => this.selectAlbum(album)}
+       
         key={index}>
-        <img src={album.thumb}/>
-        {album.title}
-        {album.genre}
-        {album.year}
-        {album.selected ? '[selected]':''}
+        <div className="search-list-item">
+            <img className="search-item-image" src={album.thumb} alt={album.title}/>
+            <div className="search-item-text">
+              <span className="title">{album.title}</span><br/>
+              <span className="genre">{album.genre}</span><br/>
+              <span className="year">{album.year}</span>
+            </div>
+          </div>
+          <button  
+          onClick={e => addAlbums(album)}
+          className="add-button">
+          ADD TO COLLECTION</button>
         </li>
     ));
 
-    if(album.selected) {
+    if(album.added) {
       console.log(album.title);
     }
 
     return <ul>{album}</ul>;
 }
 
-selectAlbum(album) {
-  this.props.dispatch(selectAlbum(album))
+addAlbums(album) {
+  this.props.dispatch(searchAlbums(album))
 }
 
 mainSearch(e){
 e.preventDefault();
-  this.props.dispatch(searchAlbums(this.input.value))
+  this.props.dispatch(searchTitles(this.input.value))
 }
+
+
 
   render() {
 
@@ -77,6 +83,7 @@ const mapStateToProps = state => {
     albums: state.search.albums,
     currentUser: user,
     loggedIn: user !== null,
+    added: state.added,
     error: state.error
   };
 };

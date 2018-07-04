@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import './App.css';
+// import './App.css';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import LandingPage from './components/landing-page/landing-page';
 import Register from './components/register/register';
@@ -16,7 +16,7 @@ class App extends Component {
       <Router>
         <div className="App">
           <Route path="/" component={LandingPage} />
-          <Route exact path="/" component={Login} />
+          <Route exact path="/login" component={Login} />
           <Route exact path="/sign-up" component={Register} />
           <PrivateRoute path="/" component={Header} />
           <PrivateRoute  path="/home" component={Dashboard} />

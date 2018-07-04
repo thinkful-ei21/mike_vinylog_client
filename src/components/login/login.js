@@ -30,16 +30,6 @@ onSubmit(values) {
 
 render() {
 
-    // let successMessage;
-
-    // if (this.props.submitSucceeded) {
-    //     successMessage = (
-    //     <div className="message message-success">
-    //         You're all logged in!
-    //     </div>
-    //     );
-    // };
-
     let errorMessage;
 
     if (this.props.error) {

@@ -73,7 +73,7 @@ export class RegisterForm extends React.Component {
           Sign Up
         </button>
       </form>
-        <Link to="/">Return to Login page</Link>
+        <Link to="/login">Return to Login page</Link>
     </div>
     );
   }
