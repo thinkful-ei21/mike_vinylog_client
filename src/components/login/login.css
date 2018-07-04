@@ -62,3 +62,8 @@ button:hover {
 	text-align: center;
 	font-size: 15px;
 }
+
+.signup-note {
+	margin: 0 auto;
+	text-align: center;
+}

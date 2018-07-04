@@ -73,10 +73,12 @@ render() {
                     Log in
                 </button>
             </form>
-            <h3>Dont have an account yet?</h3>
-            <Link to="/sign-up">Sign Up</Link>
+            <div className="signup-note">
+                <h3>Dont have an account yet?</h3>
+                <Link to="/sign-up">Sign Up</Link>
             </div>
-        );
+        </div>
+      );
     }
   }
 }

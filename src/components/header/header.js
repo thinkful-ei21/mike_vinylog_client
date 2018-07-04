@@ -25,7 +25,7 @@ export class Header extends React.Component {
     }
 
     return (
-      <div className='landing'>
+      <div className='header'>
       {logOutButton}
         <h2>Welcome {user}!</h2>
         <p>To start your collection,<br /> search by artist name to retrieve a list of albums.
