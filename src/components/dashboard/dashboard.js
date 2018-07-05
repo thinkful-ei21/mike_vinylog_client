@@ -1,6 +1,7 @@
 import React from 'react';
 import './dashboard.css';
 import {connect} from 'react-redux';
+import { withRouter } from 'react-router';
 // import Search from '../search-field/search';
 
 const Dashboard = (props) => {

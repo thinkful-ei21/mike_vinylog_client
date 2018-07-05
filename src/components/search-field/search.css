@@ -13,7 +13,7 @@ input[type="search"] {
 
 ul {
 	padding: 0;
-	max-width: 320px;
+	max-width: 600px;
 }
 
 li {
@@ -29,6 +29,12 @@ button.add-button {
 	margin: 0;
 }
 
+.album-search-list {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 20px;
+}
+
 .search-list-item button {
 	width: 20%;
 	float: right;
@@ -36,6 +42,7 @@ button.add-button {
 
 .search-list-item {
 	display: inline-block;
+	margin: 20px;
 }
 
 .title, .genre, .year {
@@ -56,7 +63,7 @@ button.add-button {
 .album-search-results {
 	padding: 0;
 	border: solid rgb(123, 123, 123) 1px;
-	margin-top: 5px;
+	margin: 25px;
 	text-align: start;
 	border-radius: 3px;
 	-webkit-border-radius: 3px;

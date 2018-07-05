@@ -43,7 +43,7 @@ class Search extends React.Component {
       console.log(album.title);
     }
 
-    return <ul>{album}</ul>;
+    return <ul className="album-search-list">{album}</ul>;
 }
 
 addAlbums(album) {
@@ -54,8 +54,6 @@ mainSearch(e){
 e.preventDefault();
   this.props.dispatch(searchTitles(this.input.value))
 }
-
-
 
   render() {
 
@@ -69,7 +67,7 @@ e.preventDefault();
           />
           <button>Search</button>
         </form>
-        <div className="album-search-list">
+        <div>
           {this.renderResults()}
         </div>
       </div>
