@@ -1,15 +1,3 @@
-.search-form {
-	margin: 0 10%;
-	text-align: center;
-	background: white;
-	/* padding: 20px 40px; */
-}
-
-input[type="search"] {
-  width: 320px;
-	height: 30px;
-	margin: 0 auto;
-}
 
 ul {
 	padding: 0;
@@ -29,18 +17,18 @@ button.add-button {
 	margin: 0;
 }
 
-.album-search-list {
+.collection-list {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
 }
 
-.search-list-item button {
+.collection-list-item button {
 	width: 20%;
 	float: right;
 }
 
-.search-list-item {
+.collection-list-item {
 	display: inline-block;
 	margin: 20px;
 }
@@ -53,14 +41,14 @@ button.add-button {
 	font-size:105%;
 }
 
-.search-item-text {
+.collection-item-text {
 	display: block;
 	width: 40%;
 	margin-left: 175px;
 	padding-top: 5px;
 }
 
-.album-search-results {
+.collection-results {
 	padding: 0;
 	border: solid rgb(123, 123, 123) 1px;
 	margin: 25px;
@@ -74,7 +62,7 @@ button.add-button {
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
-	.album-search-list {
+	.collection-list {
 		display: grid;
 		grid-template-columns: 100%;
 		grid-gap: 20px;
@@ -84,7 +72,7 @@ button.add-button {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
-	.album-search-list {
+	.collection-list {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 20px;
@@ -94,7 +82,7 @@ button.add-button {
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 1200px) {
-	.album-search-list {
+	.collection-list {
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-gap: 20px;

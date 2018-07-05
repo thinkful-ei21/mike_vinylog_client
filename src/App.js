@@ -7,7 +7,7 @@ import Login from './components/login/login';
 import Dashboard from './components/dashboard/dashboard';
 import PrivateRoute from './components/private-route';
 import Header from './components/header/header';
-
+import Collection from './components/collection/collection';
 
 
 class App extends Component {
@@ -16,10 +16,11 @@ class App extends Component {
       <Router>
         <div className="App">
           <Route path="/" component={LandingPage} />
-          <Route exact path="/login" component={Login} />
+          <Route path="/login" component={Login} />
           <Route exact path="/sign-up" component={Register} />
           <PrivateRoute path="/" component={Header} />
           <PrivateRoute  path="/home" component={Dashboard} />
+          <PrivateRoute  path="/collection" component={Collection} />
         </div>
       </Router>
     );

@@ -4,6 +4,7 @@ import {connect} from 'react-redux';
 import {clearAuth} from '../../actions/auth-actions';
 import {clearAuthToken} from '../../local-storage';
 import Search from '../search-field/search';
+import Collection from '../collection/collection';
 
 export class Header extends React.Component {
   logOut() {
