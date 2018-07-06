@@ -1,11 +1,11 @@
 import React from 'react';
 import './header.css';
 import {connect} from 'react-redux';
+import {Redirect} from 'react-router-dom';
+import { Link } from 'react-router-dom';
 import {clearAuth} from '../../actions/auth-actions';
 import {clearAuthToken} from '../../local-storage';
 import Search from '../search-field/search';
-//import Collection from '../collection/collection';
-import {viewCollection} from '../../actions/collection-actions';
 import { collection } from '../../actions/collection-actions';
 
 export class Header extends React.Component {
@@ -14,12 +14,14 @@ export class Header extends React.Component {
     clearAuthToken();
   }
 
-  getCollection(e) {
-    e.preventDefault();
-    console.log('getCollection()');
-    return this.props.dispatch(collection)
-    //.then( () => this.props.history.push('/collection'));
+  goToCollection() {
+    this.props.history.push('/collection');
+    return <Link to="/collection"></Link>;
+   //  this.props.history.push('/collection');
   }
+    // return this.props.dispatch(collection(curUserId))
+    // .then(() => this.props.history.push('/collection'));
+  //}
 
   render() {
     const user =this.props.currentUser.username;
@@ -39,7 +41,7 @@ export class Header extends React.Component {
       viewCollectionButton = (
             <button 
             className="view-collection-button"
-            onClick={(e) => this.getCollection(e)}
+            onClick={() => this.goToCollection()}
             >My Collection</button>
         );
     }
@@ -57,9 +59,10 @@ export class Header extends React.Component {
   }
 }
 
- const mapStateToProps = state => ({
+const mapStateToProps = state => ({
   currentUser: state.auth.currentUser,
   loggedIn: state.auth.currentUser !== null,
- })
+  collection: state.auth.currentUser.collection
+})
 
 export default connect(mapStateToProps)(Header);

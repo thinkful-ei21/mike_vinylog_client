@@ -1,15 +1,14 @@
 import React from 'react';
 import './dashboard.css';
 import {connect} from 'react-redux';
-import { withRouter } from 'react-router';
-// import Search from '../search-field/search';
+import Search from '../search-field/search';
 
-const Dashboard = (props) => {
-  const user = props.user.username;
-  console.log(user);
+
+const Dashboard = () => {
+ 
   return (
   <div className='dashboard'>
-  <h2>This is your dashboard</h2>
+  {/* <h2>This is your dashboard</h2> */}
        {/* <Search /> */}
   </div>
   )

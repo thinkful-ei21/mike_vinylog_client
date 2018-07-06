@@ -2,7 +2,7 @@ import React from 'react';
 import './search.css';
 import {connect} from 'react-redux';
 import Spinner from 'react-spinkit';
-import {searchTitles, searchAlbums } from '../../actions/search-actions';
+import {searchTitles } from '../../actions/search-actions';
 import { addAlbums } from '../../actions/add-album-actions';
 
 class Search extends React.Component {

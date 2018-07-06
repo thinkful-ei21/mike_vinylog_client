@@ -1,15 +1,36 @@
-import { VIEW_COLLECTION } from '../actions/view-collection-actions';
+import { VIEW_COLLECTION_REQUEST, VIEW_COLLECTION_SUCCESS, VIEW_COLLECTION_ERROR } from '../actions/collection-actions';
 
 const intialState = {
-  collection: {}
+  collection: {},
+  loading: false,
+  error: null
 };
 
 export function collectionReducer(state=intialState, action) {
-  if (action.type === VIEW_COLLECTION) {
+  switch(action.type) {
+    case VIEW_COLLECTION_REQUEST:
     return {
       ...state,
       collection: action.collection
-    }
+    };
+
+    case VIEW_COLLECTION_SUCCESS:
+    return {
+      ...state,
+      collection: action.collection,
+      loading: false,
+      error: null
+    };
+
+    case VIEW_COLLECTION_ERROR:
+    return {
+      ...state,
+      loading: false,
+      error: 'There was an error fetching collection'
+    };
+
+    default:
+      return state;
   }
-  return state;
-}
+
+};
