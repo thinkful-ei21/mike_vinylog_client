@@ -2,7 +2,7 @@ import React from 'react';
 import './collection.css';
 import {connect} from 'react-redux';
 import {API_BASE_URL} from '../../config';
-// import { viewCollection } from '../../actions/view-collection-actions';
+// import { viewCollection } from '../../actions/collection-actions';
 
 class Collection extends React.Component {
   constructor(props) {
@@ -23,7 +23,7 @@ class Collection extends React.Component {
       loading: true
     });
 
-  return fetch(`${API_BASE_URL}/collection`, {
+  return fetch(`${API_BASE_URL}/api/collection`, {
     method: 'GET'
     })
     .then(res => {

@@ -6,6 +6,7 @@ import {clearAuthToken} from '../../local-storage';
 import Search from '../search-field/search';
 //import Collection from '../collection/collection';
 import {viewCollection} from '../../actions/collection-actions';
+import { collection } from '../../actions/collection-actions';
 
 export class Header extends React.Component {
   logOut() {
@@ -13,10 +14,11 @@ export class Header extends React.Component {
     clearAuthToken();
   }
 
-  getCollection() {
+  getCollection(e) {
+    e.preventDefault();
     console.log('getCollection()');
-    this.props.dispatch(viewCollection())
-    .then(() => this.props.history.push('/collection'));
+    return this.props.dispatch(collection)
+    //.then( () => this.props.history.push('/collection'));
   }
 
   render() {
@@ -37,7 +39,7 @@ export class Header extends React.Component {
       viewCollectionButton = (
             <button 
             className="view-collection-button"
-            onClick={() => this.getCollection()}
+            onClick={(e) => this.getCollection(e)}
             >My Collection</button>
         );
     }
