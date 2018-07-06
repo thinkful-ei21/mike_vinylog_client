@@ -1,7 +1,7 @@
 import { VIEW_COLLECTION_REQUEST, VIEW_COLLECTION_SUCCESS, VIEW_COLLECTION_ERROR } from '../actions/collection-actions';
 
 const intialState = {
-  collection: {},
+  collection: [],
   loading: false,
   error: null
 };
@@ -11,7 +11,8 @@ export function collectionReducer(state=intialState, action) {
     case VIEW_COLLECTION_REQUEST:
     return {
       ...state,
-      collection: action.collection
+      collection: [],
+      loading: true
     };
 
     case VIEW_COLLECTION_SUCCESS:

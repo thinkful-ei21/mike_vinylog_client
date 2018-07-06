@@ -1,5 +1,6 @@
 import React from 'react';
 import './collection.css';
+import {Redirect} from 'react-router-dom';
 import {connect} from 'react-redux';
 import { collection } from '../../actions/collection-actions';
 
@@ -8,7 +9,7 @@ class Collection extends React.Component {
     super(props);
 
     this.state = {
-        collection: {},
+        collection: [],
         loading: false,
         error: null
     };
@@ -20,55 +21,61 @@ class Collection extends React.Component {
 
   getCollection() {
     this.setState({
-      collection: this.state.collection,
+      collection: [],
       error: null,
       loading: true
     });
 
-    return this.props.dispatch(collection(dispatch, getState));
+     return this.props.dispatch(collection());
   }
 
+  removeAlbum(album) {
+    // this.props.dispatch(deleteAlbum(album))
+  }
+
+  newSearch() {
+    this.props.history.push('/collection');
+    return <Redirect to="/home"></Redirect>;
+
+  }
 
   renderResults() {
     if (this.props.error) {
       return <strong>{this.props.error}</strong>;
     }
 
-  // const allAlbums = this.props.albums;
-
-  //  const album = this.props.collection.map((album, index) => (
-  //     <li className="collection-result-list-item"
+   const album = this.props.collection.map((album, index) => (
+      <li className="collection-result"
        
-  //       key={index}>
-  //       <div className="collection-item">
-  //           <img className="collection-item-image" src={album.thumb} alt={album.title}/>
-  //           <div className="collection-item-text">
-  //             <span className="title">{album.title}</span><br/>
-  //             <span className="genre">{album.genre}</span><br/>
-  //             <span className="year">{album.year}</span>
-  //           </div>
-  //         </div>
-  //         <button
-  //         // onClick={e => removeAlbum(album)}
-  //         className="add-button">
-  //         REMOVE FROM COLLECTION</button>
-  //       </li>
-  //   ));
+        key={index}>
+        <div className="collection-item">
+            <img className="collection-item-image" src={album.thumb} alt={album.title}/>
+            <div className="collection-item-text">
+              <span className="title">{album.title}</span><br/>
+              <span className="genre">{album.genre}</span><br/>
+              <span className="year">{album.year}</span>
+            </div>
+          </div>
+          <button
+          onClick={album => this.removeAlbum(album)}
+          className="add-button">
+          REMOVE FROM COLLECTION</button>
+        </li>
+    ));
 
-  //return <ul className="collection-list">{album}</ul>;
+  return <ul className="collection-list">{album}</ul>;
 
-    return <ul className="collection-list">album</ul>;
 }
-
-// removeAlbum(album) {
-//   this.props.dispatch(deleteAlbum(album))
-// }
 
   render() {
 
     return (
-      <div className="collection-results">
-        {/* {this.renderResults()} */}
+      <div className="collection-results"> <button  
+      onClick={() => this.newSearch()}
+      className="add-button">
+      New Search</button>
+      <h1>Collection</h1>
+        {this.renderResults()}
       </div>
     )
   }
@@ -77,12 +84,9 @@ class Collection extends React.Component {
 const mapStateToProps = state => {
   const user = state.auth.currentUser;
   return {
-    //collection: state.user.collection,
-    albums: state.albums,
+    collection: state.collection.collection,
     currentUser: user,
-    loggedIn: user !== null,
-    added: state.added,
-    error: state.error
+    loggedIn: user !== null
   };
 };
 

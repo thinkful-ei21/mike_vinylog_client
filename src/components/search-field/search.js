@@ -17,8 +17,6 @@ class Search extends React.Component {
     }
 
    const allAlbums = this.props.albums;
-    
-     console.log(allAlbums);
 
    const album = this.props.albums.map((album, index) => (
       <li className="album-search-results"

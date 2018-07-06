@@ -16,12 +16,9 @@ export class Header extends React.Component {
 
   goToCollection() {
     this.props.history.push('/collection');
-    return <Link to="/collection"></Link>;
-   //  this.props.history.push('/collection');
+    return <Redirect to="/collection"></Redirect>;
+
   }
-    // return this.props.dispatch(collection(curUserId))
-    // .then(() => this.props.history.push('/collection'));
-  //}
 
   render() {
     const user =this.props.currentUser.username;

@@ -64,14 +64,11 @@ export const collection = () => (dispatch, getState) => {
         return Promise.reject(res.statusText);
       }
 
-
       return res.json();
     })
     .then (data => {
-      console.log(data)
       return data;
-    } )
-    .then(data => data.results)
+    })
     .then(collection => dispatch(viewCollectionSuccess(collection)))
     .catch(err => dispatch(viewCollectionError(err)))
   };
