@@ -34,7 +34,7 @@ class Collection extends React.Component {
   }
 
   newSearch() {
-    this.props.history.push('/collection');
+    this.props.history.push('/home');
     return <Redirect to="/home"></Redirect>;
 
   }

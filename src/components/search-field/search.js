@@ -3,9 +3,14 @@ import './search.css';
 import {connect} from 'react-redux';
 import Spinner from 'react-spinkit';
 import {searchTitles } from '../../actions/search-actions';
-import { addAlbums } from '../../actions/add-album-actions';
+import { addToCollection } from '../../actions/collection-actions';
 
 class Search extends React.Component {
+
+  addAlbums(album) {
+    console.log('addAlbums() clicked')
+    this.props.dispatch(addToCollection(album))
+  }
 
   renderResults() {
     if (this.props.loading) {
@@ -31,7 +36,7 @@ class Search extends React.Component {
             </div>
           </div>
           <button  
-          onClick={e => addAlbums(album)}
+          onClick={album => this.addAlbums(album)}
           className="add-button">
           ADD TO COLLECTION</button>
         </li>
@@ -44,9 +49,7 @@ class Search extends React.Component {
     return <ul className="album-search-list">{album}</ul>;
 }
 
-addAlbums(album) {
-  this.props.dispatch(addAlbums(album))
-}
+
 
 mainSearch(e){
 e.preventDefault();
