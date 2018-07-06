@@ -6,12 +6,13 @@ const initialState = {
 
 export const crudReducer = (state=initialState, action) => {
     if (action.type === ADD_ALBUM) {
+
         return Object.assign({}, state, {
             collection: {
               ...state.items,
                action.item
               }
-        });
+       });
     }
 
     else if (action.type === DELETE_ALBUM) {

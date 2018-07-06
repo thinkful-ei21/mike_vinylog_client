@@ -47,7 +47,7 @@ class Search extends React.Component {
 }
 
 addAlbums(album) {
-  this.props.dispatch(searchAlbums(album))
+  this.props.dispatch(addAlbums(album))
 }
 
 mainSearch(e){

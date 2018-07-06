@@ -4,12 +4,19 @@ import {connect} from 'react-redux';
 import {clearAuth} from '../../actions/auth-actions';
 import {clearAuthToken} from '../../local-storage';
 import Search from '../search-field/search';
-import Collection from '../collection/collection';
+//import Collection from '../collection/collection';
+import {viewCollection} from '../../actions/collection-actions';
 
 export class Header extends React.Component {
   logOut() {
     this.props.dispatch(clearAuth());
     clearAuthToken();
+  }
+
+  getCollection() {
+    console.log('getCollection()');
+    this.props.dispatch(viewCollection())
+    .then(() => this.props.history.push('/collection'));
   }
 
   render() {
@@ -25,8 +32,19 @@ export class Header extends React.Component {
         );
     }
 
+    let viewCollectionButton;
+    if (this.props.loggedIn) {
+      viewCollectionButton = (
+            <button 
+            className="view-collection-button"
+            onClick={() => this.getCollection()}
+            >My Collection</button>
+        );
+    }
+
     return (
       <div className='header'>
+      {viewCollectionButton}
       {logOutButton}
         <h2>Welcome {user}!</h2>
         <p>To start your collection,<br /> search by artist name to retrieve a list of albums.

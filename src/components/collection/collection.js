@@ -2,7 +2,7 @@ import React from 'react';
 import './collection.css';
 import {connect} from 'react-redux';
 import {API_BASE_URL} from '../../config';
-import { viewCollection } from '../../actions/view-collection-actions';
+// import { viewCollection } from '../../actions/view-collection-actions';
 
 class Collection extends React.Component {
   constructor(props) {
@@ -14,16 +14,18 @@ class Collection extends React.Component {
   }
 
   componentDidMount() {
-    this.loadCollection();
-}
+    this.getCollection();
+  }
 
-loadCollection() {
-  this.setState({
-    error: null,
-    loading: true
-  });
+  getCollection() {
+    this.setState({
+      error: null,
+      loading: true
+    });
 
-  return fetch(`${API_BASE_URL}/collection`)
+  return fetch(`${API_BASE_URL}/collection`, {
+    method: 'GET'
+    })
     .then(res => {
       if (!res.ok) {
         return Promise.reject(res.statusText);
