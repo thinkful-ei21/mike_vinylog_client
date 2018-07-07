@@ -3,11 +3,11 @@ import './search-results.css';
 import {connect} from 'react-redux';
 import Spinner from 'react-spinkit';
 import {searchTitles } from '../../actions/search-actions';
-import { addToCollection } from '../../actions/collection-actions';
+import { addToCollection } from '../../actions/album-actions';
 
 class SearchResults extends React.Component {
 
-  addAlbums(album) {
+  addAlbum(album) {
     console.log('addAlbums() clicked')
     this.props.dispatch(addToCollection(album))
   }
@@ -36,7 +36,7 @@ class SearchResults extends React.Component {
             </div>
           </div>
           <button  
-          onClick={album => this.addAlbums(album)}
+          onClick={album => this.addAlbum(album)}
           className="add-button">
           ADD TO COLLECTION</button>
         </li>

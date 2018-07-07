@@ -1,4 +1,7 @@
-import { VIEW_COLLECTION_REQUEST, VIEW_COLLECTION_SUCCESS, VIEW_COLLECTION_ERROR } from '../actions/collection-actions';
+import { VIEW_COLLECTION_REQUEST,
+  VIEW_COLLECTION_SUCCESS,
+  VIEW_COLLECTION_ERROR
+} from '../actions/collection-actions';
 
 const intialState = {
   collection: [],

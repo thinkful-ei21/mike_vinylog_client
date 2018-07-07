@@ -3,6 +3,7 @@ import './collection.css';
 import {Redirect} from 'react-router-dom';
 import {connect} from 'react-redux';
 import { collection } from '../../actions/collection-actions';
+import { removeFromCollection } from '../../actions/album-actions';
 
 class Collection extends React.Component {
   constructor(props) {
@@ -30,7 +31,7 @@ class Collection extends React.Component {
   }
 
   removeAlbum(album) {
-    // this.props.dispatch(deleteAlbum(album))
+    this.props.dispatch(removeFromCollection(album));
   }
 
   newSearch() {

@@ -44,9 +44,7 @@ export class Search extends React.Component {
     }
 
     return (
-      // <div className='search-result'>
         <SearchResults />
-      // </div>
     )
   }
 }
