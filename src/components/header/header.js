@@ -46,6 +46,9 @@ export class Header extends React.Component {
     return (
       <header>
         <h1 className="header-title">Vinylog</h1>
+        <h2>
+          ... for music collectors to catalog their vinyl collection.
+       </h2>
         <span className="collection-button">
           {viewCollectionButton}
         </span>

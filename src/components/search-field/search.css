@@ -36,6 +36,13 @@ button.view-collection-button, button.search-button {
 	border-radius: 3px;
 }
 
+button:hover {
+  background: black;
+  color: rgb(255, 234, 42);
+  cursor: pointer;
+  }
+
+
 input[type="search"] {
   width: 320px;
 	height: 30px;

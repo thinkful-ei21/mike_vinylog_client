@@ -3,10 +3,16 @@
   text-align: center;
 }
 
+.dashboard > h1 {
+  color: rgb(19, 96, 102);
+  margin: 30px 0;
+  margin-bottom: 40px;
+}
+
 p {
   margin: 0 10% 40px 28%;
   width: 50%;
   font-size: 1.5em;
-  color: black;
+  color: rgb(19, 96, 102);
   text-align: start;
 }

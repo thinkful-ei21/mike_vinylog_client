@@ -40,10 +40,11 @@ button.new-search-button {
 }
 
 button:hover {
-	background: rgb(119, 151, 154);
-	color: black;
-	cursor: pointer;
-}
+  background: black;
+  color: rgb(255, 234, 42);
+  cursor: pointer;
+  }
+
 
 .collection-list {
   display: grid;

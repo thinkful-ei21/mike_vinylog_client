@@ -29,3 +29,10 @@ h1 {
   width: 45%;
 }
 
+button:hover {
+  background: black;
+  color: rgb(255, 234, 42);
+  cursor: pointer;
+  }
+
+

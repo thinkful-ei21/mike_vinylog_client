@@ -7,9 +7,9 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 const LandingPage = () => {
   return (
   <div className='landing'>
-      <h1>
+      {/* <h1>
         An app for music collectors to catalog their collection.
-      </h1>
+      </h1> */}
       <Router>
         <Route exact path="/login" component={Login} />
       {/* <p className='landing-desc-left'>
