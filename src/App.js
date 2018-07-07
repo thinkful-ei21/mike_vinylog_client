@@ -15,12 +15,12 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <Route path="/" component={LandingPage} />
+          <Route path="/" component={Header} />
+          <Route path="/login" component={LandingPage} />
           <Route path="/login" component={Login} />
           <Route exact path="/sign-up" component={Register} />
-          <PrivateRoute exact path="/home" component={Header} />
-          {/* <PrivateRoute exact path="/home" component={Dashboard} /> */}
-          <Route exact path="/collection" component={Collection} />
+          <PrivateRoute path="/home" component={Dashboard} />
+          <Route path="/collection" component={Collection} />
         </div>
       </Router>
     );

@@ -4,12 +4,14 @@ import {connect} from 'react-redux';
 import Search from '../search-field/search';
 
 
-const Dashboard = () => {
- 
+const Dashboard = (props) => {
+  const user =props.currentUser.username;
   return (
   <div className='dashboard'>
-  {/* <h2>This is your dashboard</h2> */}
-       {/* <Search /> */}
+        <h2>Welcome {user}!</h2>
+        <p>To start your collection,<br /> search by artist name to retrieve a list of albums.
+        </p>
+        <Search />
   </div>
   )
 }

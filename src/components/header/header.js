@@ -15,13 +15,13 @@ export class Header extends React.Component {
   }
 
   goToCollection() {
-    this.props.history.push('/collection');
+    //this.props.history.push('/collection');
     return <Redirect to="/collection"></Redirect>;
 
   }
 
   render() {
-    const user =this.props.currentUser.username;
+   // const user =this.props.currentUser.username;
 
     let logOutButton;
     if (this.props.loggedIn) {
@@ -45,12 +45,17 @@ export class Header extends React.Component {
 
     return (
       <div className='header'>
+      <header className="landing-header">
+      <h1 className="landing-title">Vinylog</h1>
       {viewCollectionButton}
+      {logOutButton}
+    </header>
+     {/*  {viewCollectionButton}
       {logOutButton}
         <h2>Welcome {user}!</h2>
         <p>To start your collection,<br /> search by artist name to retrieve a list of albums.
         </p>
-        <Search />
+        <Search /> */}
       </div>
     )
   }
@@ -59,7 +64,7 @@ export class Header extends React.Component {
 const mapStateToProps = state => ({
   currentUser: state.auth.currentUser,
   loggedIn: state.auth.currentUser !== null,
-  collection: state.auth.currentUser.collection
+  //collection: state.auth.currentUser.collection
 })
 
 export default connect(mapStateToProps)(Header);
