@@ -44,14 +44,9 @@ export class Search extends React.Component {
     }
 
     return (
-      <div className='header'>
-      {viewCollectionButton}
-      {logOutButton}
-        <h2>Welcome {user}!</h2>
-        <p>To start your collection,<br /> search by artist name to retrieve a list of albums.
-        </p>
+      // <div className='search-result'>
         <SearchResults />
-      </div>
+      // </div>
     )
   }
 }

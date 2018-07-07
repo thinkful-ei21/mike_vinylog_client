@@ -46,7 +46,6 @@ class Collection extends React.Component {
 
    const album = this.props.collection.map((album, index) => (
       <li className="collection-result"
-       
         key={index}>
         <div className="collection-item">
             <img className="collection-item-image" src={album.thumb} alt={album.title}/>
@@ -74,7 +73,7 @@ class Collection extends React.Component {
       onClick={() => this.newSearch()}
       className="add-button">
       New Search</button>
-      <h1>Collection</h1>
+      <h1>My Collection</h1>
         {this.renderResults()}
       </div>
     )

@@ -16,11 +16,10 @@ class App extends Component {
       <Router>
         <div className="App">
           <Route path="/" component={Header} />
-          <Route path="/login" component={LandingPage} />
-          <Route path="/login" component={Login} />
-          <Route exact path="/sign-up" component={Register} />
+          <Route exact path="/" component={LandingPage} />
+          <Route path="/login" component={Login} />             <Route exact path="/sign-up" component={Register} />
           <PrivateRoute path="/home" component={Dashboard} />
-          <Route path="/collection" component={Collection} />
+          <PrivateRoute path="/collection" component={Collection} />
         </div>
       </Router>
     );

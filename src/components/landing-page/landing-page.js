@@ -4,9 +4,14 @@ import './landing-page.css';
 const LandingPage = () => {
   return (
   <div className='landing'>
-      <p className='landing-desc'>
-        An app for music collectors to catalog their collection
-      </p>
+      <h1>
+        An app for music collectors to catalog their collection.
+      </h1>
+      {/* <p className='landing-desc-left'>
+      A billion trillion encyclopaedia galactica. Consciousness science at the edge of forever, vanquish the impossible, corpus paroxysm of global death quasar a </p>
+      
+      <p className="landing-desc-right">Trillion realm of the galaxies, vanquish the impossible tingling of the spine, the carbon in our apple pies star stuff 
+      </p> */}
   </div>
   )
 }

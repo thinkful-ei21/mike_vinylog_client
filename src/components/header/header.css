@@ -1,7 +1,7 @@
-.header {
+header {
   background-color: #222;
   padding: 15px;
-  height: 30px;
+  height: 80px;
   color: rgb(0, 0, 0);
   position: relative;
   top: 0;
@@ -9,4 +9,39 @@
   text-align: center;
 }
 
+.header-title {
+  font-size: 2.5em;
+  color: white;
+  margin: 5px 0 0 20px;
+  text-align: start;
+  padding: 0;
+}
+
+button.logout-button {
+	width: 100px;
+	height: 45px;
+	padding: 10px;
+	background: rgb(19, 96, 102);
+	color: white;
+	font-size: 18px;
+	margin: 20px 0;
+	border-radius: 3px;
+}
+
+button.collection-button{
+	width: 100px;
+	height: 45px;
+	padding: 10px;
+	background: rgb(19, 96, 102);
+	color: white;
+	font-size: 18px;
+	margin: 20px 0;
+	border-radius: 3px;
+}
+
+button:hover {
+	background: rgb(119, 151, 154);
+	color: black;
+	cursor: pointer;
+}
 

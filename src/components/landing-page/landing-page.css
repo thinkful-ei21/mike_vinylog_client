@@ -1,18 +1,31 @@
-.landing-header {
-  background-color: #222;
-  padding: 15px;
+.landing {
+  /* padding: 15px; */
+  margin-top: 5px;
   height: 60px;
   color: rgb(0, 0, 0);
+  margin-bottom: 50px;
 }
 
-.landing-title {
-  font-size: 2.5em;
-  color: white;
-  margin-top: -10px;
-}
-
-p {
-  font-size: 1.5em;
-  color: black;
+h1 {
+  font-weight: 400;
   text-align: center;
+  padding: 0 25%;
 }
+
+.landing-desc-left {
+  color: black;
+  text-align: justify;
+  margin-left: 25px;
+  float: left;
+  width: 45%;
+  clear: right;
+}
+
+.landing-desc-right {
+  color: black;
+  text-align: justify;
+  margin-right: 25px;
+  float: right;
+  width: 45%;
+}
+
