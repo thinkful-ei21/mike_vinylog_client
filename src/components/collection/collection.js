@@ -35,6 +35,7 @@ class Collection extends React.Component {
 
   newSearch() {
     this.props.history.push('/home');
+    console.log('newSearch clicked');
     return <Redirect to="/home"></Redirect>;
 
   }
@@ -55,26 +56,44 @@ class Collection extends React.Component {
               <span className="year">{album.year}</span>
             </div>
           </div>
+          {/* <button
+          onClick={album => this.removeAlbum(album)}
+          className="add-to-folder-button">
+          ADD TO FOLDER</button>
           <button
           onClick={album => this.removeAlbum(album)}
-          className="add-button">
+          className="add-tags-button">
+          ADD TAGS</button> */}
+          <button
+          onClick={album => this.removeAlbum(album)}
+          className="remove-button">
           REMOVE FROM COLLECTION</button>
         </li>
     ));
 
-  return <ul className="collection-list">{album}</ul>;
-
+return  <div>
+          {/* <button onClick={() => this.newSearch()}
+            className="new-search-button">
+            New Search
+          </button> */}
+          <ul className="collection-list"> 
+            {album}
+          </ul>
+        </div>;
 }
 
   render() {
 
     return (
-      <div className="collection-results"> <button  
-      onClick={() => this.newSearch()}
-      className="add-button">
-      New Search</button>
-      <h1>My Collection</h1>
-        {this.renderResults()}
+      <div>
+          <button onClick={() => this.newSearch()}
+            className="new-search-button">
+            New Search
+          </button>
+        <div className="collection-results">
+          <h1>My Collection</h1>
+          {this.renderResults()}
+        </div>
       </div>
     )
   }

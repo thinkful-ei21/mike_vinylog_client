@@ -13,8 +13,17 @@ img {
 	float: left;
 }
 
-button.add-button {
+/* button.add-to-folder-button,
+   button.add-tags-button, */
+button.remove-button { 
 	margin: 0;
+}
+
+button.new-search-button {
+	width: 175px;
+	margin-top: -84px;
+	margin-right: 290px;
+	float: right;
 }
 
 .collection-list {

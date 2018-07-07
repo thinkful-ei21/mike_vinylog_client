@@ -1,14 +1,5 @@
-.search-form {
-	margin: 0 10%;
-	text-align: center;
-	background: white;
-	/* padding: 20px 40px; */
-}
-
-input[type="search"] {
-  width: 320px;
-	height: 30px;
-	margin: 0 auto;
+h1 {
+	margin-top: 90px;
 }
 
 ul {
@@ -27,6 +18,25 @@ img {
 
 button.add-button {
 	margin: 0;
+}
+
+button.logout-button, button.view-collection-button {
+	float: right;
+	margin-right: 0px;
+	width: 175px;
+}
+
+input[type="search"] {
+  width: 320px;
+	height: 30px;
+	margin: 0 auto;
+}
+
+.search-form {
+	margin: 0 10%;
+	text-align: center;
+	background: white;
+	/* padding: 20px 40px; */
 }
 
 .album-search-list {
