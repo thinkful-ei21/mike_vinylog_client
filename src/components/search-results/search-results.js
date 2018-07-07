@@ -63,10 +63,10 @@ e.preventDefault();
         <form onSubmit={e => this.mainSearch(e)}>
           <input 
           type="search"
-          placeholder="artist name" 
+          placeholder="artist name"
           ref={input => (this.input = input)} 
           />
-          <button>Search</button>
+          <button className="search-button">Search</button>
         </form>
         <div>
           {this.renderResults()}

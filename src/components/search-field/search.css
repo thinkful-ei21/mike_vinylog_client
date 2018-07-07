@@ -26,6 +26,16 @@ button.logout-button, button.view-collection-button {
 	width: 175px;
 }
 
+button.view-collection-button, button.search-button {
+	height: 45px;
+	padding: 10px;
+	background: rgb(19, 96, 102);
+	color: white;
+	font-size: 18px;
+	margin: 20px 0;
+	border-radius: 3px;
+}
+
 input[type="search"] {
   width: 320px;
 	height: 30px;

@@ -4,7 +4,8 @@
 }
 
 p {
-  margin-left: 100px;
+  margin: 0 10% 40px 28%;
+  width: 50%;
   font-size: 1.5em;
   color: black;
   text-align: start;

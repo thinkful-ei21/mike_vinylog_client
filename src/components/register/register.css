@@ -40,8 +40,8 @@ input {
 	font-size: 15px;
 }
 
-button {
-	width: 320px;
+button.signup-button {
+	width: 289px;
 	height: 45px;
 	padding: 10px;
 	background: rgb(19, 96, 102);

@@ -30,8 +30,10 @@ class Collection extends React.Component {
      return this.props.dispatch(collection());
   }
 
-  removeAlbum(album) {
-    this.props.dispatch(removeFromCollection(album));
+  //TODO: 
+  removeAlbum() {
+    console.log(this.state);
+    this.props.dispatch(removeFromCollection(this.state.album));
   }
 
   newSearch() {
@@ -57,14 +59,14 @@ class Collection extends React.Component {
               <span className="year">{album.year}</span>
             </div>
           </div>
-          {/* <button
-          onClick={album => this.removeAlbum(album)}
+          <button
+          onClick={album => this.addToFolder(album)}
           className="add-to-folder-button">
           ADD TO FOLDER</button>
           <button
-          onClick={album => this.removeAlbum(album)}
+          onClick={album => this.addTag(album)}
           className="add-tags-button">
-          ADD TAGS</button> */}
+          ADD TAGS</button>
           <button
           onClick={album => this.removeAlbum(album)}
           className="remove-button">
@@ -105,7 +107,8 @@ const mapStateToProps = state => {
   return {
     collection: state.collection.collection,
     currentUser: user,
-    loggedIn: user !== null
+    loggedIn: user !== null,
+    album: state.album.album
   };
 };
 

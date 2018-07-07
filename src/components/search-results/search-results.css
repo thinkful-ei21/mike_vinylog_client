@@ -1,0 +1,26 @@
+button.search-button {
+  width: 320px;
+	height: 45px;
+	padding: 10px;
+	background: rgb(19, 96, 102);
+	color: white;
+	font-size: 18px;
+	margin: 20px 0;
+	border-radius: 3px;
+}
+
+button.add-button {
+  width: 320px;
+  height: 45px;
+  padding: 10px;
+  background: rgb(19, 96, 102);
+  color: white;
+  font-size: 18px;
+  border-radius: 3px;
+}
+
+button:hover {
+background: rgb(119, 151, 154);
+color: black;
+cursor: pointer;
+}

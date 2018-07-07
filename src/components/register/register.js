@@ -68,6 +68,7 @@ export class RegisterForm extends React.Component {
           validate={[required, nonEmpty, matchesPassword]}
         />
         <button
+          className="signup-button"
           type="submit"
           disabled={this.props.pristine || this.props.submitting}>
           Sign Up

@@ -59,8 +59,7 @@ export class Header extends React.Component {
 
 const mapStateToProps = state => ({
   currentUser: state.auth.currentUser,
-  loggedIn: state.auth.currentUser !== null,
- // collection: state.auth.currentUser.collection
+  loggedIn: state.auth.currentUser !== null
 })
 
 export default connect(mapStateToProps)(Header);

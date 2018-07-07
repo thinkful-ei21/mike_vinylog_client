@@ -40,7 +40,7 @@ export function albumReducer(state=intialState, action) {
     case REMOVE_ALBUM_REQUEST:
     return {
       ...state,
-      album: {},
+      album: action.album,
       loading: true
     };
 

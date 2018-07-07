@@ -13,10 +13,17 @@ img {
 	float: left;
 }
 
-/* button.add-to-folder-button,
-   button.add-tags-button, */
+button.add-to-folder-button,
+button.add-tags-button,
 button.remove-button { 
 	margin: 0;
+	width: 320px;
+	height: 45px;
+	padding: 10px;
+	background: rgb(19, 96, 102);
+	color: white;
+	font-size: 18px;
+	border-radius: 3px;
 }
 
 button.new-search-button {
@@ -24,6 +31,18 @@ button.new-search-button {
 	margin-top: -84px;
 	margin-right: 290px;
 	float: right;
+	height: 45px;
+	padding: 10px;
+	background: rgb(19, 96, 102);
+	color: white;
+	font-size: 18px;
+	border-radius: 3px;
+}
+
+button:hover {
+	background: rgb(119, 151, 154);
+	color: black;
+	cursor: pointer;
 }
 
 .collection-list {
