@@ -11,7 +11,6 @@ class SearchResults extends React.Component {
 
   addAlbum(album) {
     const curUserId = this.props.currentUser._id;
-    console.log('addAlbums() clicked')
     this.props.dispatch(addToCollection(album, curUserId));
   }
 
@@ -28,8 +27,6 @@ class SearchResults extends React.Component {
     // return album.filter(album.type !== 'artist')
     return album;
    });
-
-   console.log(allAlbums);
 
    const album = this.props.albums.map((album, index) => (
       <li className="album-search-results"
@@ -49,14 +46,12 @@ class SearchResults extends React.Component {
         </li>
     ));
 
-    if(album.added) {
-      console.log(album.title);
-    }
+    // if(album.added) {
+    //   console.log(album.title);
+    // }
 
     return <ul className="album-search-list">{album}</ul>;
 }
-
-
 
 mainSearch(e){
 e.preventDefault();

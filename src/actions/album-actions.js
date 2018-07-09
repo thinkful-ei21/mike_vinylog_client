@@ -41,7 +41,6 @@ export const removeAlbumError = album => ({
 
 export const addToCollection = (album, user) => (dispatch, getState) => {
   const state = getState();
-  console.log(album, user);
   fetch(`${API_BASE_URL}/api/collection`, {
     method: 'POST',
     headers: {
@@ -68,27 +67,25 @@ export const addToCollection = (album, user) => (dispatch, getState) => {
   .catch(err => dispatch(addAlbumError(err)))
 };
 
-export const removeFromCollection = album => (dispatch, getState) => {
+export const removeFromCollection = albumId => (dispatch, getState) => {
   const state = getState();
-  const idToRemove = state.collection.collection[0].id;
-  console.log(album);
-  console.log(idToRemove);
-  fetch(`${API_BASE_URL}/api/collection/${idToRemove}`, {
+  console.log(albumId);
+  fetch(`${API_BASE_URL}/api/collection/${albumId}`, {
     method: 'DELETE',
     headers: {
       Authorization: `Bearer ${state.auth.authToken}`,
       'Content-Type': 'application/json'
-    },
-    data: {
-      userId: this.userId
     }
   })
   .then(res => {
     if(!res.ok) {
+      console.log('got here')
       return Promise.reject(res.statusText);
     }
-    return res.json();
+    console.log('got here')
+    return res;
   })
+  .then(data => console.log('got here', data))
   .then(data => {
     return data})
   .then(album => dispatch(removeAlbumSuccess(album)))

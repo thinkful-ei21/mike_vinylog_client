@@ -31,9 +31,9 @@ class Collection extends React.Component {
   }
 
   //TODO: 
-  removeAlbum() {
-    console.log(this.state);
-    this.props.dispatch(removeFromCollection(this.album));
+  removeAlbum(album) {
+    console.log(album.id);
+    this.props.dispatch(removeFromCollection(album.id));
   }
 
   newSearch() {
@@ -68,7 +68,7 @@ class Collection extends React.Component {
           className="add-tags-button">
           ADD TAGS</button> */}
           <button
-          onClick={album => this.removeAlbum(album)}
+          onClick={e => this.removeAlbum(album)}
           className="remove-button">
           REMOVE FROM COLLECTION</button>
         </li>
