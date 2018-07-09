@@ -30,9 +30,7 @@ class Collection extends React.Component {
      return this.props.dispatch(collection());
   }
 
-  //TODO: 
   removeAlbum(album) {
-    console.log(album.id);
     this.props.dispatch(removeFromCollection(album.id));
   }
 
@@ -49,40 +47,23 @@ class Collection extends React.Component {
     }
 
    const album = this.props.collection.map((album, index) => (
-      <li className="collection-result"
-        key={index}>
-        <div className="collection-item">
-            <img className="collection-item-image" src={album.thumb} alt={album.title}/>
-            <div className="collection-item-text">
-              <span className="title">{album.title}</span><br/>
-              <span className="genre">{album.genre}</span><br/>
-              <span className="year">{album.year}</span>
-            </div>
+    <li className="collection-result"
+      key={index}>
+      <div className="collection-item">
+          <img className="collection-item-image" src={album.thumb} alt={album.title}/>
+          <div className="collection-item-text">
+            <span className="title">{album.title}</span><br/>
+            <span className="genre">{album.genre}</span><br/>
+            <span className="year">{album.year}</span>
           </div>
-          {/* <button
-          onClick={album => this.addToFolder(album)}
-          className="add-to-folder-button">
-          ADD TO FOLDER</button>
-          <button
-          onClick={album => this.addTag(album)}
-          className="add-tags-button">
-          ADD TAGS</button> */}
-          <button
-          onClick={e => this.removeAlbum(album)}
-          className="remove-button">
-          REMOVE FROM COLLECTION</button>
-        </li>
-    ));
-
-return  <div>
-          {/* <button onClick={() => this.newSearch()}
-            className="new-search-button">
-            New Search
-          </button> */}
-          <ul className="collection-list"> 
-            {album}
-          </ul>
-        </div>;
+        </div>
+        <button
+        onClick={e => this.removeAlbum(album)}
+        className="remove-button">
+        REMOVE FROM COLLECTION</button>
+      </li>
+  ));
+  return  <ul className="collection-list"> {album} </ul>;
 }
 
   render() {

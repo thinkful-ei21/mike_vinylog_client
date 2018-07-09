@@ -1,5 +1,4 @@
 import {API_BASE_URL} from '../config';
-import { loadAuthToken } from '../local-storage';
 
 export const VIEW_COLLECTION_REQUEST = 'VIEW_COLLECTION_REQUEST';
 export const viewCollectionRequest = collection => ({
@@ -38,7 +37,6 @@ export const collection = () => (dispatch, getState) => {
       return res.json();
     })
     .then (data => {
-      console.log(data);
       return data;
     })
     .then(collection => dispatch(viewCollectionSuccess(collection)))

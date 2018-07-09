@@ -2,11 +2,8 @@ import React from 'react';
 import './header.css';
 import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import {clearAuth} from '../../actions/auth-actions';
 import {clearAuthToken} from '../../local-storage';
-import Search from '../search-field/search';
-import { collection } from '../../actions/collection-actions';
 
 export class Header extends React.Component {
   logOut() {
@@ -15,13 +12,12 @@ export class Header extends React.Component {
   }
 
   goToCollection() {
-    this.props.history.push('/collection');
-    return <Redirect to="/collection"></Redirect>;
+    return this.props.history.push('/collection');
+    // return <Redirect to="/collection"></Redirect>;
 
   }
 
   render() {
-   // const user =this.props.currentUser.username;
 
     let logOutButton;
     if (this.props.loggedIn) {

@@ -1,5 +1,4 @@
 import {API_BASE_URL} from '../config';
-import { loadAuthToken } from '../local-storage';
 
 export const ADD_ALBUM_REQUEST = 'ADD_ALBUM_REQUEST';
 export const addAlbumRequest = album => ({
@@ -79,13 +78,10 @@ export const removeFromCollection = albumId => (dispatch, getState) => {
   })
   .then(res => {
     if(!res.ok) {
-      console.log('got here')
       return Promise.reject(res.statusText);
     }
-    console.log('got here')
     return res;
   })
-  .then(data => console.log('got here', data))
   .then(data => {
     return data})
   .then(album => dispatch(removeAlbumSuccess(album)))

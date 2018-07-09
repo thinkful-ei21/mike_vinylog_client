@@ -10,6 +10,7 @@ class SearchResults extends React.Component {
 
 
   addAlbum(album) {
+    console.log(album.type);
     const curUserId = this.props.currentUser._id;
     this.props.dispatch(addToCollection(album, curUserId));
   }
@@ -23,12 +24,9 @@ class SearchResults extends React.Component {
       return <strong>{this.props.error}</strong>;
     }
 
-   const allAlbums = this.props.albums.map(album => {
-    // return album.filter(album.type !== 'artist')
-    return album;
-   });
-
-   const album = this.props.albums.map((album, index) => (
+  const album = this.props.albums.map((album, index) => {
+    if(album.type === 'album' || album.type === 'master') {
+      return (
       <li className="album-search-results"
         key={index}>
         <div className="search-list-item">
@@ -44,12 +42,9 @@ class SearchResults extends React.Component {
           className="add-button">
           ADD TO COLLECTION</button>
         </li>
-    ));
-
-    // if(album.added) {
-    //   console.log(album.title);
-    // }
-
+      )
+    } 
+  });
     return <ul className="album-search-list">{album}</ul>;
 }
 

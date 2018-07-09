@@ -2,11 +2,9 @@ import React from 'react';
 import './search.css';
 import {connect} from 'react-redux';
 import {Redirect} from 'react-router-dom';
-import { Link } from 'react-router-dom';
 import {clearAuth} from '../../actions/auth-actions';
 import {clearAuthToken} from '../../local-storage';
 import SearchResults from '../search-results/search-results';
-import { collection } from '../../actions/collection-actions';
 
 export class Search extends React.Component {
   logOut() {
@@ -21,7 +19,7 @@ export class Search extends React.Component {
   }
 
   render() {
-    const user =this.props.currentUser.username;
+    //const user =this.props.currentUser.username;
 
     let viewCollectionButton;
     if (this.props.loggedIn) {
