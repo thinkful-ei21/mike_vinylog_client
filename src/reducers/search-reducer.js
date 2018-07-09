@@ -21,6 +21,7 @@ export function searchReducer(state=initialState, action) {
       return {
           ...state,
           albums: action.albums,
+          pagination: action.pagination,
           loading: false,
           error: null
       }

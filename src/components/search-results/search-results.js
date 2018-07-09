@@ -25,7 +25,7 @@ class SearchResults extends React.Component {
     }
 
   const album = this.props.albums.map((album, index) => {
-    if(album.type === 'album' || album.type === 'master') {
+   if(album.type === 'album' || album.type === 'master') {
       return (
       <li className="album-search-results"
         key={index}>
@@ -43,7 +43,7 @@ class SearchResults extends React.Component {
           ADD TO COLLECTION</button>
         </li>
       )
-    } 
+   } 
   });
     return <ul className="album-search-list">{album}</ul>;
 }
@@ -68,6 +68,12 @@ e.preventDefault();
         <div>
           {this.renderResults()}
         </div>
+        <div className="pagination">
+          {this.props.pagination ? 
+          console.log(this.props.pagination)
+        //    <a href={this.props.pagination.next}>next</a>
+            : ""}
+        </div>
       </div>
     )
   }
@@ -77,6 +83,7 @@ const mapStateToProps = state => {
   const user = state.auth.currentUser;
   return {
     albums: state.search.albums,
+    pagination: state.search.pagination,
     currentUser: user,
     loggedIn: user !== null,
     added: state.added,

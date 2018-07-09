@@ -6,9 +6,10 @@ export const searchAlbumsRequest = () => ({
 });
 
 export const SEARCH_ALBUMS_SUCCESS = 'SEARCH_ALBUMS_SUCCESS';
-export const searchAlbumsSuccess = albums => ({
+export const searchAlbumsSuccess = data => ({
     type: SEARCH_ALBUMS_SUCCESS,
-    albums
+    albums: data.results,
+    pagination: data.pagination.urls,
 });
 
 export const SEARCH_ALBUMS_ERROR = 'SEARCH_ALBUMS_ERROR';
@@ -20,13 +21,6 @@ export const searchAlbumsError = error => ({
 export const searchTitles = name => dispatch => {
     dispatch(searchAlbumsRequest());
     searchQuery(name)
-        .then(albums => dispatch(searchAlbumsSuccess(albums)))
-        .catch(err => dispatch(searchAlbumsError(err)))
-};
-
-export const searchAlbums = name => dispatch => {
-    dispatch(searchAlbumsRequest());
-    searchReleases(name)
-        .then(albums => dispatch(searchAlbumsSuccess(albums)))
+        .then(data => dispatch(searchAlbumsSuccess(data)))
         .catch(err => dispatch(searchAlbumsError(err)))
 };
