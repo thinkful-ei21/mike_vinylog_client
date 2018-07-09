@@ -6,10 +6,13 @@ import {searchTitles } from '../../actions/search-actions';
 import { addToCollection } from '../../actions/album-actions';
 
 class SearchResults extends React.Component {
+  
+
 
   addAlbum(album) {
+    const curUserId = this.props.currentUser._id;
     console.log('addAlbums() clicked')
-    this.props.dispatch(addToCollection(album))
+    this.props.dispatch(addToCollection(album, curUserId));
   }
 
   renderResults() {
@@ -21,11 +24,15 @@ class SearchResults extends React.Component {
       return <strong>{this.props.error}</strong>;
     }
 
-   const allAlbums = this.props.albums;
+   const allAlbums = this.props.albums.map(album => {
+    // return album.filter(album.type !== 'artist')
+    return album;
+   });
+
+   console.log(allAlbums);
 
    const album = this.props.albums.map((album, index) => (
       <li className="album-search-results"
-       
         key={index}>
         <div className="search-list-item">
             <img className="search-item-image" src={album.thumb} alt={album.title}/>
@@ -36,7 +43,7 @@ class SearchResults extends React.Component {
             </div>
           </div>
           <button  
-          onClick={album => this.addAlbum(album)}
+          onClick={e => this.addAlbum(album)}
           className="add-button">
           ADD TO COLLECTION</button>
         </li>

@@ -33,7 +33,7 @@ class Collection extends React.Component {
   //TODO: 
   removeAlbum() {
     console.log(this.state);
-    this.props.dispatch(removeFromCollection(this.state.album));
+    this.props.dispatch(removeFromCollection(this.album));
   }
 
   newSearch() {
@@ -59,14 +59,14 @@ class Collection extends React.Component {
               <span className="year">{album.year}</span>
             </div>
           </div>
-          <button
+          {/* <button
           onClick={album => this.addToFolder(album)}
           className="add-to-folder-button">
           ADD TO FOLDER</button>
           <button
           onClick={album => this.addTag(album)}
           className="add-tags-button">
-          ADD TAGS</button>
+          ADD TAGS</button> */}
           <button
           onClick={album => this.removeAlbum(album)}
           className="remove-button">

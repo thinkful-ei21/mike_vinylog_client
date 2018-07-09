@@ -39,22 +39,22 @@ export const removeAlbumError = album => ({
     error: this.error
 });
 
-export const addToCollection = () => (dispatch, getState) => {
+export const addToCollection = (album, user) => (dispatch, getState) => {
   const state = getState();
-  console.log(state);
+  console.log(album, user);
   fetch(`${API_BASE_URL}/api/collection`, {
     method: 'POST',
     headers: {
       Authorization: `Bearer ${state.auth.authToken}`,
       'Content-Type': 'application/json'
     },
-    data: {
-      title: 'test title',
-      thumb: this.thumb,
-      genre: this.genre,
-      year: this.year,
-      userId: this.userId
-    }
+    body: JSON.stringify({
+      title: album.title,
+      thumb: album.thumb,
+      genre: album.genre,
+      year: album.year,
+      userId: user
+    })
   })
   .then(res => {
     if(!res.ok) {
@@ -68,9 +68,10 @@ export const addToCollection = () => (dispatch, getState) => {
   .catch(err => dispatch(addAlbumError(err)))
 };
 
-export const removeFromCollection = () => (dispatch, getState) => {
+export const removeFromCollection = album => (dispatch, getState) => {
   const state = getState();
   const idToRemove = state.collection.collection[0].id;
+  console.log(album);
   console.log(idToRemove);
   fetch(`${API_BASE_URL}/api/collection/${idToRemove}`, {
     method: 'DELETE',
