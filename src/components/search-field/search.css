@@ -69,7 +69,6 @@ input[type="search"] {
 
 .search-list-item {
 	display: inline-block;
-	margin: 20px;
 }
 
 .title, .genre, .year {
