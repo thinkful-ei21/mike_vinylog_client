@@ -7,12 +7,13 @@ import { addToCollection } from '../../actions/album-actions';
 
 class SearchResults extends React.Component {
   
-
-
   addAlbum(album) {
-    console.log(album.type);
     const curUserId = this.props.currentUser._id;
     this.props.dispatch(addToCollection(album, curUserId));
+  }
+
+  wasAdded(e){
+    console.log(this.props);
   }
 
   renderResults() {
@@ -24,12 +25,17 @@ class SearchResults extends React.Component {
       return <strong>{this.props.error}</strong>;
     }
 
-  const album = this.props.albums.map((album, index) => {
-   if(album.type === 'album' || album.type === 'master') {
-      return (
-      <li className="album-search-results"
-        key={index}>
-        <div className="search-list-item">
+    if (this.props.added) {
+      return <h2>Added To Collection</h2>
+    };
+
+
+    const album = this.props.albums.map((album, index) => {
+    if(album.type === 'album' || album.type === 'master') {
+        return (
+        <li className="album-search-results"
+          key={index}>
+          <div className="search-list-item">
             <img className="search-item-image" src={album.thumb} alt={album.title}/>
             <div className="search-item-text">
               <span className="title">{album.title}</span><br/>
@@ -37,14 +43,21 @@ class SearchResults extends React.Component {
               <span className="year">{album.year}</span>
             </div>
           </div>
-          <button  
-          onClick={e => this.addAlbum(album)}
+          {/* {this.props.added ? 
+            console.log(this.props.added)
+            <h2>Added To Collection</h2>
+            : ""} */}
+          <button
+          onClick={e => {
+            this.addAlbum(album)
+            this.wasAdded(e)}
+          }
           className="add-button">
           ADD TO COLLECTION</button>
-        </li>
-      )
-   } 
-  });
+          </li>
+        )
+    } 
+    });
     return <ul className="album-search-list">{album}</ul>;
 }
 

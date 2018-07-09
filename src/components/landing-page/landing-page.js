@@ -7,9 +7,9 @@ import {BrowserRouter as Router, Route} from 'react-router-dom';
 const LandingPage = () => {
   return (
   <div className='landing'>
-      <Router>
+      {/* <Router>
         <Route exact path="/login" component={Login} />
-      </Router>
+      </Router> */}
   </div>
   )
 }

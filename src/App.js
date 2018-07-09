@@ -9,14 +9,17 @@ import PrivateRoute from './components/private-route';
 import Header from './components/header/header';
 import Collection from './components/collection/collection';
 
+import createHistory from 'history/createBrowserHistory';
+
+const history = createHistory();
 
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router history={history} forceRefresh={true}>
         <div className="App">
           <Route path="/" component={Header} />
-          <Route exact path="/" component={LandingPage} />
+          {/* <Route exact path="/" component={LandingPage} /> */}
           <Route exact path="/" component={Login} />
           <Route exact path="/login" component={Login} />
           <Route path="/sign-up" component={Register} />

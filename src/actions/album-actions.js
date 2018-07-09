@@ -10,13 +10,15 @@ export const addAlbumRequest = album => ({
 export const ADD_ALBUM_SUCCESS = 'ADD_ALBUM_SUCCESS';
 export const addAlbumSuccess = album => ({
     type: ADD_ALBUM_SUCCESS,
-    album
+    album,
+    added: true
 });
 
 export const ADD_ALBUM_ERROR = 'ADD_ALBUM_ERROR';
 export const addAlbumError = album => ({
     type: ADD_ALBUM_ERROR,
-    error: this.error
+    error: this.error,
+    added: false
 });
 
 export const REMOVE_ALBUM_REQUEST = 'REMOVE_ALBUM_REQUEST';
@@ -68,7 +70,6 @@ export const addToCollection = (album, user) => (dispatch, getState) => {
 
 export const removeFromCollection = albumId => (dispatch, getState) => {
   const state = getState();
-  console.log(albumId);
   fetch(`${API_BASE_URL}/api/collection/${albumId}`, {
     method: 'DELETE',
     headers: {
