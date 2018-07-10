@@ -3,7 +3,7 @@
 	text-align: center;
 	background: white;
 	width: 320px;
-	padding: 20px 40px;
+	padding: 20px 0;
 	border-radius: 3px;
 }
 
@@ -41,21 +41,15 @@ input {
 }
 
 .login-form > button {
-	width: 289px;
-	height: 45px;
-	padding: 10px;
-	background: rgb(19, 96, 102);
-	color: white;
-	font-size: 18px;
-	margin: 20px 0;
-	border-radius: 3px;
+    width: 289px;
+    height: 45px;
+    padding: 10px;
+    background: rgb(19, 96, 102);
+    color: white;
+    font-size: 18px;
+    margin: 20px 37px 0 0;
+    border-radius: 3px;
 }
-
-/* button:hover {
-	background: rgb(119, 151, 154);
-	color: black;
-	cursor: pointer;
-} */
 
 button:hover {
   background: black;
@@ -71,6 +65,16 @@ button:hover {
 }
 
 .signup-note {
-	margin: 0 auto;
+	margin: 0 auto 50px auto;
 	text-align: center;
+	
+}
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+	.login-form {
+		margin-left: 15px;
+	}
 }

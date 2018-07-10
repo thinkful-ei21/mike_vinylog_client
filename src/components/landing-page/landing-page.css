@@ -1,6 +1,5 @@
 .landing {
   height: 100%;
-  /* background-image: url('./assets/images/11938285_bfdb922eb6_o.jpg');background-position: center; */
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -45,5 +44,15 @@ button:hover {
   color: rgb(255, 234, 42);
   cursor: pointer;
   }
+
+
+/* Small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .landing-desc {
+    width: 298px;
+    margin-left: 10px;
+  }
+
+}
 
 

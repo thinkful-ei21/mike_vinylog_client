@@ -53,14 +53,6 @@ button:hover {
 	cursor: pointer;
 }
 
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-
-	button.logout-button {
-		margin-right: -8px;
-	}
-
-} 
 
 
 /* Small devices (phones, 600px and down) */
@@ -73,6 +65,10 @@ button:hover {
 		margin-left: 0;
 	}
 
+	button.logout-button {
+		margin-right: -8px;
+	}
+
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
@@ -82,3 +78,11 @@ button:hover {
 		margin: 10px 0;
 	}
 }
+
+/* Extra small devices (phones, 600px and up) */
+@media only screen and (max-width: 400px) {
+	header {
+		width:110%;
+	}
+
+} 

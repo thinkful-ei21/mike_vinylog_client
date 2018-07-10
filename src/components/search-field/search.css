@@ -54,7 +54,6 @@ input[type="search"] {
 	margin: 0 10%;
 	text-align: center;
 	background: white;
-	/* padding: 20px 40px; */
 }
 
 .album-search-list {
@@ -123,8 +122,14 @@ input[type="search"] {
 	}
 
 	.album-search-item {
-		width: 320px;
+		width: 280px;
 	}
+
+input[type="search"] {
+  width: 298px;
+	height: 40px;
+	margin-left: -10px;
+}
 
 	button.logout-button {
 		width: 30%;

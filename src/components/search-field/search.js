@@ -14,12 +14,10 @@ export class Search extends React.Component {
 
   goToCollection() {
     this.props.history.push('/collection');
-    return <Redirect to="/collection"></Redirect>;
+    // return <Redirect to="/collection"></Redirect>;
   }
 
   render() {
-    //const user =this.props.currentUser.username;
-
     let viewCollectionButton;
     if (this.props.loggedIn) {
       viewCollectionButton = (

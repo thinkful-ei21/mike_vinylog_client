@@ -65,7 +65,9 @@ export class RegisterForm extends React.Component {
           Sign Up
         </button>
       </form>
+      <div className="login-note">
         <Link to="/login">Return to Login page</Link>
+      </div>
     </div>
     );
   }

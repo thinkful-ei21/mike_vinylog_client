@@ -24,3 +24,13 @@ button.add-button:hover {
   color: rgb(255, 234, 42);
   cursor: pointer;
   }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    button.search-button {
+      width: 310px;
+      margin: 20px 0 20px -30px;
+    }
+    
+  }
