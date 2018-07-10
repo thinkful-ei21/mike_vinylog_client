@@ -2,6 +2,8 @@ import React from 'react';
 import './collection.css';
 import {Redirect} from 'react-router-dom';
 import {connect} from 'react-redux';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import { collection } from '../../actions/collection-actions';
 import { removeFromCollection } from '../../actions/album-actions';
 
@@ -27,7 +29,7 @@ class Collection extends React.Component {
       loading: true
     });
 
-     return this.props.dispatch(collection());
+    return this.props.dispatch(collection());
   }
 
   goToCollection() {
@@ -41,9 +43,16 @@ class Collection extends React.Component {
 
   newSearch() {
     this.props.history.push('/home');
-    console.log('newSearch clicked');
     return <Redirect to="/home"></Redirect>;
 
+  }
+
+
+  notify = () => {
+    return toast.info("ALBUM REMOVED", {
+    autoClose: 1500,
+    hideProgressBar: true
+    });
   }
 
   renderResults() {
@@ -64,9 +73,11 @@ class Collection extends React.Component {
         </div>
         <button
         onClick={e => {
-          this.removeAlbum(album)
-          this.goToCollection();
-        }}
+          this.notify();
+          this.removeAlbum(album);
+         // this.goToCollection()
+          }
+        }
         className="remove-button">
         REMOVE FROM COLLECTION</button>
       </li>
@@ -78,6 +89,7 @@ class Collection extends React.Component {
 
     return (
       <div>
+          <ToastContainer />
           <button onClick={() => this.newSearch()}
             className="new-search-button">
             New Search

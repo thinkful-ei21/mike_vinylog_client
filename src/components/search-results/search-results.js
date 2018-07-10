@@ -1,6 +1,8 @@
 import React from 'react';
 import './search-results.css';
 import {connect} from 'react-redux';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 import Spinner from 'react-spinkit';
 import {searchTitles } from '../../actions/search-actions';
 import { addToCollection } from '../../actions/album-actions';
@@ -12,8 +14,11 @@ class SearchResults extends React.Component {
     this.props.dispatch(addToCollection(album, curUserId));
   }
 
-  wasAdded(e){
-    console.log(this.props);
+  notify = () => {
+    return toast.info("ALBUM ADDED", {
+    autoClose: 2000,
+    hideProgressBar: true
+    });
   }
 
   renderResults() {
@@ -39,7 +44,11 @@ class SearchResults extends React.Component {
             </div>
           </div>
           <button
-          onClick={e => this.addAlbum(album)}
+          onClick={e => {
+            this.notify();
+            this.addAlbum(album);
+            }
+          }
           className="add-button">
           ADD TO COLLECTION</button>
           </li>
