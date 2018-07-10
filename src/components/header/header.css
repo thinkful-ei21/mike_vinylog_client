@@ -7,7 +7,7 @@ header {
   top: 0;
   right: 0;
 	text-align: center;
-	width: 101%
+	width: 106%
 }
 
 h2 {
@@ -58,7 +58,7 @@ button:hover {
 /* Small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 	header {
-		width:101%;
+		width: 95%;
 	}
 
 	h1 {
@@ -82,7 +82,7 @@ button:hover {
 /* Extra small devices (phones, 600px and up) */
 @media only screen and (max-width: 400px) {
 	header {
-		width:110%;
-	}
+		width: 102%;
+	} 
 
 } 
