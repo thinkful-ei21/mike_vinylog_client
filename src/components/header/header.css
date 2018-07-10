@@ -25,7 +25,7 @@ h1 {
 }
 
 button.logout-button {
-	width: 100px;
+	width: 95px;
 	height: 45px;
 	padding: 10px;
 	background: rgb(19, 96, 102);
@@ -51,4 +51,13 @@ button:hover {
 	color: black;
 	cursor: pointer;
 }
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+	button.logout-button {
+
+	}
+
+} 
 

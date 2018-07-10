@@ -101,12 +101,35 @@ input[type="search"] {
 	-o-border-radius: 3px;
 }
 
+
+/* Extra small devices (phones, 465 and down) */
+@media only screen and (min-width: 465) {
+
+	.albun-search-list {
+		display: grid;
+		grid-template-columns: 100%;
+		grid-gap: 20px;
+	}
+
+}
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 	.album-search-list {
 		display: grid;
 		grid-template-columns: 100%;
 		grid-gap: 20px;
+	}
+
+	button.logout-button {
+		width: 30%;
+		padding: 2% 0;
+		margin-right: 0;
+	}
+
+	button.view-collection-button {
+		width: 40%;
+	  padding: 2% 0;
 	}
 
 } 
@@ -121,7 +144,17 @@ input[type="search"] {
 
 } 
 
-/* Medium devices (landscape tablets, 768px and up) */
+/* Medium devices (landscape tablets, 860px and up) */
+@media only screen and (min-width: 860px) {
+	.album-search-list {
+		display: grid;
+		grid-template-columns: repeat(2, 1fr);
+		grid-gap: 20px;
+	}
+
+} 
+
+/* Large devices (landscape tablets, 1200px and up) */
 @media only screen and (min-width: 1200px) {
 	.album-search-list {
 		display: grid;
@@ -130,3 +163,4 @@ input[type="search"] {
 	}
 
 } 
+

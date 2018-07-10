@@ -19,12 +19,6 @@ button.add-button {
   border-radius: 3px;
 }
 
-/* button:hover {
-background: rgb(119, 151, 154);
-color: black;
-cursor: pointer;
-} */
-
 button.add-button:hover {
   background: black;
   color: rgb(255, 234, 42);
