@@ -1,7 +1,6 @@
 import React from 'react';
 import './header.css';
 import {connect} from 'react-redux';
-import {Redirect} from 'react-router-dom';
 import {clearAuth} from '../../actions/auth-actions';
 import {clearAuthToken} from '../../local-storage';
 
@@ -13,8 +12,6 @@ export class Header extends React.Component {
 
   goToCollection() {
     return this.props.history.push('/collection');
-    // return <Redirect to="/collection"></Redirect>;
-
   }
 
   render() {

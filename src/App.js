@@ -19,10 +19,10 @@ class App extends Component {
       <Router history={history} forceRefresh={true}>
         <div className="App">
           <Route path="/" component={Header} />
-          <Route exact path="/" component={LandingPage} />
           <Route exact path="/" component={Login} />
           <Route exact path="/login" component={Login} />
           <Route path="/sign-up" component={Register} />
+          <PrivateRoute exact path="/home" component={LandingPage} />
           <PrivateRoute exact path="/home" component={Dashboard} />
           <PrivateRoute path="/collection" component={Collection} />
         </div>

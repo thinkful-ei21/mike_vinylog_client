@@ -1,5 +1,4 @@
 .dashboard{
-  margin-top: 100px;
   text-align: center;
 }
 
@@ -7,6 +6,7 @@
   color: rgb(19, 96, 102);
   margin: 30px 0;
   margin-bottom: 40px;
+  text-align: center;
 }
 
 p {

@@ -1,28 +1,40 @@
 .landing {
   height: 100%;
-  background-image: url('./assets/images/11938285_bfdb922eb6_o.jpg');background-position: center;
+  /* background-image: url('./assets/images/11938285_bfdb922eb6_o.jpg');background-position: center; */
   background-repeat: no-repeat;
   background-size: cover;
 }
 
-h1 {
+.landing h1 {
   font-weight: 400;
-  text-align: center;
-  padding: 0 25%;
+  text-align: start;
+  padding: 0 2%;
+  color: black;
+  margin-top: 10px;
 }
 
-.landing-desc-left {
-  color: black;
-  text-align: justify;
-  margin-left: 25px;
+.landing-desc {
+  text-align: start;
+  margin-top: 40px;
+  color: white;
+  padding: 5%;
+  background-color: rgba(19, 96, 102, 0.76);
+  border-radius: 5px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -o-border-radius: 3px;
+}
+
+.left {
+  margin-top: 10px;
+  margin-left: 80px;
   float: left;
   width: 45%;
   clear: right;
 }
 
-.landing-desc-right {
-  color: black;
-  text-align: justify;
+.right {
   margin-right: 25px;
   float: right;
   width: 45%;
