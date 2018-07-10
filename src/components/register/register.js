@@ -21,14 +21,6 @@ export class RegisterForm extends React.Component {
   }
 
   render() {
-  let successMessage;
-  if (this.props.submitSucceeded) {
-    successMessage = (
-      <div className="message message-success">
-        You're all signed up!
-      </div>
-    );
-  }
 
   let errorMessage;
   if (this.props.error) {
@@ -44,7 +36,6 @@ export class RegisterForm extends React.Component {
         onSubmit={this.props.handleSubmit(values =>
           this.onSubmit(values)
         )}>
-        {successMessage}
         {errorMessage}
         <Field
           label="Username"

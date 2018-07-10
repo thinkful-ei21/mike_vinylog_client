@@ -1,9 +1,8 @@
 .landing {
-  /* padding: 15px; */
-  margin-top: 5px;
-  height: 60px;
-  color: rgb(0, 0, 0);
-  margin-bottom: 50px;
+  height: 100%;
+  background-image: url('./assets/images/11938285_bfdb922eb6_o.jpg');background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 h1 {

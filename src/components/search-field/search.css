@@ -18,6 +18,7 @@ img {
 
 button.add-button {
 	margin: 0;
+	position: relative;
 }
 
 button.logout-button, button.view-collection-button {
@@ -87,11 +88,13 @@ input[type="search"] {
 }
 
 .album-search-results {
+	height: fit-content;
 	padding: 0;
 	border: solid rgb(123, 123, 123) 1px;
 	margin: 25px;
 	text-align: start;
 	border-radius: 3px;
+	position: relative;
 	-webkit-border-radius: 3px;
 	-moz-border-radius: 3px;
 	-ms-border-radius: 3px;

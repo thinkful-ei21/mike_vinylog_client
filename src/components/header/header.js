@@ -45,11 +45,11 @@ export class Header extends React.Component {
         <h2>
           ... for music collectors to catalog their vinyl collection.
        </h2>
-        <span className="collection-button">
-          {viewCollectionButton}
-        </span>
         <span className="logout-button">
           {logOutButton}
+        </span>
+        <span className="collection-button">
+          {viewCollectionButton}
         </span>
       </header>
     )
