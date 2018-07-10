@@ -61,6 +61,7 @@ input[type="search"] {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-gap: 20px;
+	margin-left: -35px;
 }
 
 .search-list-item button {
@@ -105,7 +106,7 @@ input[type="search"] {
 /* Extra small devices (phones, 465 and down) */
 @media only screen and (min-width: 465) {
 
-	.albun-search-list {
+	.album-search-list {
 		display: grid;
 		grid-template-columns: 100%;
 		grid-gap: 20px;
@@ -119,6 +120,10 @@ input[type="search"] {
 		display: grid;
 		grid-template-columns: 100%;
 		grid-gap: 20px;
+	}
+
+	.album-search-item {
+		width: 320px;
 	}
 
 	button.logout-button {
