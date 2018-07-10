@@ -10,15 +10,13 @@ export const addAlbumRequest = album => ({
 export const ADD_ALBUM_SUCCESS = 'ADD_ALBUM_SUCCESS';
 export const addAlbumSuccess = album => ({
     type: ADD_ALBUM_SUCCESS,
-    album,
-    added: true
+    album
 });
 
 export const ADD_ALBUM_ERROR = 'ADD_ALBUM_ERROR';
 export const addAlbumError = album => ({
     type: ADD_ALBUM_ERROR,
-    error: this.error,
-    added: false
+    error: this.error
 });
 
 export const REMOVE_ALBUM_REQUEST = 'REMOVE_ALBUM_REQUEST';

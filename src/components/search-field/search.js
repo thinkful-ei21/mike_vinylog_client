@@ -15,7 +15,6 @@ export class Search extends React.Component {
   goToCollection() {
     this.props.history.push('/collection');
     return <Redirect to="/collection"></Redirect>;
-
   }
 
   render() {

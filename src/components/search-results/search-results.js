@@ -25,13 +25,8 @@ class SearchResults extends React.Component {
       return <strong>{this.props.error}</strong>;
     }
 
-    if (this.props.added) {
-      return <h2>Added To Collection</h2>
-    };
-
-
     const album = this.props.albums.map((album, index) => {
-    if(album.type === 'album' || album.type === 'master') {
+      if(album.type === 'album' || album.type === 'master') {
         return (
         <li className="album-search-results"
           key={index}>
@@ -43,20 +38,13 @@ class SearchResults extends React.Component {
               <span className="year">{album.year}</span>
             </div>
           </div>
-          {/* {this.props.added ? 
-            console.log(this.props.added)
-            <h2>Added To Collection</h2>
-            : ""} */}
           <button
-          onClick={e => {
-            this.addAlbum(album)
-            this.wasAdded(e)}
-          }
+          onClick={e => this.addAlbum(album)}
           className="add-button">
           ADD TO COLLECTION</button>
           </li>
         )
-    } 
+      } 
     });
     return <ul className="album-search-list">{album}</ul>;
 }

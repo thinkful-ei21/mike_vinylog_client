@@ -10,7 +10,6 @@ import {
 const intialState = {
   album: {},
   loading: false,
-  added: false,
   error: null,
 };
 
@@ -20,8 +19,7 @@ export function albumReducer(state=intialState, action) {
     return {
       ...state,
       album: {},
-      loading: true,
-      added: false
+      loading: true
     };
 
     case ADD_ALBUM_SUCCESS:
@@ -29,7 +27,6 @@ export function albumReducer(state=intialState, action) {
       ...state,
       album: action.album,
       loading: false,
-      added: action.added,
       error: null
     };
 

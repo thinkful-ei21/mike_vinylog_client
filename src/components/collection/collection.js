@@ -30,6 +30,11 @@ class Collection extends React.Component {
      return this.props.dispatch(collection());
   }
 
+  goToCollection() {
+    this.props.history.push('/collection');
+    return <Redirect to="/collection"></Redirect>;
+  }
+
   removeAlbum(album) {
     this.props.dispatch(removeFromCollection(album.id));
   }
@@ -58,7 +63,10 @@ class Collection extends React.Component {
           </div>
         </div>
         <button
-        onClick={e => this.removeAlbum(album)}
+        onClick={e => {
+          this.removeAlbum(album)
+          this.goToCollection();
+        }}
         className="remove-button">
         REMOVE FROM COLLECTION</button>
       </li>
