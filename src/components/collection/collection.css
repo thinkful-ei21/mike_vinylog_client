@@ -105,9 +105,8 @@ button:hover {
   margin-top: 10px;
 }
 
-
 /* Extra small devices (phones, 465 and down) */
-@media only screen and (max-width: 465) {
+@media only screen and (min-width: 465) {
 
 	.collection-results h1 {
 		padding-top: 60px;
@@ -123,8 +122,6 @@ button:hover {
 		float: left;
 		margin-top: -65px;
 	}
-
-
 }
 
 /* Small devices (phones, 600px and down) */
@@ -157,22 +154,21 @@ button:hover {
 
 } 
 
-
 /* Medium devices (landscape tablets, 860px and up) */
 @media only screen and (min-width: 860px) {
 	.collection-list {
 		display: grid;
-		grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 20px;
 	}
 
 } 
 
-/* Large devices (landscape tablets, 1200px and up) */
+/* Large devices (landscape tablets, 1600px and up) */
 @media only screen and (min-width: 1200px) {
 	.collection-list {
 		display: grid;
-		grid-template-columns: repeat(4, 1fr);
+		grid-template-columns: repeat(3, 1fr);
 		grid-gap: 20px;
 	}
 
