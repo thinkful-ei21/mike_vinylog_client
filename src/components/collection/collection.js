@@ -34,7 +34,7 @@ class Collection extends React.Component {
 
   goToCollection() {
     this.props.history.push('/collection');
-    return <Redirect to="/collection"></Redirect>;
+    // return <Redirect to="/collection"></Redirect>;
   }
 
   removeAlbum(album) {
@@ -75,7 +75,7 @@ class Collection extends React.Component {
         onClick={e => {
           this.notify();
           this.removeAlbum(album);
-         // this.goToCollection()
+          window.setTimeout(() => this.getCollection(), 2500)
           }
         }
         className="remove-button">

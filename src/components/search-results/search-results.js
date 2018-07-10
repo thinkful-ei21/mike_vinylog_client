@@ -1,6 +1,7 @@
 import React from 'react';
 import './search-results.css';
 import {connect} from 'react-redux';
+import { Redirect } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Spinner from 'react-spinkit';
@@ -8,6 +9,15 @@ import {searchTitles } from '../../actions/search-actions';
 import { addToCollection } from '../../actions/album-actions';
 
 class SearchResults extends React.Component {
+  constructor(props) {
+    super(props);
+
+    this.state = {
+      albums: [],
+      loading: false,
+      error: null
+    };
+  }
   
   addAlbum(album) {
     const curUserId = this.props.currentUser._id;
@@ -31,7 +41,8 @@ class SearchResults extends React.Component {
     }
 
     const album = this.props.albums.map((album, index) => {
-      if(album.type === 'album' || album.type === 'master') {
+      if(album.type === 'album' || album.type === 'master' 
+        && album.type !== 'artist' && album.type !== 'label') {
         return (
         <li className="album-search-results"
           key={index}>
@@ -67,6 +78,7 @@ e.preventDefault();
 
     return (
       <div className="search-form">
+        <ToastContainer />
         <form onSubmit={e => this.mainSearch(e)}>
           <input 
           type="search"
@@ -78,12 +90,12 @@ e.preventDefault();
         <div>
           {this.renderResults()}
         </div>
-        <div className="pagination">
+        {/* <div className="pagination">
           {this.props.pagination ? 
           console.log(this.props.pagination)
         //    <a href={this.props.pagination.next}>next</a>
             : ""}
-        </div>
+        </div> */}
       </div>
     )
   }
