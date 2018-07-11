@@ -51,7 +51,6 @@ render() {
                     this.onSubmit(values)
                 )}>
                 <h3>Login</h3>
-                {/* {successMessage} */}
                 {errorMessage}
                 <label htmlFor="username">Username</label>
                 <Field
