@@ -53,6 +53,18 @@ button:hover {
 	cursor: pointer;
 }
 
+/* Xtra small devices (landscape tablets, 354 and down) */
+@media only screen and (max-width: 354px) {
+	header {
+		width: 105%;
+	}
+
+	button.logout-button {
+		width: 31%;
+		font-size: 98%;
+	}
+
+}
 
 
 /* Small devices (phones, 600px and down) */
@@ -81,7 +93,7 @@ button:hover {
 
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
+/* Medium devices (landscape tablets, 768px and down) */
 @media only screen and (max-width: 768px) {
 
 	h1 {
@@ -94,7 +106,7 @@ button:hover {
 }
 
 
-/* Extra small devices (phones, 600px and up) */
+/* Extra small devices (phones, 400px and down) */
 @media only screen and (max-width: 400px) {
 	header {
 		width: 100%;
