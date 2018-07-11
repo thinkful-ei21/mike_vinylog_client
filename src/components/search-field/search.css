@@ -132,10 +132,11 @@ input[type="search"] {
 		display: grid;
 		grid-template-columns: 100%;
 		grid-gap: 20px;
+		margin-left: -60px;
 	}
 
 	.album-search-item {
-		width: 280px;
+		width: 289px;
 	}
 
 	button.logout-button {
@@ -149,7 +150,13 @@ input[type="search"] {
 	  padding: 2% 0;
 	}
 
-} 
+	input[type="search"] {
+		max-width: 110%;
+		width: 110%;
+		height: 40px;
+		margin-left: -20px;
+	} 
+}
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
