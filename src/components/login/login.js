@@ -44,7 +44,7 @@ render() {
         return <RegisterForm />
     } else {
        return (
-        <div>
+        <div aria-live="polite" aria-atomic="true" role="complementary">
             <form
                 className="login-form"
                 onSubmit={this.props.handleSubmit(values =>
@@ -52,20 +52,24 @@ render() {
                 )}>
                 <h3>Login</h3>
                 {errorMessage}
-                <label htmlFor="username">Username</label>
                 <Field
+                    label="Username"
                     component={Input}
                     type="text"
                     name="username"
                     id="username"
+                    aria-label="Username"
+                    aria-required="true"
                     validate={[required, nonEmpty]}
                 />
-                <label htmlFor="password">Password</label>
                 <Field
+                    label="Password"
                     component={Input}
                     type="password"
                     name="password"
                     id="password"
+                    aria-label="Password"
+                    aria-required="true"
                     validate={[required, nonEmpty]}
                 />
                 <button disabled={this.props.pristine || this.props.submitting}>

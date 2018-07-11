@@ -37,7 +37,7 @@ export class Header extends React.Component {
     }
 
     return (
-      <header>
+      <header role="banner" aria-live="polite" aria-atomic="true">
         <h1 className="header-title">Vinylog</h1>
         <h2>
           ... for music collectors to catalog their vinyl collection.

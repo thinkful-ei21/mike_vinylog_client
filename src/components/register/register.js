@@ -25,12 +25,12 @@ export class RegisterForm extends React.Component {
   let errorMessage;
   if (this.props.error) {
     errorMessage = (
-      <div className="message message-error">{this.props.error}</div>
+      <div className="message message-error"aria-live="polite" aria-atomic="true">{this.props.error}</div>
     );
   }
 
   return (
-    <div className="register-form">
+    <div className="register-form" aria-live="polite" aria-atomic="true" role="complementary">
       <h3>Sign Up</h3>
       <form 
         onSubmit={this.props.handleSubmit(values =>
@@ -42,6 +42,8 @@ export class RegisterForm extends React.Component {
           component={Input}
           type="text"
           name="username"
+          aria-label="Username"
+          aria-required="true"
           validate={[required, nonEmpty, isTrimmed]}
         />
         <Field
@@ -49,6 +51,8 @@ export class RegisterForm extends React.Component {
           component={Input}
           type="password"
           name="password"
+          aria-label="Password"
+          aria-required="true"
           validate={[required, nonEmpty, passwordLength, isTrimmed]}
         />
         <Field
@@ -56,6 +60,8 @@ export class RegisterForm extends React.Component {
           component={Input}
           type="password"
           name="passwordConfirm"
+          aria-label="Confirm Password"
+          aria-required="true"
           validate={[required, nonEmpty, matchesPassword]}
         />
         <button

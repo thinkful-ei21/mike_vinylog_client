@@ -7,7 +7,7 @@ import Search from '../search-field/search';
 const Dashboard = (props) => {
   const user =props.currentUser.username;
   return (
-  <div className='dashboard'>
+  <div className='dashboard' role="main" aria-live="polite" aria-atomic="true">
     <Search />
   </div>
   )

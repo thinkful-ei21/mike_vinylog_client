@@ -88,13 +88,13 @@ class Collection extends React.Component {
   render() {
 
     return (
-      <div>
+      <div aria-live="polite" aria-atomic="true" role="main">
           <ToastContainer />
           <button onClick={() => this.newSearch()}
             className="new-search-button">
             New Search
           </button>
-        <div className="collection-results">
+        <div className="collection-results" aria-live="polite" aria-atomic="true">
           <h1>My Collection</h1>
           {this.renderResults()}
         </div>

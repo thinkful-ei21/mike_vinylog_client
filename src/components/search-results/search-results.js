@@ -1,7 +1,6 @@
 import React from 'react';
 import './search-results.css';
 import {connect} from 'react-redux';
-import { Redirect } from 'react-router-dom'
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Spinner from 'react-spinkit';
@@ -41,7 +40,7 @@ class SearchResults extends React.Component {
     }
 
     const album = this.props.albums.map((album, index) => {
-      if(album.type === 'album' || album.type === 'master' 
+      if((album.type === 'album' || album.type === 'master') 
         && album.type !== 'artist' && album.type !== 'label') {
         return (
         <li className="album-search-results"
@@ -66,7 +65,7 @@ class SearchResults extends React.Component {
         )
       } 
     });
-    return <ul className="album-search-list">{album}</ul>;
+    return <ul className="album-search-list" role="complementary">{album}</ul>;
 }
 
 mainSearch(e){
@@ -77,12 +76,17 @@ e.preventDefault();
   render() {
 
     return (
-      <div className="search-form">
+      <div className="search-form" role="search" 
+        aria-live="polite" aria-atomic="true">
         <ToastContainer />
-        <form onSubmit={e => this.mainSearch(e)}>
+        <form 
+          onSubmit={e => this.mainSearch(e)}
+          aria-label=""
+          >
           <input 
           type="search"
           placeholder="artist name"
+          aria-label="search"
           ref={input => (this.input = input)} 
           />
           <button className="search-button">Search</button>
@@ -90,12 +94,6 @@ e.preventDefault();
         <div>
           {this.renderResults()}
         </div>
-        {/* <div className="pagination">
-          {this.props.pagination ? 
-          console.log(this.props.pagination)
-        //    <a href={this.props.pagination.next}>next</a>
-            : ""}
-        </div> */}
       </div>
     )
   }
