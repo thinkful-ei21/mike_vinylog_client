@@ -55,7 +55,7 @@ button:hover {
 
 .collection-list {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  /* grid-template-columns: repeat(3, 1fr); */
   grid-gap: 20px;
 }
 
@@ -188,30 +188,30 @@ button:hover {
 } 
 
 /* Medium devices (landscape tablets, 768px and up) */
-/* @media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px) {
 	.collection-list {
 		grid-template-columns: repeat(2, 1fr);
 		margin-left: 0;
 	}
 
-}  */
+} 
 
 /* Medium devices (landscape tablets, 860px and up) */
-/* @media only screen and (min-width: 860px) {
+@media only screen and (min-width: 860px) {
 	.collection-list {
 		display: grid;
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 20px;
 	}
 
-}  */
+} 
 
 /* Large devices (landscape tablets, 1200px and up) */
-/* @media only screen and (min-width: 1200px) { */
-	/* .collection-list {
+@media only screen and (min-width: 1200px) { 
+	.collection-list { 
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
 		grid-gap: 20px;
 	}
 
-}  */
+} 
