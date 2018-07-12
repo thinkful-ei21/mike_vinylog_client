@@ -7,7 +7,7 @@ import Spinner from 'react-spinkit';
 import {searchTitles } from '../../actions/search-actions';
 import { addToCollection } from '../../actions/album-actions';
 
-class SearchResults extends React.Component {
+export class SearchResults extends React.Component {
   constructor(props) {
     super(props);
 

@@ -1,30 +1,35 @@
-.landing {
-  height: 100%;
-  background-repeat: no-repeat;
-  background-size: cover;
-}
-
-.landing h1 {
+h1.welcome {
   font-weight: 400;
   text-align: start;
-  padding: 0 2%;
   color: black;
-  margin-top: 10px;
+  margin-top: -10px;
+  margin-left: -10px;
 }
 
-.landing-desc {
-  margin: 40px auto;
-  max-width: 500px;
-  width: 100%;
-  text-align: start;
-  color: white;
-  padding: 5%;
+.landing {
+  margin: 6px auto 6px 5px;
+  width: 300px;
+  padding: 2%;
   background-color: rgba(19, 96, 102, 0.76);
   border-radius: 5px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
+  display: inline-block;
+}
+.welcome {
+  position: relative;
+  top: 2;
+  width: 300px;
+}
+
+p.desc {
+  text-align: start;
+  color: white;
+  margin: 0 10px 0 -10px;
+  width: 300px;
+  padding: 2%;
 }
 
 .left {
@@ -46,7 +51,6 @@ button:hover {
   color: rgb(255, 234, 42);
   cursor: pointer;
   }
-
 
 /* Small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
