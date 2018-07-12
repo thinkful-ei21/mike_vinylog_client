@@ -62,7 +62,8 @@ button:hover {
   }
 
   p.desc{
-    margin: 0;
+    margin: 0 10px;
+    width: 240px;
   }
 
 }
