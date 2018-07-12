@@ -5,7 +5,11 @@ import { Collection } from '../components/collection/collection';
 
 describe.skip('<Collection/>', () => {
   it('Should render without crashing', () => {
-    shallow(<Collection collection={[]}/>);
+    shallow(<Collection collection={[
+
+
+    ]}/>);
+    console.log(wrapper.debug());
   });
 
 })

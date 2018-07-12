@@ -1,7 +1,6 @@
 import React from 'react';
 import './landing-page.css';
 import {connect} from 'react-redux';
-// import { closeWelcomeBox } from '../../actions/welcome-box-actions';
 
 
 export function LandingPage (props) {
@@ -18,8 +17,7 @@ export function LandingPage (props) {
 
  const mapStateToProps = state => ({
   currentUser: state.auth.currentUser,
-  loggedIn: state.auth.currentUser !== null,
-  // welcome: state.welcome.welcome,
+  loggedIn: state.auth.currentUser !== null
  })
 
 export default connect(mapStateToProps)(LandingPage);

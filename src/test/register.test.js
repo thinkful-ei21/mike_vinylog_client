@@ -21,10 +21,9 @@ describe.skip('<Register/>', () => {
     console.log(wrapper.debug());
   });
 
- /*  it('Should register a user when the form is submitted' () => {
+  it('Should register a user when the form is submitted', () => {
     const username = 'userOne';
     const password = 'password';
     const passwordConfirm = 'password';
-
-  }); */
+  }); 
 });
