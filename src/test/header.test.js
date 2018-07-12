@@ -8,9 +8,9 @@ describe.only('<Header/>', () => {
     shallow(<Header/>);
   });
 
-  it('Should render the header and login form', () => {
-    const wrapper = shallow(<Header />);
-    console.log(wrapper.debug());
-  });
+  // it('Should render the header and login form', () => {
+  //   const wrapper = shallow(<Header />);
+  //   console.log(wrapper.debug());
+  // });
 
 })

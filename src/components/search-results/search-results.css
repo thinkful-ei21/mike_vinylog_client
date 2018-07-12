@@ -107,17 +107,20 @@ input[type="search"] {
 		margin-left: -25px;
   }
   
-
   .search-form {
-    margin: 0;
-  }
+		margin: 5px 0 0 -20px;
+	}
+	
+	input[type="search"] {
+		width: 320px;
+	}
 
 } 
 
 /* Medium devices (landscape tablets, 600 and up) */
-@media only screen and (min-width: 600) {
+@media only screen and (min-width: 600px) {
 	.album-search-list {
-		grid-template-columns: repeat(2, 1fr);
+		grid-template-columns: 100%;
 		margin-left: 0;
   }
   
@@ -145,7 +148,7 @@ input[type="search"] {
   }
   
   .search-form {
-    margin: -120px 0 0 150px;
+    margin: -110px 0 0 350px;
   }
 
 } 

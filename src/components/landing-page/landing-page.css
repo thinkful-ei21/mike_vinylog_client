@@ -55,15 +55,36 @@ button:hover {
   cursor: pointer;
   }
 
+
+
 /* Small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   h1.welcome {
-    margin: 0;
+    margin: 0 0 0 -30px;;
   }
 
-  p.desc{
+  p.desc {
     margin: 0 10px;
     width: 240px;
   }
 
+  .landing {
+    width: 300px;
+    margin: 0 auto;
+  }
+
 }
+
+  /* Xtra small devices (phones, 600px and up) */
+  @media only screen and (min-width: 600px) {
+
+    h1.welcome {
+      margin: -10px 0 0 -30px;
+    }
+  
+    p.desc{
+      margin: 0 2px;
+      width: 240px;
+    }
+  }
+  

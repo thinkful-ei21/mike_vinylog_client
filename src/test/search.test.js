@@ -3,7 +3,7 @@ import {shallow} from 'enzyme';
 
 import Search from '../components/search-field/search';
 
-describe('<Search/>', () => {
+describe.skip('<Search/>', () => {
   it('Should render without crashing', () => {
     shallow(<Search/>);
   });
