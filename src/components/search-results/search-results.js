@@ -63,7 +63,7 @@ export class SearchResults extends React.Component {
           ADD TO COLLECTION</button>
           </li>
         )
-      } 
+      }
     });
     return <ul className="album-search-list" role="complementary">{album}</ul>;
 }

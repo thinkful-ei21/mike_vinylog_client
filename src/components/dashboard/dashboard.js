@@ -1,8 +1,6 @@
 import React from 'react';
 import './dashboard.css';
 import {connect} from 'react-redux';
-import {clearAuth} from '../../actions/auth-actions';
-import {clearAuthToken} from '../../local-storage';
 import SearchResults from '../search-results/search-results';
 
 export class Dashboard extends React.Component {

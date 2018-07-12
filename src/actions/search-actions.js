@@ -1,4 +1,4 @@
-import { searchQuery, searchReleases }  from '../fetch-albums';
+import { searchQuery }  from '../fetch-albums';
 
 export const SEARCH_ALBUMS_REQUEST = 'SEARCH_ALBUMS_REQUEST';
 export const searchAlbumsRequest = () => ({

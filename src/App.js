@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import './App.css';
 import {BrowserRouter as Router, Route} from 'react-router-dom';
 import LandingPage from './components/landing-page/landing-page';
 import Register from './components/register/register';
