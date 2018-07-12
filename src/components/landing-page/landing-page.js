@@ -22,7 +22,7 @@ export function LandingPage (props) {
           }
         }
         >&#9746;</span> */}
-      <p className="desc">Search by artist name, album title, or song title to retrieve a list of albums.<br />You can then add them to your collection.
+      <p className="desc">* Search by artist name, album title, or song title to retrieve a list of albums.<br /><br />* You can then add them to your collection.
       </p>
     </div>
   )

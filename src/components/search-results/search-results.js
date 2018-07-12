@@ -76,16 +76,17 @@ e.preventDefault();
   render() {
 
     return (
-      <div className="search-form" role="search" 
+      <div role="search" 
         aria-live="polite" aria-atomic="true">
         <ToastContainer />
         <form 
+          className="search-form" 
           onSubmit={e => this.mainSearch(e)}
           aria-label=""
           >
           <input 
           type="search"
-          placeholder="artist name"
+          placeholder="artist name, album title, song title"
           aria-label="search"
           ref={input => (this.input = input)} 
           />

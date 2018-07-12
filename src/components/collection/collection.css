@@ -168,7 +168,7 @@ button:hover {
 
 } 
 
-/* Xtra small devices (landscape tablets, 354 and down) */
+/* Xtra large devices (landscape tablets, 354 and down) */
 @media only screen and (max-width: 354px) {
 
 	button.new-search-button {

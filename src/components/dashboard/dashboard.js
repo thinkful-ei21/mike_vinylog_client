@@ -8,7 +8,6 @@ import SearchResults from '../search-results/search-results';
 export class Dashboard extends React.Component {
 
   render() {
-
     return (
       <div>
         <SearchResults />
