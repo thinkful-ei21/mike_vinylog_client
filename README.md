@@ -27,6 +27,7 @@ Website: [https://www.discogs.com/]
 Login Page iPhone
 
 ![Mobile Small Login Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-login_s.png?raw=true "Mobile Small  Login Page")
+
 Home Page iPhone
 
 ![Mobile Small Home Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-home_s.png?raw=true "Mobile Small  Home Page")
@@ -34,6 +35,7 @@ Home Page iPhone
 Search Page iPhone
 
 ![Mobile Small Search Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-search_s.png?raw=true "Mobile Small  Search Page")
+
 Collection Page iPhone
 
 ![Mobile Small Collection Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-collection_s.png?raw=true "Mobile Small  Collection Page")
