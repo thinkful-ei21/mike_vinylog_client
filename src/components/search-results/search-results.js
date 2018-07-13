@@ -39,10 +39,7 @@ export class SearchResults extends React.Component {
       return <strong>{this.props.error}</strong>;
     }
     
-
     const album = this.props.albums.map((album, index) => {
-      if((album.type === 'album' || album.type === 'master') 
-        && album.type !== 'artist' && album.type !== 'label') {
         return (
         <li className="album-search-results"
           key={index}>
@@ -64,7 +61,6 @@ export class SearchResults extends React.Component {
           ADD TO COLLECTION</button>
         </li>
         )
-       }
     });
     return <ul className="album-search-list" role="complementary">{album}</ul>;
 }
