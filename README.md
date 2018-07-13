@@ -19,10 +19,10 @@ Website: [https://www.discogs.com/]
 
 ### Screenshots
 
-![Mobile Login Page](https://github.com/thinkful-ei21/mike_vinylog_client/src/assets/images/mobile-login_s.png "Mobile Login Page")
+![Mobile Login Page](https://github.com/thinkful-ei21/mike_vinylog_client/tree/master/src/assets/images/mobile-login_s.png "Mobile Login Page")
 
-![Mobile Home Page](https://github.com/thinkful-ei21/mike_vinylog_client/src/assets/images/mobile-home_s.png "Mobile Home Page")
+![Mobile Home Page](https://github.com/thinkful-ei21/mike_vinylog_client/tree/master/src/assets/images/mobile-home_s.png "Mobile Home Page")
 
-![Mobile Search Page](https://github.com/thinkful-ei21/mike_vinylog_client/src/assets/images/mobile-search_s.png "Mobile Search Page")
+![Mobile Search Page](https://github.com/thinkful-ei21/mike_vinylog_client/tree/master/src/assets/images/mobile-search_s.png "Mobile Search Page")
 
-![Mobile Collection Page](https://github.com/thinkful-ei21/mike_vinylog_client/src/assets/images/mobile-collection_s.png "Mobile Collection Page")
+![Mobile Collection Page](https://github.com/thinkful-ei21/mike_vinylog_client/tree/master/src/assets/images/mobile-collection_s.png "Mobile Collection Page")
