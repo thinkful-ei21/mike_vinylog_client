@@ -59,6 +59,8 @@ button:hover {
 	text-align: center;
 }
 
+
+
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
 
@@ -67,8 +69,17 @@ button:hover {
 	}
 
 	.signup-note {
-		margin: 0 95px 0 0;
-		text-align: center;
+		margin: 0 175px 0 0;
 	}
 
 }
+
+/* Extra small devices (phones, 300px and up) */
+@media only screen and (min-width: 300px) {
+
+	.signup-note {
+		margin: 0 60px 0 0;
+	}
+
+}
+
