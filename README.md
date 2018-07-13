@@ -2,6 +2,9 @@
 
 Vinylog is web application that allows users to create a private and secure account to catalog their vinyl collection. By searching for an album title or artists name, users can retrieve a list of album release data including title, album image, genre, and release year. Users will be able to save results to their collection, view their collection, and remove them as well. 
 
+### Link to App 
+[https://vinylog.herokuapp.com/]
+
 ### Stack
 -	React
 -	Redux
@@ -35,3 +38,28 @@ Website: [https://www.discogs.com/]
 
 ### Key Parts of the Project
 
+#### Client
+
+- Redux actions can be found in src/actions
+- Redux reducers can be found in src/reducers
+  - CombinedReducers can be found in src/reducers/index.js
+- React components can be found in src/components
+  - Components
+    - Header
+    - Register
+    - Login
+    - Landing Page
+    - Dashboard
+    - Search Results
+    - Collection
+- Client validation can be found in src/validators
+- Redux store can be found in src/store
+- 3rd party API fetch can be found in src/fetch-albums.js
+
+#### Server
+
+- Repo can be found at [https://github.com/thinkful-ei21/mike_vinylog_server]
+- JWT authentication can be found in /auth/strategies
+- Models can be found in /models
+- Routes can be found in /routes
+- Tests can be found in /tests
