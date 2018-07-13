@@ -28,17 +28,17 @@ Website: [https://www.discogs.com/]
 
 #### Mobile Large
 
-![Mobile Large Login Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-m-login_s.png?raw=true "Mobile Large Login Page")
-![Mobile Large Home Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-m-home_s.png?raw=true "Mobile Large Home Page")
-![Mobile Large Search Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-m-search_s.png?raw=true "Mobile Large Search Page")
-![Mobile Large Collection Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-m-collection_s.png?raw=true "Mobile Large Collection Page")
+![Mobile Large Login Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-m-login.png?raw=true "Mobile Large Login Page")
+![Mobile Large Home Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-m-home.png?raw=true "Mobile Large Home Page")
+![Mobile Large Search Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-m-search.png?raw=true "Mobile Large Search Page")
+![Mobile Large Collection Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-m-collection.png?raw=true "Mobile Large Collection Page")
 
 #### Desktop
 
-![Desktop Login Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/desktop-login_s.png?raw=true "Desktop Login Page")
-![Desktop Home Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/desktop-home_s.png?raw=true "Desktop Home Page")
-![Desktop Search Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/desktop-search_s.png?raw=true "Desktop Search Page")
-![Desktop Collection Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/desktop-collection_s.png?raw=true "Desktop Collection Page")
+![Desktop Login Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/desktop-login.png?raw=true "Desktop Login Page")
+![Desktop Home Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/desktop-home.png?raw=true "Desktop Home Page")
+![Desktop Search Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/desktop-search.png?raw=true "Desktop Search Page")
+![Desktop Collection Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/desktop-collection.png?raw=true "Desktop Collection Page")
 
 
 ### Key Parts of the Project
