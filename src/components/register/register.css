@@ -7,6 +7,10 @@
 	border-radius: 3px;
 }
 
+.register-form h3 {
+	margin-right: 20px;
+}
+
 fieldset {
   border: none;
   margin: 0;
@@ -64,7 +68,7 @@ button:hover {
 }
 
 .login-note {
-	margin: 30px auto 50px -20px;
+	margin: 30px 10px 50px -20px;
 	text-align: center;
 }
 

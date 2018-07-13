@@ -86,7 +86,7 @@ e.preventDefault();
           >
           <input 
           type="search"
-          placeholder="artist name, album title, song title"
+          placeholder="album title, artist name"
           aria-label="search"
           ref={input => (this.input = input)} 
           />
