@@ -1,6 +1,6 @@
 # Vinylog
 
-Vinylog is web application that allows users to create a private and secure account to catalog their vinyl collection. By searching for an album title or artists name, users can retrieve a list of album release data including title, album image, genre, and release year. Users will be able to save results to their collection, view their collection, and remove them as well. 
+Vinylog is web application that allows users to create a private and secure account to catalog their vinyl collection so when record shopping, they can check to see if they already own that album. By searching for an album title or artists name, users can retrieve a list of album release data including title, album image, genre, and release year. Users will be able to save results to their collection, view their collection, and remove them as well. 
 
 ### Link to App 
 [https://vinylog.herokuapp.com/]
@@ -24,17 +24,17 @@ Website: [https://www.discogs.com/]
 
 #### Mobile Small
 
-![Mobile Small Login Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-login_s.png?raw=true "Mobile Small  Login Page")
-![Mobile Small Home Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-home_s.png?raw=true "Mobile Small  Home Page")
-![Mobile Small Search Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-search_s.png?raw=true "Mobile Small  Search Page")
-![Mobile Small Collection Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-collection_s.png?raw=true "Mobile Small  Collection Page")
+Login Page iPhone![Mobile Small Login Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-login_s.png?raw=true "Mobile Small  Login Page")
+Home Page iPhone![Mobile Small Home Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-home_s.png?raw=true "Mobile Small  Home Page")
+Search Page iPhone![Mobile Small Search Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-search_s.png?raw=true "Mobile Small  Search Page")
+Collection Page iPhone![Mobile Small Collection Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-collection_s.png?raw=true "Mobile Small  Collection Page")
 
 #### Mobile Large
 
-![Mobile Large Login Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-m-login.png?raw=true "Mobile Large Login Page")
-![Mobile Large Home Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-m-home.png?raw=true "Mobile Large Home Page")
-![Mobile Large Search Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-m-search.png?raw=true "Mobile Large Search Page")
-![Mobile Large Collection Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-m-collection.png?raw=true "Mobile Large Collection Page")
+Login Page iPad![Mobile Large Login Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-m-login.png?raw=true "Mobile Large Login Page")
+Home Page iPad![Mobile Large Home Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-m-home.png?raw=true "Mobile Large Home Page")
+Search Page iPad![Mobile Large Search Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-m-search.png?raw=true "Mobile Large Search Page")
+Collection Page iPad![Mobile Large Collection Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-m-collection.png?raw=true "Mobile Large Collection Page")
 
 ### Key Parts of the Project
 
