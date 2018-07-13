@@ -1,10 +1,12 @@
 h1.welcome {
   font-weight: 400;
   width: 280px;
+  height: fit-content;
   font-size: 30px;
   text-align: center;
   color: black;
-  margin: -18px 2px 0 -20px;
+  margin: -18px 2px 0 1%;
+  padding: 0 1%;
   word-wrap: break-word;
 }
 
@@ -60,7 +62,7 @@ button:hover {
 /* Small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
   h1.welcome {
-    margin: 0 0 0 -30px;;
+    margin: 0 10px 0 -10px;
   }
 
   p.desc {
@@ -74,11 +76,12 @@ button:hover {
 
 }
 
-  /* Xtra small devices (phones, 600px and up) */
+  /* Medium and large devices (phones, 600px and up) */
   @media only screen and (min-width: 600px) {
 
     h1.welcome {
-      margin: -10px 0 0 -30px;
+      margin: -10px 15px 0 -10px;
+      width: 95%;
     }
   
     p.desc{
