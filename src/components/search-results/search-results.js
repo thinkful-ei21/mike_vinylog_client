@@ -38,6 +38,7 @@ export class SearchResults extends React.Component {
     if (this.props.error) {
       return <strong>{this.props.error}</strong>;
     }
+    
 
     const album = this.props.albums.map((album, index) => {
       if((album.type === 'album' || album.type === 'master') 
@@ -61,9 +62,9 @@ export class SearchResults extends React.Component {
           }
           className="add-button">
           ADD TO COLLECTION</button>
-          </li>
+        </li>
         )
-      }
+       }
     });
     return <ul className="album-search-list" role="complementary">{album}</ul>;
 }
@@ -108,7 +109,8 @@ const mapStateToProps = state => {
     currentUser: user,
     loggedIn: user !== null,
     added: state.added,
-    error: state.error
+    error: state.error,
+    loading: state.loading
   };
 };
 
