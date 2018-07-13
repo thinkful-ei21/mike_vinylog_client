@@ -19,7 +19,27 @@ Website: [https://www.discogs.com/]
 
 ### Screenshots
 
-![Mobile Login Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-login_s.png?raw=true "Mobile Login Page")
-![Mobile Home Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-home_s.png?raw=true "Mobile Home Page")
-![Mobile Search Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-search_s.png?raw=true "Mobile Search Page")
-![Mobile Collection Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-collection_s.png?raw=true "Mobile Collection Page")
+#### Mobile Small
+
+![Mobile Small Login Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-login_s.png?raw=true "Mobile Small  Login Page")
+![Mobile Small Home Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-home_s.png?raw=true "Mobile Small  Home Page")
+![Mobile Small Search Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-search_s.png?raw=true "Mobile Small  Search Page")
+![Mobile Small Collection Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-collection_s.png?raw=true "Mobile Small  Collection Page")
+
+#### Mobile Large
+
+![Mobile Large Login Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-m-login_s.png?raw=true "Mobile Large Login Page")
+![Mobile Large Home Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-m-home_s.png?raw=true "Mobile Large Home Page")
+![Mobile Large Search Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-m-search_s.png?raw=true "Mobile Large Search Page")
+![Mobile Large Collection Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-m-collection_s.png?raw=true "Mobile Large Collection Page")
+
+#### Desktop
+
+![Desktop Login Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/desktop-login_s.png?raw=true "Desktop Login Page")
+![Desktop Home Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/desktop-home_s.png?raw=true "Desktop Home Page")
+![Desktop Search Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/desktop-search_s.png?raw=true "Desktop Search Page")
+![Desktop Collection Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/desktop-collection_s.png?raw=true "Desktop Collection Page")
+
+
+### Key Parts of the Project
+
