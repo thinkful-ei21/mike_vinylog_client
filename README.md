@@ -25,27 +25,35 @@ Website: [https://www.discogs.com/]
 #### Mobile Small
 
 Login Page iPhone
+
 ![Mobile Small Login Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-login_s.png?raw=true "Mobile Small  Login Page")
 Home Page iPhone
+
 ![Mobile Small Home Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-home_s.png?raw=true "Mobile Small  Home Page")
 
 Search Page iPhone
+
 ![Mobile Small Search Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-search_s.png?raw=true "Mobile Small  Search Page")
 Collection Page iPhone
+
 ![Mobile Small Collection Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-collection_s.png?raw=true "Mobile Small  Collection Page")
 
 #### Mobile Large
 
 Login Page iPad
+
 ![Mobile Large Login Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-m-login.png?raw=true "Mobile Large Login Page")
 
 Home Page iPad
+
 ![Mobile Large Home Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-m-home.png?raw=true "Mobile Large Home Page")
 
 Search Page iPad
+
 ![Mobile Large Search Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-m-search.png?raw=true "Mobile Large Search Page")
 
 Collection Page iPad
+
 ![Mobile Large Collection Page](https://github.com/thinkful-ei21/mike_vinylog_client/blob/master/src/assets/images/mobile-m-collection.png?raw=true "Mobile Large Collection Page")
 
 ### Key Parts of the Project
