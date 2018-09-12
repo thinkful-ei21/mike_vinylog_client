@@ -1,14 +1,10 @@
 .register-form {
-	margin: auto;
+	margin: 0 auto;
 	text-align: center;
 	background: white;
-	width: 320px;
+	width: 280px;
 	padding: 20px 0;
 	border-radius: 3px;
-}
-
-.register-form h3 {
-	margin-right: 20px;
 }
 
 fieldset {
@@ -37,7 +33,7 @@ label {
 
 input {
 	height: 5px;
-	width: 286px;
+	width: 280px;
 	padding: 15px;
 	border: 2px solid #ccc;
 	border-radius: 3px;
@@ -45,13 +41,13 @@ input {
 }
 
 button.signup-button {
-	width: 289px;
+	width: 280px;
 	height: 45px;
 	padding: 10px;
 	background: rgb(19, 96, 102);
 	color: white;
 	font-size: 18px;
-	margin: 20px 37px 0 0;
+	margin: 20px auto 0 0;
 	border-radius: 3px;
 }
 
@@ -68,7 +64,7 @@ button:hover {
 }
 
 .login-note {
-	margin: 30px 10px 50px -20px;
+	margin: 30px auto;
 	text-align: center;
 }
 
@@ -76,6 +72,7 @@ button:hover {
 @media only screen and (max-width: 600px) {
 
 	.register-form {
-		margin-left: 15px;
+		margin-left: auto;
+		width: 280px;
 	}
 }

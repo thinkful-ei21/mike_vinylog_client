@@ -20,13 +20,13 @@ h1.welcome {
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
-  display: inline-block;
+  /* display: inline-block; */
 }
-.welcome {
+/* .welcome {
   position: relative;
   top: 2;
   width: 300px;
-}
+} */
 
 p.desc {
   text-align: start;
@@ -71,7 +71,10 @@ button:hover {
   }
 
   .landing {
-    width: 300px;
+    /* width: 300px; */
+
+    margin: 70px auto 20px auto;
+    /* margin: 0 auto; */
   }
 
 }

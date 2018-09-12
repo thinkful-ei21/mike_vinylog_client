@@ -11,7 +11,7 @@ label {
 
 input {
 	height: 5px;
-	width: 286px;
+	width: 280px;
 	padding: 15px;
 	border: 2px solid #ccc;
 	border-radius: 3px;
@@ -19,7 +19,7 @@ input {
 }
 
 form > h3 {
-	margin: 0 20px 0 0;
+	margin: 0 auto;
 }
 
 button:hover {
@@ -32,19 +32,19 @@ button:hover {
 	margin: 0 auto;
 	text-align: center;
 	background: white;
-	width: 320px;
+	width: 280px;
 	padding: 20px 0;
 	border-radius: 3px;
 }
 
 .login-form > button {
-    width: 289px;
+    width: 280px;
     height: 45px;
     padding: 10px;
     background: rgb(19, 96, 102);
     color: white;
     font-size: 18px;
-    margin: 20px 37px 0 0;
+    margin: 20px auto 0 0;
     border-radius: 3px;
 }
 
@@ -55,60 +55,6 @@ button:hover {
 }
 
 .signup-note {
-	margin: 0 30px 0 0;
+	margin: 0 auto;
 	text-align: center;
 }
-
-/* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-
-	.login-form {
-		margin-left: 50px;
-	}
-
-	.signup-note {
-		margin: 0 175px 0 0;
-	}
-
-}
-
-
-/* Extra small devices (phones, 300px and up) */
-@media only screen and (min-width: 350px) and (max-width: 600px) {
-
-	.signup-note {
-		margin: 0 50px 30px 0;
-	}
-
-	.login-form {
-		width: 275px;
-		margin-left: 50px;
-	}
-
-	.login-form > button {
-		width: 285px;
-		margin-right: 20px;
-	}
-	
-}
-
-
-/* Extra small devices (phones, 300px and up) */
-@media only screen and (min-width: 300px) and (max-width: 350px) {
-
-	.signup-note {
-		margin: 0 60px 0 0;
-	}
-
-	.login-form {
-		width: 275px;
-		margin-left: 10px;
-	}
-
-	.login-form > button {
-		width: 285px;
-		margin-right: 20px;
-	}
-	
-}
-
