@@ -1,14 +1,12 @@
-
 ul {
 	padding: 0;
-	max-width: 600px;
   margin: 0 auto;
   width: 100%;
 }
 
 li {
 	list-style-type: none;
-	width: 320px;
+	width: 300px;
 }
 
 img {
@@ -19,7 +17,7 @@ button.add-to-folder-button,
 button.add-tags-button,
 button.remove-button { 
 	margin: 0;
-	width: 320px;
+	width: 300px;
 	height: 45px;
 	padding: 10px;
 	background: rgb(19, 96, 102);
@@ -52,11 +50,9 @@ button:hover {
   cursor: pointer;
   }
 
-
 .collection-list {
   display: grid;
-  /* grid-template-columns: repeat(3, 1fr); */
-  grid-gap: 20px;
+  grid-gap: 40px;
 }
 
 .collection-list-item button {
@@ -66,7 +62,6 @@ button:hover {
 
 .collection-list-item {
 	display: inline-block;
-	margin: 20px;
 }
 
 .title, .genre, .year {
@@ -88,7 +83,7 @@ button:hover {
 	height: fit-content;
 	padding: 0;
 	border: solid rgb(123, 123, 123) 1px;
-	margin: 25px;
+	margin: 25px auto;
 	text-align: start;
 	border-radius: 3px;
 	position: relative;
@@ -109,9 +104,12 @@ button:hover {
 
 /* Extra small devices (phones, 289 and up) */
 @media only screen and (min-width: 289) {
-
 	.collection-results h1 {
 		padding-top: 80px;
+	}
+
+	.collection-result {
+		margin: 25px auto 0 25px;
 	}
 
 	button.new-search-button {
@@ -128,9 +126,7 @@ button:hover {
 	}
 
 	.collection-list {
-		display: grid;
 		grid-template-columns: 100%;
-		grid-gap: 20px;
 	}
 
 	button.new-search-button {
@@ -154,6 +150,10 @@ button:hover {
 		margin-left: -25px;
 	}
 
+	.collection-result {
+		margin-left: 24px;
+	}
+
 	.collection-item {
 		width: 280px;
 	}
@@ -166,9 +166,16 @@ button:hover {
 	  padding: 2% 0;
 	}
 
-} 
+}
 
-/* Xtra large devices (landscape tablets, 354 and down) */
+/* Medium devices (landscape tablets, 768px and up) */
+/* @media only screen and (min-width: 768px) {
+	.collection-list {
+		grid-template-columns: repeat(2, 1fr);
+	}
+} */
+
+/* small devices (landscape tablets, 354 and down) */
 @media only screen and (max-width: 354px) {
 
 	button.new-search-button {
@@ -181,36 +188,29 @@ button:hover {
 @media only screen and (min-width: 768) {
 	.collection-list {
 		grid-template-columns: repeat(2, 1fr);
-		margin-left: 0;
 	}
 
 } 
 
-/* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
-	.collection-list {
-		grid-template-columns: repeat(2, 1fr);
-		margin-left: 0;
-	}
-
-} 
 
 /* Medium devices (landscape tablets, 860px and up) */
 @media only screen and (min-width: 860px) {
 	.collection-list {
-		display: grid;
 		grid-template-columns: repeat(2, 1fr);
-		grid-gap: 20px;
+		grid-gap: 40px;
 	}
 
 } 
 
-/* Large devices (landscape tablets, 1200px and up) */
-@media only screen and (min-width: 1200px) { 
+/* Large devices (landscape tablets, 1024px and up) */
+@media only screen and (min-width: 1024px) { 
 	.collection-list { 
 		display: grid;
 		grid-template-columns: repeat(3, 1fr);
-		grid-gap: 20px;
+		grid-gap: 25px;
+		margin: 0 auto;
+    width: 100%;
 	}
 
 } 
+
