@@ -52,6 +52,7 @@ button:hover {
 
 .collection-list {
   display: grid;
+	grid-template-columns: repeat(2, 1fr);
   grid-gap: 40px;
 }
 
@@ -136,7 +137,7 @@ button:hover {
 }
 
 /* Small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 660px) {
 
 	.collection-results h1 {
 		padding-top: 60px;
@@ -155,7 +156,7 @@ button:hover {
 	}
 
 	button.new-search-button {
-		float: left;
+		/* float: left; */
 		margin-top: -5px;
 		margin-left: 2px;
 		width: 34%;
