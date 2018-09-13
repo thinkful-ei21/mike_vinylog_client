@@ -78,7 +78,9 @@ export class LoginForm extends React.Component {
       </form>
       <div className="signup-note">
         <h3>Dont have an account yet?</h3>
-        <Link to="/sign-up">Sign Up</Link>
+        <Link to="/sign-up">Sign Up</Link><br />
+        <p className="test-user">Need a test account?<br />Username: test-user<br />Password: test-user
+        </p>
       </div>
     </div>
     );

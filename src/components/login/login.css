@@ -1,3 +1,8 @@
+p.test-user {
+	font-size: 20px;
+	margin: 0 auto;
+}
+
 form label, form input {
 	display: block;
 }
