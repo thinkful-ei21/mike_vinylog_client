@@ -41,7 +41,7 @@ button.new-search-button {
 
 button.remove-button {
 	position: relative;
-	bottom: 0;	
+	bottom: 0;
 }
 
 button:hover {
@@ -147,11 +147,7 @@ button:hover {
 		display: grid;
 		grid-template-columns: 100%;
 		grid-gap: 20px;
-		margin-left: -25px;
-	}
-
-	.collection-result {
-		margin-left: 24px;
+		margin-left: 0;
 	}
 
 	.collection-item {
@@ -168,13 +164,6 @@ button:hover {
 
 }
 
-/* Medium devices (landscape tablets, 768px and up) */
-/* @media only screen and (min-width: 768px) {
-	.collection-list {
-		grid-template-columns: repeat(2, 1fr);
-	}
-} */
-
 /* small devices (landscape tablets, 354 and down) */
 @media only screen and (max-width: 354px) {
 
@@ -185,7 +174,7 @@ button:hover {
 }
 
 /* Medium devices (landscape tablets, 600 and up) */
-@media only screen and (min-width: 768) {
+@media only screen and (min-width: 600) {
 	.collection-list {
 		grid-template-columns: repeat(2, 1fr);
 	}
@@ -194,7 +183,7 @@ button:hover {
 
 
 /* Medium devices (landscape tablets, 860px and up) */
-@media only screen and (min-width: 860px) {
+@media only screen and (min-width: 800px) {
 	.collection-list {
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 40px;
@@ -210,6 +199,15 @@ button:hover {
 		grid-gap: 25px;
 		margin: 0 auto;
     width: 100%;
+	}
+
+} 
+
+
+/* X-Large devices (landscape tablets, 1350px and up) */
+@media only screen and (min-width: 1350px) { 
+	.collection-list { 
+		grid-template-columns: repeat(4, 1fr);
 	}
 
 } 
