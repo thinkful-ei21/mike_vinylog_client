@@ -1,6 +1,8 @@
 import React from 'react';
 import './login.css';
 import {Field, reduxForm, focus} from 'redux-form';
+import {connect} from 'react-redux';
+import Spinner from 'react-spinkit';
 import Input from '../input';
 import {login} from '../../actions/auth-actions';
 import {required, nonEmpty} from '../../validators';
@@ -31,13 +33,18 @@ export class LoginForm extends React.Component {
   render() {
 
     let errorMessage;
-
     if (this.props.error) {
         errorMessage = (
         <div className="form-error" aria-live="polite">
             {this.props.error}
         </div>
         );
+    }
+
+    let spinner;
+    if (this.props.loading) {
+        console.log('loading spinner')
+        return spinner = (<Spinner spinnerName="circle" noFadeIn />)
     }
 
   if (this.state.signUp) {
@@ -52,6 +59,7 @@ export class LoginForm extends React.Component {
         )}>
         <h3>Login</h3>
         {errorMessage}
+        {spinner}
         <Field
           label="Username"
           component={Input}
@@ -87,6 +95,14 @@ export class LoginForm extends React.Component {
   }
   }
 }
+
+const mapStateToProps = state => ({
+  loading: state.loading,
+});
+
+LoginForm = connect(
+  mapStateToProps
+)(LoginForm)
 
 export default reduxForm({
   form: 'login',

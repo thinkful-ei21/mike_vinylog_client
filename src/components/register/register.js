@@ -1,6 +1,8 @@
 import React from 'react';
 import './register.css';
 import {reduxForm, Field, focus} from 'redux-form';
+import {connect} from 'react-redux';
+import Spinner from 'react-spinkit';
 import { Link } from 'react-router-dom';
 import {registerUser} from '../../actions/user-actions';
 import {login} from '../../actions/auth-actions';
@@ -29,6 +31,12 @@ export class RegisterForm extends React.Component {
     );
   }
 
+  let spinner;
+  if (this.props.loading) {
+      console.log('loading spinner')
+      return spinner = (<Spinner spinnerName="circle" noFadeIn />)
+  }
+
   return (
     <div className="register-form" aria-live="polite" aria-atomic="true" role="complementary">
       <h3>Sign Up</h3>
@@ -37,6 +45,7 @@ export class RegisterForm extends React.Component {
           this.onSubmit(values)
         )}>
         {errorMessage}
+        {spinner}
         <Field
           label="Username"
           component={Input}
@@ -78,6 +87,15 @@ export class RegisterForm extends React.Component {
     );
   }
 }
+
+
+const mapStateToProps = state => ({
+  loading: state.loading,
+});
+
+RegisterForm = connect(
+  mapStateToProps
+)(RegisterForm)
 
 export default reduxForm({
   form: 'register',
