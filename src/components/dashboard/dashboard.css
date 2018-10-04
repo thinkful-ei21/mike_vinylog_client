@@ -38,6 +38,10 @@ button.view-collection-button, button.search-button {
 	border-radius: 3px;
 }
 
+button.view-wishlist-button {
+	
+}
+
 button:hover {
   background: black;
   color: rgb(255, 234, 42);

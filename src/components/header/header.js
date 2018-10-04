@@ -14,6 +14,10 @@ export class Header extends React.Component {
     return this.props.history.push('/collection');
   }
 
+  goToWishlist() {
+    return this.props.history.push('./wishlist');
+  }
+
   render() {
 
     let logOutButton;
@@ -29,11 +33,23 @@ export class Header extends React.Component {
     let viewCollectionButton;
     if (this.props.loggedIn) {
       viewCollectionButton = (
-            <button 
+          <button 
             className="view-collection-button"
             onClick={() => this.goToCollection()}
-            >My Collection</button>
-        );
+            >My Collection
+          </button>
+      );
+    }
+
+    let viewWishlistButton;
+    if (this.props.loggedIn) {
+      viewWishlistButton = (
+        <button
+          className= "view-collection-button"
+          onClick={() => this.goToWishlist()}
+          >My Wishlist
+        </button>
+      )
     }
 
     return (
@@ -44,6 +60,9 @@ export class Header extends React.Component {
        </h2>
         <span className="logout-button">
           {logOutButton}
+        </span>
+        <span className="wishlist-button">
+          {viewWishlistButton}
         </span>
         <span className="collection-button">
           {viewCollectionButton}

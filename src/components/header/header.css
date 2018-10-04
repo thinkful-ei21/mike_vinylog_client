@@ -36,7 +36,7 @@ button.logout-button {
 	border-radius: 3px;
 }
 
-button.collection-button{
+button.collection-button, button.wishlist-button {
 	width: 100px;
 	height: 45px;
 	padding: 10px;
@@ -45,6 +45,10 @@ button.collection-button{
 	font-size: 18px;
 	margin: 20px 0;
 	border-radius: 3px;
+}
+
+button.wishlist-button {
+	
 }
 
 button:hover {

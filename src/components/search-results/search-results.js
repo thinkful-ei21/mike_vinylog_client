@@ -23,6 +23,12 @@ export class SearchResults extends React.Component {
     this.props.dispatch(addToCollection(album, curUserId));
   }
 
+  addAlbumToWishlist(album) {
+    console.log('adding to wishlist')
+    // const curUserId = this.props.currentUser._id;
+    // this.props.dispatch(addToWishList(album, curUSerId));
+  }
+
   notify = () => {
     return toast.info("ALBUM ADDED", {
     autoClose: 2000,
@@ -52,13 +58,23 @@ export class SearchResults extends React.Component {
             </div>
           </div>
           <button
-          onClick={e => {
-            this.notify();
-            this.addAlbum(album);
+            onClick={e => {
+              this.notify();
+              this.addAlbumToWishlist(album);
+              }
             }
-          }
-          className="add-button">
-          ADD TO COLLECTION</button>
+            className="add-button">
+            ADD TO WISHLIST
+          </button>
+          <button
+            onClick={e => {
+              this.notify();
+              this.addAlbum(album);
+              }
+            }
+            className="add-button">
+            ADD TO COLLECTION
+          </button>
         </li>
         )
     });
