@@ -86,3 +86,33 @@ export const removeFromCollection = albumId => (dispatch, getState) => {
   .then(album => dispatch(removeAlbumSuccess(album)))
   .catch(err => dispatch(removeAlbumError(err)))
 };
+
+export const addToWishlist = (album, user) => (dispatch, getState) => {
+  const state = getState();
+  console.log(album)
+  fetch(`${API_BASE_URL}/api/wishlist`, {
+    method: 'POST',
+    headers: {
+      Authorization: `Bearer ${state.auth.authToken}`,
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify({
+      title: album.title,
+      thumb: album.thumb,
+      genre: album.genre,
+      year: album.year,
+      userId: user
+    })
+  })
+  .then(res => {
+    if(!res.ok) {
+      return Promise.reject(res.statusText);
+    }
+    return res.json();
+  })
+  .then(data => {
+    return data})
+  .then(album => dispatch(addAlbumSuccess(album)))
+  .catch(err => dispatch(addAlbumError(err)))
+};
+

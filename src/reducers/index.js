@@ -3,6 +3,7 @@ import authReducer from './auth-reducer';
 import {reducer as formReducer} from 'redux-form';
 import { searchReducer } from './search-reducer';
 import { collectionReducer } from './collection-reducer';
+import { wishlistReducer } from './wishlist-reducer';
 import { albumReducer } from './album-reducer';
 
 const rootReducer = combineReducers(
@@ -11,6 +12,7 @@ const rootReducer = combineReducers(
     form: formReducer,
     search: searchReducer,
     collection: collectionReducer,
+    wishlist: wishlistReducer,
     album: albumReducer
   }
 );

@@ -7,6 +7,7 @@ import Dashboard from './components/dashboard/dashboard';
 import PrivateRoute from './components/private-route';
 import Header from './components/header/header';
 import Collection from './components/collection/collection';
+import Wishlist from './components/wishlist/wishlist';
 
 class App extends Component {
   render() {
@@ -20,6 +21,7 @@ class App extends Component {
             <PrivateRoute exact path="/home" component={LandingPage} />
             <PrivateRoute exact path="/home" component={Dashboard} />
             <PrivateRoute path="/collection" component={Collection} />
+            <PrivateRoute path="/wishlist" component={Wishlist} />
         </div>
       </BrowserRouter>
     );

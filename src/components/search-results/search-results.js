@@ -6,6 +6,7 @@ import 'react-toastify/dist/ReactToastify.css';
 import Spinner from 'react-spinkit';
 import {searchTitles } from '../../actions/search-actions';
 import { addToCollection } from '../../actions/album-actions';
+import { addToWishlist } from '../../actions/album-actions';
 
 export class SearchResults extends React.Component {
   constructor(props) {
@@ -25,8 +26,8 @@ export class SearchResults extends React.Component {
 
   addAlbumToWishlist(album) {
     console.log('adding to wishlist')
-    // const curUserId = this.props.currentUser._id;
-    // this.props.dispatch(addToWishList(album, curUSerId));
+    const curUserId = this.props.currentUser._id;
+    this.props.dispatch(addToWishlist(album, curUserId));
   }
 
   notify = () => {

@@ -1,43 +1,43 @@
 import React from 'react';
-import './collection.css';
+import '../collection/collection.css';
 import {Redirect} from 'react-router-dom';
 import {connect} from 'react-redux';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
-import { collection } from '../../actions/collection-actions';
-import { removeFromCollection } from '../../actions/album-actions';
+import { wishlist } from '../../actions/wishlist-actions';
+import { removeFromWishlist } from '../../actions/album-actions';
 
-class Collection extends React.Component {
+class Wishlist extends React.Component {
   constructor(props) {
     super(props);
 
     this.state = {
-        collection: [],
+        wishlist: [],
         loading: false,
         error: null
     };
   }
 
   componentDidMount() {
-    this.getCollection();
+    this.getWishlist();
   }
 
-  getCollection() {
+  getWishlist() {
     this.setState({
-      collection: [],
+      wishlist: [],
       error: null,
       loading: true
     });
 
-    return this.props.dispatch(collection());
+    return this.props.dispatch(wishlist());
   }
 
   goToCollection() {
     this.props.history.push('/collection');
   }
 
-  removeAlbum(album) {
-    this.props.dispatch(removeFromCollection(album.id));
+  removeFromWishlist(album) {
+    // this.props.dispatch(removeFromWishlist(album.id));
   }
 
   newSearch() {
@@ -59,7 +59,7 @@ class Collection extends React.Component {
       return <strong>{this.props.error}</strong>;
     }
 
-   const album = this.props.collection.map((album, index) => (
+   const album = this.props.wishlist.map((album, index) => (
     <li className="collection-result"
       key={index}>
       <div className="collection-item">
@@ -74,7 +74,7 @@ class Collection extends React.Component {
         onClick={e => {
           this.notify();
           this.removeAlbum(album);
-          window.setTimeout(() => this.getCollection(), 2500)
+          window.setTimeout(() => this.getWishlist(), 2500)
           }
         }
         className="remove-button">
@@ -94,7 +94,7 @@ class Collection extends React.Component {
             New Search
           </button>
         <div className="collection-results" aria-live="polite" aria-atomic="true">
-          <h1>My Collection</h1>
+          <h1>My Wishlist</h1>
           {this.renderResults()}
         </div>
       </div>
@@ -105,11 +105,11 @@ class Collection extends React.Component {
 const mapStateToProps = state => {
   const user = state.auth.currentUser;
   return {
-    collection: state.collection.collection,
+    wishlist: state.wishlist.wishlist,
     currentUser: user,
     loggedIn: user !== null,
     album: state.album.album
   };
 };
 
-export default connect(mapStateToProps)(Collection);
+export default connect(mapStateToProps)(Wishlist);
