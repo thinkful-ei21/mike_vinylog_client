@@ -22,7 +22,6 @@ export const viewWishlistError = error => ({
 export const wishlist = () => (dispatch, getState) => {
   const state = getState();
   dispatch(viewWishlistRequest());
-  console.log('get wishlist')
   return fetch(`${API_BASE_URL}/api/wishlist`, {
     method: 'GET',
     headers: {
@@ -34,14 +33,9 @@ export const wishlist = () => (dispatch, getState) => {
       if (!res.ok) {
         return Promise.reject(res.statusText);
       }
-
       return res.json();
     })
-    .then (data => console.log(data))
-      
-      // {
-      // return data;
-    // })
-    .then(collection => dispatch(viewWishlistSuccess(collection)))
+    .then(data => data)
+    .then(wishlist => dispatch(viewWishlistSuccess(wishlist)))
     .catch(err => dispatch(viewWishlistError(err)))
   };

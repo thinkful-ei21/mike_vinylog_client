@@ -1,7 +1,7 @@
 import React from 'react';
 import '../collection/collection.css';
-import {Redirect} from 'react-router-dom';
-import {connect} from 'react-redux';
+import { Redirect } from 'react-router-dom';
+import { connect } from 'react-redux';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { wishlist } from '../../actions/wishlist-actions';
@@ -43,12 +43,10 @@ class Wishlist extends React.Component {
   newSearch() {
     this.props.history.push('/home');
     return <Redirect to="/home"></Redirect>;
-
   }
 
-
   notify = () => {
-    return toast.info("ALBUM REMOVED", {
+    return toast.info("ALBUM REMOVED FROM WISHLIST", {
     autoClose: 1500,
     hideProgressBar: true
     });
@@ -58,10 +56,11 @@ class Wishlist extends React.Component {
     if (this.props.error) {
       return <strong>{this.props.error}</strong>;
     }
-
-   const album = this.props.wishlist.map((album, index) => (
+    console.log(this.props.wishlist)
+    const album = this.props.wishlist.map((album, index) => (
     <li className="collection-result"
       key={index}>
+      {console.log(album)}
       <div className="collection-item">
           <img className="collection-item-image" src={album.thumb} alt={album.title}/>
           <div className="collection-item-text">
@@ -78,7 +77,7 @@ class Wishlist extends React.Component {
           }
         }
         className="remove-button">
-        REMOVE FROM COLLECTION</button>
+        REMOVE FROM WISHLIST</button>
       </li>
   ));
   return  <ul className="collection-list"> {album} </ul>;
@@ -95,6 +94,7 @@ class Wishlist extends React.Component {
           </button>
         <div className="collection-results" aria-live="polite" aria-atomic="true">
           <h1>My Wishlist</h1>
+          {this.state.error}
           {this.renderResults()}
         </div>
       </div>

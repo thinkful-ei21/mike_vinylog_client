@@ -33,12 +33,9 @@ export const collection = () => (dispatch, getState) => {
       if (!res.ok) {
         return Promise.reject(res.statusText);
       }
-
       return res.json();
     })
-    .then (data => {
-      return data;
-    })
+    .then (data => data)
     .then(collection => dispatch(viewCollectionSuccess(collection)))
     .catch(err => dispatch(viewCollectionError(err)))
   };
