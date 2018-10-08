@@ -116,3 +116,24 @@ export const addToWishlist = (album, user) => (dispatch, getState) => {
   .catch(err => dispatch(addAlbumError(err)))
 };
 
+export const removeFromWishlist = albumId => (dispatch, getState) => {
+  const state = getState();
+  fetch(`${API_BASE_URL}/api/wishlist/${albumId}`, {
+    method: 'DELETE',
+    headers: {
+      Authorization: `Bearer ${state.auth.authToken}`,
+      'Content-Type': 'application/json'
+    }
+  })
+  .then(res => {
+    if(!res.ok) {
+      return Promise.reject(res.statusText);
+    }
+    return res;
+  })
+  .then(data => {
+    return data})
+  .then(album => dispatch(removeAlbumSuccess(album)))
+  .catch(err => dispatch(removeAlbumError(err)))
+};
+

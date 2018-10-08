@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { wishlist } from '../../actions/wishlist-actions';
-import { removeFromWishlist } from '../../actions/album-actions';
+import { removeFromWishlist, addToCollection  } from '../../actions/album-actions';
 
 class Wishlist extends React.Component {
   constructor(props) {
@@ -37,7 +37,13 @@ class Wishlist extends React.Component {
   }
 
   removeFromWishlist(album) {
-    // this.props.dispatch(removeFromWishlist(album.id));
+    this.props.dispatch(removeFromWishlist(album.id));
+  }
+
+  addAlbum(album) {
+    const curUserId = this.props.currentUser._id;
+    this.props.dispatch(addToCollection(album, curUserId));
+    this.props.dispatch(removeFromWishlist(album.id));
   }
 
   newSearch() {
@@ -45,8 +51,15 @@ class Wishlist extends React.Component {
     return <Redirect to="/home"></Redirect>;
   }
 
-  notify = () => {
+  notifyRemove = () => {
     return toast.info("ALBUM REMOVED FROM WISHLIST", {
+    autoClose: 1500,
+    hideProgressBar: true
+    });
+  }
+
+  notifyAdd = () => {
+    return toast.info("ALBUM ADDED TO COLLECTION", {
     autoClose: 1500,
     hideProgressBar: true
     });
@@ -56,11 +69,9 @@ class Wishlist extends React.Component {
     if (this.props.error) {
       return <strong>{this.props.error}</strong>;
     }
-    console.log(this.props.wishlist)
     const album = this.props.wishlist.map((album, index) => (
     <li className="collection-result"
       key={index}>
-      {console.log(album)}
       <div className="collection-item">
           <img className="collection-item-image" src={album.thumb} alt={album.title}/>
           <div className="collection-item-text">
@@ -70,14 +81,25 @@ class Wishlist extends React.Component {
           </div>
         </div>
         <button
-        onClick={e => {
-          this.notify();
-          this.removeAlbum(album);
-          window.setTimeout(() => this.getWishlist(), 2500)
+          onClick={e => {
+            this.notifyRemove();
+            this.removeAlbum(album);
+            window.setTimeout(() => this.getWishlist(), 2500)
+            }
           }
-        }
-        className="remove-button">
-        REMOVE FROM WISHLIST</button>
+          className="remove-button">
+          REMOVE FROM WISHLIST
+        </button>
+        <button
+          onClick={e => {
+            this.notifyAdd();
+            this.addAlbum(album);
+            window.setTimeout(() => this.getWishlist(), 2500)
+            }
+          }
+          className="add-button">
+          ADD TO COLLECTION
+        </button>
       </li>
   ));
   return  <ul className="collection-list"> {album} </ul>;

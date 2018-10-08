@@ -57,7 +57,6 @@ class Collection extends React.Component {
     if (this.props.error) {
       return <strong>{this.props.error}</strong>;
     }
-    console.log(this.props.collection)
     const album = this.props.collection.map((album, index) => (
     <li className="collection-result"
       key={index}>
@@ -70,14 +69,15 @@ class Collection extends React.Component {
           </div>
         </div>
         <button
-        onClick={e => {
-          this.notify();
-          this.removeAlbum(album);
-          window.setTimeout(() => this.getCollection(), 2500)
+          onClick={e => {
+            this.notify();
+            this.removeAlbum(album);
+            window.setTimeout(() => this.getCollection(), 2500)
+            }
           }
-        }
-        className="remove-button">
-        REMOVE FROM COLLECTION</button>
+          className="remove-button">
+          REMOVE FROM COLLECTION
+        </button>
       </li>
   ));
   return  <ul className="collection-list"> {album} </ul>;
