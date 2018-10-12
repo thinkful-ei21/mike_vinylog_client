@@ -5,7 +5,7 @@ import { connect } from 'react-redux';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { wishlist } from '../../actions/wishlist-actions';
-import { removeFromWishlist, addToCollection  } from '../../actions/album-actions';
+import { removeFromWishlist, addToCollection } from '../../actions/album-actions';
 
 class Wishlist extends React.Component {
   constructor(props) {
@@ -83,7 +83,7 @@ class Wishlist extends React.Component {
         <button
           onClick={e => {
             this.notifyRemove();
-            this.removeAlbum(album);
+            this.removeFromWishlist(album);
             window.setTimeout(() => this.getWishlist(), 2500)
             }
           }
