@@ -16,7 +16,7 @@ export const addAlbumSuccess = album => ({
 export const ADD_ALBUM_ERROR = 'ADD_ALBUM_ERROR';
 export const addAlbumError = album => ({
     type: ADD_ALBUM_ERROR,
-    error: this.error
+    error: "There was an error adding album"
 });
 
 export const REMOVE_ALBUM_REQUEST = 'REMOVE_ALBUM_REQUEST';
@@ -35,7 +35,7 @@ export const removeAlbumSuccess = album => ({
 export const REMOVE_ALBUM_ERROR = 'REMOVE_ALBUM_ERROR';
 export const removeAlbumError = album => ({
     type: REMOVE_ALBUM_ERROR,
-    error: this.error
+    error: "There was an error removing album"
 });
 
 export const addToCollection = (album, user) => (dispatch, getState) => {

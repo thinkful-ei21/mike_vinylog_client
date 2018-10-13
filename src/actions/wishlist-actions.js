@@ -16,7 +16,7 @@ export const viewWishlistSuccess = wishlist => ({
 export const VIEW_WISHLIST_ERROR = 'VIEW_WISHLIST_ERROR';
 export const viewWishlistError = error => ({
     type: VIEW_WISHLIST_ERROR,
-    error
+    error: "There was an error getting wishlist"
 });
 
 export const wishlist = () => (dispatch, getState) => {
