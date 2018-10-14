@@ -4,7 +4,7 @@ h1.welcome {
   height: fit-content;
   font-size: 30px;
   text-align: center;
-  /* color: black; */
+  color: rgb(46, 148, 155);
   /* margin: -18px 2px 0 1%; */
   padding: 0 1%;
   word-wrap: break-word;
@@ -14,7 +14,7 @@ h1.welcome {
   margin: 6px auto 6px 5px;
   width: 280px;
   padding: 2%;
-  background-color: rgb(19, 96, 102);
+  /* background-color: rgb(19, 96, 102); */
   border-radius: 5px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
@@ -30,9 +30,9 @@ h1.welcome {
 
 p.desc {
   text-align: start;
-  color: white;
+  color: rgb(46, 148, 155);
   margin: 15px 2px 0 -16px;
-  width: 260px;
+  width: 600px;
   padding: 2%;
   font-size: 20px;
 }
@@ -52,8 +52,8 @@ p.desc {
 }
 
 button:hover {
-  background: black;
-  color: rgb(255, 234, 42);
+  background: #111;
+	color: rgb(46, 148, 155);
   cursor: pointer;
   }
 

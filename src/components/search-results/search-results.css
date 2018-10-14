@@ -10,25 +10,29 @@ button.search-button {
 }
 
 button.add-button {
-  width: 300px;
+  width: 292px;
   height: 45px;
   padding: 10px;
   background: rgb(19, 96, 102);
   color: white;
   font-size: 18px;
-  border-radius: 3px;
+  border-radius: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -ms-border-radius: 0;
+  -o-border-radius: 0;
 }
 
 button.add-button:hover {
-  background: black;
-  color: rgb(255, 234, 42);
+  background: #111;
+	color: rgb(46, 148, 155);
   cursor: pointer;
   }
 
 .search-form {
   margin: 10px 100px 0 100px;
 	text-align: center;
-  background: white;
+  /* background: white; */
 }
 
 input[type="search"] {
@@ -76,7 +80,7 @@ input[type="search"] {
 .album-search-results {
 	height: fit-content;
 	padding: 0;
-	border: solid rgb(123, 123, 123) 1px;
+	border: solid #ccc;
 	margin: 25px auto;
 	text-align: start;
 	border-radius: 3px;
@@ -85,6 +89,7 @@ input[type="search"] {
 	-moz-border-radius: 3px;
 	-ms-border-radius: 3px;
 	-o-border-radius: 3px;
+	background-color: azure;
 }
 
 

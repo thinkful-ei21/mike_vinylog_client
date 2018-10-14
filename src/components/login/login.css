@@ -30,15 +30,16 @@ form > h3 {
 }
 
 button:hover {
-  background: black;
-  color: rgb(255, 234, 42);
-  cursor: pointer;
+  background: #111;
+	color: rgb(46, 148, 155);
+	cursor: pointer;
+	border-color: rgb(255, 234, 42);
   }
 
 .login-form {
 	margin: 0 auto;
 	text-align: center;
-	background: white;
+	color: #ccc;
 	width: 280px;
 	padding: 20px 0;
 	border-radius: 3px;
@@ -56,7 +57,7 @@ button:hover {
 }
 
 .login, .login a {
-	color: white;
+	color: #ccc;
 	text-align: center;
 	font-size: 15px;
 }
@@ -64,4 +65,13 @@ button:hover {
 .signup-note {
 	margin: -20px 0 auto;
 	text-align: center;
+	color: rgb(19, 96, 102);
+}
+
+.test-user-title {
+	color: #ccc;
+}
+
+.test-user-credential {
+	color: rgb(255, 234, 42);
 }

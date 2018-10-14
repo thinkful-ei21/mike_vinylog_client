@@ -97,7 +97,7 @@ class Wishlist extends React.Component {
             window.setTimeout(() => this.getWishlist(), 2500)
             }
           }
-          className="add-button">
+          className="remove-button">
           ADD TO COLLECTION
         </button>
       </li>

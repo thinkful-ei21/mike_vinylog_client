@@ -2,6 +2,13 @@
   box-sizing: border-box;
 }
 
+#root {
+  background-color: #111;
+  min-height: 98vh;
+  overflow-x: hidden;
+  scroll-behavior: unset;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -9,7 +16,7 @@ body {
 }
 
 button:hover {
-  background: black;
-  color: rgb(255, 234, 42);
+  background: #111;
   cursor: pointer;
+	color: rgb(46, 148, 155);
   }

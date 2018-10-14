@@ -1,5 +1,5 @@
 header {
-  background-color: #222;
+  background-color: #111;
   padding: 15px;
   height: fit-content;
   color: rgb(0, 0, 0);
@@ -29,31 +29,27 @@ button.logout-button {
 	width: 95px;
 	height: 45px;
 	padding: 10px;
-	background: rgb(19, 96, 102);
+	background: transparent;
 	color: white;
 	font-size: 18px;
 	margin: 20px 0;
 	border-radius: 3px;
+	border: none;
 }
 
-button.collection-button, button.wishlist-button {
-	width: 100px;
+button.view-collection-button, button.view-wishlist-button {
 	height: 45px;
 	padding: 10px;
-	background: rgb(19, 96, 102);
+	background: transparent;
 	color: white;
 	font-size: 18px;
 	margin: 20px 0;
-	border-radius: 3px;
-}
-
-button.wishlist-button {
-	
+	border: none;
 }
 
 button:hover {
-	background: rgb(119, 151, 154);
-	color: black;
+	background: #111;
+	color: rgb(46, 148, 155);
 	cursor: pointer;
 }
 

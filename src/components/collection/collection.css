@@ -15,15 +15,21 @@ img {
 
 button.add-to-folder-button,
 button.add-tags-button,
-button.remove-button { 
-	margin: 0;
-	width: 300px;
+button.remove-button,
+button.add-button {
+	margin: 1px;
+	width: 292px;
 	height: 45px;
 	padding: 10px;
 	background: rgb(19, 96, 102);
 	color: white;
+	border: none;
 	font-size: 18px;
-	border-radius: 3px;
+	border-radius: 0;
+	-webkit-border-radius: 0;
+	-moz-border-radius: 0;
+	-ms-border-radius: 0;
+	-o-border-radius: 0;
 }
 
 button.new-search-button {
@@ -33,10 +39,10 @@ button.new-search-button {
 	clear: left;
 	height: 45px;
 	padding: 10px;
-	background: rgb(19, 96, 102);
+	background: transparent;
 	color: white;
 	font-size: 18px;
-	border-radius: 3px;
+	border: none;
 }
 
 button.remove-button {
@@ -45,9 +51,11 @@ button.remove-button {
 }
 
 button:hover {
-  background: black;
-  color: rgb(255, 234, 42);
-  cursor: pointer;
+  background: #111;
+	/* color: rgb(255, 234, 42);*/
+	color: rgb(46, 148, 155);
+	cursor: pointer;
+	border-color: rgb(19, 96, 102);
   }
 
 .collection-list {
@@ -78,12 +86,13 @@ button:hover {
 	width: 40%;
 	margin-left: 175px;
 	padding-top: 5px;
+	overflow-wrap: break-word;
 }
 
 .collection-result {
 	height: fit-content;
 	padding: 0;
-	border: solid rgb(123, 123, 123) 1px;
+	border: solid rgb(19, 96, 102);
 	margin: 25px auto;
 	text-align: start;
 	border-radius: 3px;
@@ -92,6 +101,7 @@ button:hover {
 	-moz-border-radius: 3px;
 	-ms-border-radius: 3px;
 	-o-border-radius: 3px;
+	background-color: azure;
 }
 
 .collection-results h1 {

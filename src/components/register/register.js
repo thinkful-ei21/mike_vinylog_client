@@ -81,7 +81,7 @@ export class RegisterForm extends React.Component {
         </button>
       </form>
       <div className="login-note">
-        <Link to="/login">Return to Login page</Link>
+        <Link style={{color:"#ccc"}} to="/login">Return to Login page</Link>
       </div>
     </div>
     );

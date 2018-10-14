@@ -104,7 +104,7 @@ e.preventDefault();
           aria-label="search"
           ref={input => (this.input = input)} 
           />
-          <button className="search-button">Search</button>
+          <button className="search-button">Search For Album or Artist</button>
         </form>
         <div>
           {this.renderResults()}

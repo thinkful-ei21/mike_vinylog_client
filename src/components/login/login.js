@@ -51,7 +51,9 @@ export class LoginForm extends React.Component {
     return <RegisterForm />
   } else {
     return (
-      <div className="form-div" aria-live="polite" aria-atomic="true" role="complementary">
+      <div className="form-div" aria-live="polite" aria-atomic="true" role="complementary"> 
+      <p className="desc">Search by album title or artist name to retrieve a list of albums. You can then add them to your collection.
+      </p>
         <form
           className="login-form"
           onSubmit={this.props.handleSubmit(values =>
@@ -86,8 +88,12 @@ export class LoginForm extends React.Component {
       </form>
       <div className="signup-note">
         <h3>Dont have an account yet?</h3>
-        <Link to="/sign-up">Sign Up</Link><br />
-        <p className="test-user">Need a test account?<br />Username: test-user<br />Password: test-user
+        <Link style={{color:"#ccc"}} to="/sign-up" className="sign-up-link">Sign Up</Link><br />
+        <p className="test-user">Need a test account?<br />
+        <span className="test-user-title">Username: </span>
+        <span className="test-user-credential">test-user</span><br />
+        <span className="test-user-title">Password: </span>
+        <span className="test-user-credential">test-user</span>
         </p>
       </div>
     </div>

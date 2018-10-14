@@ -1,10 +1,10 @@
 .register-form {
 	margin: 0 auto;
 	text-align: center;
-	background: white;
 	width: 280px;
 	padding: 20px 0;
 	border-radius: 3px;
+	color: #ccc;
 }
 
 fieldset {
@@ -52,13 +52,13 @@ button.signup-button {
 }
 
 button:hover {
-  background: black;
-  color: rgb(255, 234, 42);
+  background: #111;
+	color: rgb(46, 148, 155);
   cursor: pointer;
   }
 
 .login, .login a {
-	color: white;
+	color: #ccc;
 	text-align: center;
 	font-size: 15px;
 }
@@ -66,6 +66,7 @@ button:hover {
 .login-note {
 	margin: 30px auto;
 	text-align: center;
+	color: rgb(19, 96, 102)
 }
 
 /* Extra small devices (phones, 600px and down) */
