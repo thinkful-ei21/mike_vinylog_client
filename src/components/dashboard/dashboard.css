@@ -1,5 +1,6 @@
 h1 {
 	margin-top: 90px;
+  color: rgb(46, 148, 155);
 }
 
 ul {
@@ -22,13 +23,13 @@ button.add-button {
 	position: relative;
 }
 
-button.logout-button, button.view-collection-button {
+/* button.logout-button, button.view-collection-button {
 	float: right;
 	margin-right: 0px;
-	width: 175px;
 }
 
-button.view-collection-button, button.search-button {
+button.view-collection-button, 
+button.search-button {
 	height: 45px;
 	padding: 10px;
 	background: rgb(19, 96, 102);
@@ -36,7 +37,7 @@ button.view-collection-button, button.search-button {
 	font-size: 18px;
 	margin: 20px 0;
 	border-radius: 3px;
-}
+} */
 
 button:hover {
   background: #111;

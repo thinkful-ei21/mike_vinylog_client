@@ -52,8 +52,8 @@ export class LoginForm extends React.Component {
   } else {
     return (
       <div className="form-div" aria-live="polite" aria-atomic="true" role="complementary"> 
-      <p className="desc">Search by album title or artist name to retrieve a list of albums. You can then add them to your collection.
-      </p>
+      {/* <p className="desc">Search by album title or artist name to retrieve a list of albums. You can then add them to your collection.
+      </p> */}
         <form
           className="login-form"
           onSubmit={this.props.handleSubmit(values =>

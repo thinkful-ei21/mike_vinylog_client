@@ -1,6 +1,5 @@
 import React from 'react';
 import '../collection/collection.css';
-import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -44,11 +43,6 @@ class Wishlist extends React.Component {
     const curUserId = this.props.currentUser._id;
     this.props.dispatch(addToCollection(album, curUserId));
     this.props.dispatch(removeFromWishlist(album.id));
-  }
-
-  newSearch() {
-    this.props.history.push('/home');
-    return <Redirect to="/home"></Redirect>;
   }
 
   notifyRemove = () => {
@@ -109,13 +103,8 @@ class Wishlist extends React.Component {
 
     return (
       <div aria-live="polite" aria-atomic="true" role="main">
-          <ToastContainer />
-          <button onClick={() => this.newSearch()}
-            className="new-search-button">
-            New Search
-          </button>
+        <ToastContainer />
         <div className="collection-results" aria-live="polite" aria-atomic="true">
-          <h1>My Wishlist</h1>
           {this.state.error}
           {this.renderResults()}
         </div>

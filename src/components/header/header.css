@@ -25,19 +25,14 @@ h1 {
 	padding: 0;
 }
 
-button.logout-button {
-	width: 95px;
-	height: 45px;
-	padding: 10px;
-	background: transparent;
-	color: white;
-	font-size: 18px;
-	margin: 20px 0;
-	border-radius: 3px;
-	border: none;
+nav {
+	margin-top: -130px;
+	margin-right: 40px;
 }
 
+button.logout-button,
 button.view-collection-button, button.view-wishlist-button {
+	float: right;
 	height: 45px;
 	padding: 10px;
 	background: transparent;

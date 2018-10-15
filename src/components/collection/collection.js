@@ -40,12 +40,6 @@ class Collection extends React.Component {
     this.props.dispatch(removeFromCollection(album.id));
   }
 
-  newSearch() {
-    this.props.history.push('/home');
-    return <Redirect to="/home"></Redirect>;
-  }
-
-
   notify = () => {
     return toast.info("ALBUM REMOVED FROM COLLECTION", {
     autoClose: 1500,
@@ -87,13 +81,8 @@ class Collection extends React.Component {
 
     return (
       <div aria-live="polite" aria-atomic="true" role="main">
-          <ToastContainer />
-          <button onClick={() => this.newSearch()}
-            className="new-search-button">
-            New Search
-          </button>
+        <ToastContainer />
         <div className="collection-results" aria-live="polite" aria-atomic="true">
-          <h1>My Collection</h1>
           {this.state.error}
           {this.renderResults()}
         </div>

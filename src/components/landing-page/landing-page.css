@@ -5,28 +5,19 @@ h1.welcome {
   font-size: 30px;
   text-align: center;
   color: rgb(46, 148, 155);
-  /* margin: -18px 2px 0 1%; */
   padding: 0 1%;
   word-wrap: break-word;
 }
 
 .landing {
   margin: 6px auto 6px 5px;
-  width: 280px;
   padding: 2%;
-  /* background-color: rgb(19, 96, 102); */
   border-radius: 5px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
-  /* display: inline-block; */
 }
-/* .welcome {
-  position: relative;
-  top: 2;
-  width: 300px;
-} */
 
 p.desc {
   text-align: start;
@@ -71,10 +62,7 @@ button:hover {
   }
 
   .landing {
-    /* width: 300px; */
-
     margin: 70px auto 20px auto;
-    /* margin: 0 auto; */
   }
 
 }
@@ -83,7 +71,7 @@ button:hover {
   @media only screen and (min-width: 600px) {
 
     h1.welcome {
-      margin: -10px 15px 0 -10px;
+      margin: -68px 15px 0 -10px;
       width: 95%;
     }
   

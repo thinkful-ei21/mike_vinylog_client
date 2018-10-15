@@ -30,9 +30,8 @@ button.add-button:hover {
   }
 
 .search-form {
-  margin: 10px 100px 0 100px;
+  margin: 100px 100px 0 100px;
 	text-align: center;
-  /* background: white; */
 }
 
 input[type="search"] {
@@ -105,11 +104,6 @@ input[type="search"] {
     margin: 20px 0 20px 0;
     width: 300px;
 	}
-/* 
-	.album-search-results {
-		margin-left: 24px;
-	}
-   */
 
 	input[type="search"] {
 		width: 300px;
@@ -132,11 +126,11 @@ input[type="search"] {
 	input[type="search"] {
 		width: 300px;
 	}
-
+/* 
   .search-form {
 		margin: 5px 0 0 10px;
 		width: 300px;
-	}
+	} */
 }
 
 /* Small devices (phones, 600px and down) */
@@ -153,10 +147,10 @@ input[type="search"] {
 		width: 280px;
 	}
 	
-  .search-form {
+  /* .search-form {
 		margin: 5px 0 0 10px;
 		width: 290px;
-	}
+	} */
 	
 	input[type="search"] {
 		width: 300px;
@@ -171,10 +165,10 @@ input[type="search"] {
 }
 
 @media only screen and (max-width: 768px) {
-	.search-form {
+	/* .search-form {
 		float: right;
 		width: 100%;
-	}
+	} */
 }
 
 
@@ -183,10 +177,10 @@ input[type="search"] {
 	.album-search-list {
 		grid-template-columns: repeat(2, 1fr);
   }
-
+/* 
   .search-form {
 		margin: 10px 0 0 350px;
-  }
+  } */
 
 } 
 
@@ -196,10 +190,6 @@ input[type="search"] {
 		grid-template-columns: repeat(2, 1fr);
 		grid-gap: 40px;
 	}
-
-  .search-form {
-		margin: -110px 0 0 350px;
-  }
 
 }
 
@@ -213,7 +203,7 @@ input[type="search"] {
     margin-bottom: 0;
     margin-left: auto;
 		margin-right: auto;
-		margin-top: -100px;
+		margin-top: 100px;
 	}
 
 }

@@ -18,55 +18,78 @@ export class Header extends React.Component {
     return this.props.history.push('./wishlist');
   }
 
+  newSearch() {
+    return this.props.history.push('/search');
+  }
+
   render() {
 
     let logOutButton;
-    if (this.props.loggedIn) {
-        logOutButton = (
-            <button 
-            className="logout-button"
-            onClick={() => this.logOut()}
-            >Log out</button>
-        );
-    }
-
+    let newSearchButton;
     let viewCollectionButton;
-    if (this.props.loggedIn) {
-      viewCollectionButton = (
-          <button 
-            className="view-collection-button"
-            onClick={() => this.goToCollection()}
-            >My Collection
-          </button>
-      );
-    }
-
     let viewWishlistButton;
+    let user;
+    let userWelcome;
+
     if (this.props.loggedIn) {
+      logOutButton = (
+          <button 
+          className="logout-button"
+          onClick={() => this.logOut()}
+          >Log out</button>
+      );
+
+      viewCollectionButton = (
+        <button 
+          className="view-collection-button"
+          onClick={() => this.goToCollection()}
+          >My Collection
+        </button>
+      );
+
       viewWishlistButton = (
         <button
           className= "view-collection-button"
           onClick={() => this.goToWishlist()}
           >My Wishlist
         </button>
-      )
+      );
+
+      newSearchButton = (
+        <button onClick={() => this.newSearch()}
+          className="view-collection-button">
+          New Search
+        </button>
+      );
+
+      user =this.props.currentUser.username;
+
+      userWelcome = (
+        <div className="landing" role="complementary" aria-live="polite" aria-atomic="true">
+          <h1 className="welcome">Welcome {user}!</h1>
+        </div>
+      );
+
     }
 
     return (
       <header role="banner" aria-live="polite" aria-atomic="true">
         <h1 className="header-title">Vinylog</h1>
-        <h2>
-          ... for music collectors to catalog their vinyl collection.
-       </h2>
-        <span className="logout-button">
-          {logOutButton}
-        </span>
-        <span className="wishlist-button">
-          {viewWishlistButton}
-        </span>
-        <span className="collection-button">
-          {viewCollectionButton}
-        </span>
+        {userWelcome}
+        <nav>
+          <span className="logout-button">
+            {logOutButton}
+          </span>
+          <span className="new-search-button">
+            {newSearchButton}
+          </span>
+          <span className="wishlist-button">
+            {viewWishlistButton}
+          </span>
+          <span className="collection-button">
+            {viewCollectionButton}
+          </span>
+        </nav>
       </header>
     )
   }
