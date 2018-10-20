@@ -23,22 +23,6 @@ button.add-button {
 	position: relative;
 }
 
-/* button.logout-button, button.view-collection-button {
-	float: right;
-	margin-right: 0px;
-}
-
-button.view-collection-button, 
-button.search-button {
-	height: 45px;
-	padding: 10px;
-	background: rgb(19, 96, 102);
-	color: white;
-	font-size: 18px;
-	margin: 20px 0;
-	border-radius: 3px;
-} */
-
 button:hover {
   background: #111;
 	color: rgb(46, 148, 155);
@@ -146,7 +130,7 @@ button:hover {
 }
 
 p {
-  margin: 0 10% 40px 28%;
+  /* margin: 0 10% 40px 28%; */
   width: 50%;
   font-size: 1.5em;
   color: rgb(19, 96, 102);

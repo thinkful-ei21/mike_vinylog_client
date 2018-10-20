@@ -8,6 +8,7 @@ export class Header extends React.Component {
   logOut() {
     this.props.dispatch(clearAuth());
     clearAuthToken();
+    this.props.history.push('/');
   }
 
   goToCollection() {

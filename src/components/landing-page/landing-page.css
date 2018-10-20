@@ -1,16 +1,14 @@
-h1.welcome {
-  font-weight: 400;
-  width: 280px;
-  height: fit-content;
-  font-size: 30px;
-  text-align: center;
-  color: rgb(46, 148, 155);
-  padding: 0 1%;
-  word-wrap: break-word;
+h1.landing-title {
+  font-size: 2.5em;
+  color: white;
+  margin: 30px auto;
+  text-align: Center;
+	padding: 0;
 }
 
 .landing {
-  margin: 6px auto 6px 5px;
+  margin: 30px auto;
+  width: 50%;
   padding: 2%;
   border-radius: 5px;
   -webkit-border-radius: 3px;
@@ -22,10 +20,10 @@ h1.welcome {
 p.desc {
   text-align: start;
   color: rgb(46, 148, 155);
-  margin: 15px 2px 0 -16px;
+  margin: 0 auto;
   width: 600px;
   padding: 2%;
-  font-size: 20px;
+  font-size: 30px;
 }
 
 .left {
@@ -42,13 +40,18 @@ p.desc {
   width: 45%;
 }
 
+.landing > button {
+  position: absolute;
+  top: 0;
+  right: 20px;
+  width: 100px!important;
+}
+
 button:hover {
   background: #111;
 	color: rgb(46, 148, 155);
   cursor: pointer;
   }
-
-
 
 /* Small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -56,10 +59,10 @@ button:hover {
     margin: 0 10px 0 -10px;
   }
 
-  p.desc {
+  /* p.desc {
     margin: 0 10px;
     width: 240px;
-  }
+  } */
 
   .landing {
     margin: 70px auto 20px auto;
@@ -74,10 +77,10 @@ button:hover {
       margin: -68px 15px 0 -10px;
       width: 95%;
     }
-  
+/*   
     p.desc{
       margin: 0 2px;
       width: 240px;
-    }
+    } */
   }
   
