@@ -11,11 +11,12 @@ header {
 }
 
 h1 {
-  font-size: 2.5em;
-  color: white;
-  margin: 10px auto;
-  text-align: center;
+	font-size: 3.5em;
+	color: rgb(46, 148, 155);
+  margin: -10px 10px 10px 10px;
+  text-align: start;
 	padding: 0;
+	font-family: 'Righteous', cursive;
 }
 
 h1.welcome {
@@ -29,16 +30,8 @@ h1.welcome {
   word-wrap: break-word;
 }
 
-h2 {
-	/* margin: 30px 0 0 150px; */
-	color: rgb(255, 234, 42);
-	font-size: 30px;
-	font-weight: 400;
-}
-
-
 nav {
-	margin-top: -130px;
+	margin-top: -174px;
 	margin-right: 40px;
 }
 
@@ -52,6 +45,7 @@ button.view-collection-button, button.view-wishlist-button {
 	font-size: 18px;
 	margin: 20px 0;
 	border: none;
+  font-family: 'Maven Pro', sans-serif;
 }
 
 button:hover {
@@ -92,13 +86,13 @@ button:hover {
 
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+/* @media only screen and (min-width: 768px) {
 
 	h1 {
 		margin-left: 20px;
 	}
 
-}
+} */
 
 /* Medium devices (landscape tablets, 768px and down) */
 @media only screen and (max-width: 768px) {

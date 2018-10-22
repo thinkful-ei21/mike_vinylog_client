@@ -6,6 +6,15 @@ h1.landing-title {
 	padding: 0;
 }
 
+h2 {
+	margin: 50px auto;
+	color:  #eee;
+	font-size: 30px;
+  font-weight: 400;
+  width: 600px;
+  text-align: center;
+}
+
 .landing {
   margin: 30px auto;
   width: 50%;
@@ -17,12 +26,21 @@ h1.landing-title {
   -o-border-radius: 3px;
 }
 
+.landing > h2 {
+  color: rgb(46, 148, 155);
+  font-size: 225%;
+}
+
+.landing > p.desc {
+  color: #eee;
+  font-size: 175%;
+}
+
 p.desc {
   text-align: start;
   color: rgb(46, 148, 155);
   margin: 0 auto;
   width: 600px;
-  padding: 2%;
   font-size: 30px;
 }
 

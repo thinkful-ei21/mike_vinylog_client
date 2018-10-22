@@ -83,6 +83,7 @@ class Collection extends React.Component {
       <div aria-live="polite" aria-atomic="true" role="main">
         <ToastContainer />
         <div className="collection-results" aria-live="polite" aria-atomic="true">
+          <h2>{this.props.currentUser.username}'s Collection</h2>
           {this.state.error}
           {this.renderResults()}
         </div>

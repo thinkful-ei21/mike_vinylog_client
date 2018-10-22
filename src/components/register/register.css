@@ -1,9 +1,8 @@
 .register-form {
-	margin: 0 auto;
+	margin: 40px auto 0 auto;
 	text-align: center;
 	width: 280px;
 	padding: 20px 0;
-	border-radius: 3px;
 	color: #ccc;
 }
 
