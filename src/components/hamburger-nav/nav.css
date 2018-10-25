@@ -1,0 +1,190 @@
+nav {
+  /* overflow: hidden; */
+  /* background-color: rgb(32, 46, 68); */
+  /* transition: 0.8s; */
+}
+
+nav a {
+	color: rgb(46, 148, 155);
+}
+
+nav .navWide {
+  display: none;
+  margin: 0 auto;
+}
+
+nav .navWide .wideDiv {
+  text-align: end;
+  margin-top: 7px;
+}
+
+nav .navWide .wideDiv a {
+  text-decoration: none;
+  display: inline-block;
+  margin: 5px 15px 0 50px;
+}
+
+nav .navWide .wideDiv a:hover {
+	color: #eee;
+	cursor: pointer;
+}
+
+nav .navNarrow i {
+  /* float: right; */
+  cursor: pointer;
+  color: rgb(46, 148, 155);
+  margin-right: 100px;
+  margin-top: 200px;
+}
+
+nav .navNarrow .narrowLinks {
+  display: none;
+  transition: 0.8s;
+}
+
+nav .navNarrow .narrowLinks a {
+  text-decoration: none;
+  display: block;
+  transition: 0.8s;
+  float: right;
+  clear: both;
+  margin: 10px 100px 30px 0;
+  background-color: transparent;
+  height: 200%;
+  width: 50%;
+}
+
+/* Media Queries ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
+
+
+
+@media only screen and (min-width: 690px) {
+  nav .navWide {
+    display: block;
+    transition: 0.8s;
+    padding: 10px;
+    float: right;
+    margin-right: 10px;
+    margin-top: -70px;
+    font-size: 20px;
+  }
+
+  nav .navNarrow {
+    display: none;
+    transition: 0.8s;
+  }
+
+  nav .narrowLinks {
+    text-decoration: none;
+    display: block;
+    transition: 0.8s;
+    float: right;
+    clear: left;
+    padding: 0.5em 0;
+    background-color: #111;
+    height: 200%;
+  }
+
+  nav .navNarrow .narrowLinks a { 
+    background-color: #111;
+  }
+
+  nav .navNarrow i {
+    margin-right: 70px;
+  }
+
+}
+
+@media only screen and (max-width: 690px) {
+
+  nav .navWide {
+    /* margin-right: 50px; */
+  }
+
+  nav .wideDiv a {
+    margin: 5px 0 0 10px;
+  }
+
+}
+
+@media only screen and (max-width: 1024px) {
+
+  nav .navWide .wideDiv a {
+    margin-left: 20px;
+  }
+
+}
+
+@media only screen and (max-width: 800px) {
+
+  nav .navWide {
+    /* margin-right: 30px; */
+  }
+
+}
+
+
+@media only screen and (max-width: 550px) {
+
+  nav .navWide .wideDiv  {
+    right: 0;
+  }
+
+}
+
+@media only screen and (max-width: 600px) {
+/* 
+  nav .navWide .wideDiv  {
+    margin-left: 0;
+    position: relative;
+    right: 20px;
+  }
+
+  nav .navWide .wideDiv a {
+    margin: 5px 5px 0 15px;
+  }
+
+  nav .navWide {
+    margin-top: 0;
+    margin-right: 40px;
+    padding: 0;
+    font-size: 22px;
+  }
+
+*/
+
+  nav .navNarrow i {
+    margin-right: 60px;
+    margin-top: 107px;
+  }
+
+  nav .narrowLinks {
+    margin-top: -7px;
+    margin-right: -25px;
+    padding: 20px;
+  }
+
+  nav .navNarrow .narrowLinks a {
+    width: 100%;
+    margin-right: 45px;
+    font-size: 28px;
+    margin-top: -37px;
+    padding: 5%; 
+    background-color: rgb(32, 46, 68)
+  } 
+
+}
+
+
+
+@media only screen and (max-width: 350px) {
+  .navNarrow {
+    /* margin-right: -20px; */
+  }
+
+  nav .navNarrow i {
+    margin-right: 80px;
+  }
+
+}
+

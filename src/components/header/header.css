@@ -30,10 +30,10 @@ h1.welcome {
   word-wrap: break-word;
 }
 
-nav {
+/* nav {
 	margin-top: -174px;
 	margin-right: 40px;
-}
+} */
 
 button.logout-button,
 button.view-collection-button, button.view-wishlist-button {
@@ -61,7 +61,7 @@ button:hover {
 	}
 
 	button.logout-button {
-		width: 31%;
+		width: 25%;
 		font-size: 98%;
 	}
 
@@ -98,7 +98,7 @@ button:hover {
 @media only screen and (max-width: 768px) {
 
 	h1 {
-		margin-left: 20px;
+		margin-left: 5px;
 	}
 
 	h2 {

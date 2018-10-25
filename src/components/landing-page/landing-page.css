@@ -11,9 +11,18 @@ h2 {
 	color:  #eee;
 	font-size: 30px;
   font-weight: 400;
-  width: 600px;
+  /* width: 600px; */
   text-align: center;
 }
+
+/* .landing-page {
+  width: 100%;
+  background-image: url('https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=78082d217e11e7ac46288b6a2624a5ba&auto=format&fit=crop&w=2253&q=80');
+  background-position: bottom center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  z-index: 1;
+} */
 
 .landing {
   margin: 30px auto;
@@ -32,7 +41,7 @@ h2 {
 }
 
 .landing > p.desc {
-  color: #eee;
+  color: #ccc;
   font-size: 175%;
 }
 
@@ -62,14 +71,22 @@ p.desc {
   position: absolute;
   top: 0;
   right: 20px;
-  width: 100px!important;
+  width: 80px!important;
 }
 
 button:hover {
   background: #111;
 	color: rgb(46, 148, 155);
   cursor: pointer;
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .landing {
+    margin: 30px auto;
+    width: 90%;
   }
+}
 
 /* Small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -82,8 +99,11 @@ button:hover {
     width: 240px;
   } */
 
-  .landing {
-    margin: 70px auto 20px auto;
+  .landing, .landing > h2, .landing > p.desc {
+    margin: 30px 0 20px 0;
+    width: 300px;
+    text-align: start;
+    font-size: 25px;
   }
 
 }
@@ -91,10 +111,10 @@ button:hover {
   /* Medium and large devices (phones, 600px and up) */
   @media only screen and (min-width: 600px) {
 
-    h1.welcome {
+    /* h1.welcome {
       margin: -68px 15px 0 -10px;
       width: 95%;
-    }
+    } */
 /*   
     p.desc{
       margin: 0 2px;

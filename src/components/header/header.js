@@ -3,6 +3,7 @@ import './header.css';
 import {connect} from 'react-redux';
 import {clearAuth} from '../../actions/auth-actions';
 import {clearAuthToken} from '../../local-storage';
+import NavComponent from '../hamburger-nav/nav';
 
 export class Header extends React.Component {
   logOut() {
@@ -67,7 +68,7 @@ export class Header extends React.Component {
 
       userWelcome = (
         <div className="landing" role="complementary" aria-live="polite" aria-atomic="true">
-          {/* <h1 className="welcome">Welcome {user}!</h1> */}
+          <h1 className="welcome">Welcome {user}!</h1>
         </div>
       );
 
@@ -76,8 +77,8 @@ export class Header extends React.Component {
     return (
       <header role="banner" aria-live="polite" aria-atomic="true">
         <h1 className="header-title">Vinylog</h1>
-        {userWelcome}
-        <nav>
+        <NavComponent />
+        {/* <nav>
           <span className="logout-button">
             {logOutButton}
           </span>
@@ -90,7 +91,7 @@ export class Header extends React.Component {
           <span className="collection-button">
             {viewCollectionButton}
           </span>
-        </nav>
+        </nav> */}
       </header>
     )
   }
