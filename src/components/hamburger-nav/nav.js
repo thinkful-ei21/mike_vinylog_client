@@ -7,7 +7,6 @@ import {connect} from 'react-redux';
 import {clearAuth} from '../../actions/auth-actions';
 import {clearAuthToken} from '../../local-storage';
 
-
 export class NavComponent extends React.Component {
 
   burgerToggle() {
@@ -34,19 +33,18 @@ export class NavComponent extends React.Component {
 
   render() {
     let logOutButton;
-    let x;
 
     if (this.props.loggedIn) {
       logOutButton = (
-          <button 
-          className="logout-button"
-          onClick={() => this.logOut()}
-          >Log out</button>
+        <button 
+        className="logout-button"
+        onClick={() => this.logOut()}
+        >Log out</button>
       );
     }
 
     return (
-      <nav tabContainer>
+      <nav>
         <div className="navWide">
           <div className="wideDiv">
             <Link to="collection">My Collection</Link>
@@ -56,18 +54,11 @@ export class NavComponent extends React.Component {
           </div>
         </div>
         <div className="navNarrow" id="icon">
-          {/* <div className="burger" onClick={this.burgerToggle(this)}>
+          <div className="burger" onClick={() => this.menuFunction()}>
             <div className="bar1"></div>
             <div className="bar2"></div>
             <div className="bar3"></div>
-          </div> */}
- 
-              <div className="burger" onClick={() => this.menuFunction()}>
-                <div className="bar1"></div>
-                <div className="bar2"></div>
-                <div className="bar3"></div>
-              </div>
-          {/* <i className="fa fa-bars fa-2x" onClick={this.burgerToggle} /> */}
+          </div>
           <div className="narrowLinks" >
             <Link to="collection" onClick={this.burgerToggle}>
             My Collection
