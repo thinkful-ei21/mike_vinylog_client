@@ -26,43 +26,46 @@ export class Header extends React.Component {
 
   render() {
 
-    let logOutButton;
-    let newSearchButton;
-    let viewCollectionButton;
-    let viewWishlistButton;
+    // let logOutButton;
+    // let newSearchButton;
+    // let viewCollectionButton;
+    // let viewWishlistButton;
     let user;
     let userWelcome;
+    let nav;
 
     if (this.props.loggedIn) {
-      logOutButton = (
-          <button 
-          className="logout-button"
-          onClick={() => this.logOut()}
-          >Log out</button>
-      );
 
-      viewCollectionButton = (
-        <button 
-          className="view-collection-button"
-          onClick={() => this.goToCollection()}
-          >My Collection
-        </button>
-      );
+      nav = <NavComponent />;
+      // logOutButton = (
+      //     <button 
+      //     className="logout-button"
+      //     onClick={() => this.logOut()}
+      //     >Log out</button>
+      // );
 
-      viewWishlistButton = (
-        <button
-          className= "view-collection-button"
-          onClick={() => this.goToWishlist()}
-          >My Wishlist
-        </button>
-      );
+      // viewCollectionButton = (
+      //   <button 
+      //     className="view-collection-button"
+      //     onClick={() => this.goToCollection()}
+      //     >My Collection
+      //   </button>
+      // );
 
-      newSearchButton = (
-        <button onClick={() => this.newSearch()}
-          className="view-collection-button">
-          New Search
-        </button>
-      );
+      // viewWishlistButton = (
+      //   <button
+      //     className= "view-collection-button"
+      //     onClick={() => this.goToWishlist()}
+      //     >My Wishlist
+      //   </button>
+      // );
+
+      // newSearchButton = (
+      //   <button onClick={() => this.newSearch()}
+      //     className="view-collection-button">
+      //     New Search
+      //   </button>
+      // );
 
       user =this.props.currentUser.username;
 
@@ -77,12 +80,12 @@ export class Header extends React.Component {
     return (
       <header role="banner" aria-live="polite" aria-atomic="true">
         <h1 className="header-title">Vinylog</h1>
-        <NavComponent />
-        {/* <nav>
-          <span className="logout-button">
+        {nav}
+        {/* <nav> */}
+          {/* <span className="logout-button">
             {logOutButton}
-          </span>
-          <span className="new-search-button">
+          </span> */}
+         {/*  <span className="new-search-button">
             {newSearchButton}
           </span>
           <span className="wishlist-button">

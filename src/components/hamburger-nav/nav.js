@@ -3,9 +3,12 @@
 import React from 'react';
 import { Link }  from 'react-router-dom';
 import './nav.css';
+import {connect} from 'react-redux';
+import {clearAuth} from '../../actions/auth-actions';
+import {clearAuthToken} from '../../local-storage';
 
 
-export default class NavComponent extends React.Component {
+export class NavComponent extends React.Component {
 
   burgerToggle() {
     let linksEl = document.querySelector(".narrowLinks");
@@ -14,20 +17,57 @@ export default class NavComponent extends React.Component {
     } else {
       linksEl.style.display = "block";
     }
+
+  }
+
+  menuFunction() {
+    let x = document.getElementById("icon");
+    x.classList.toggle("change");
+    this.burgerToggle();
+}
+
+  logOut() {
+    this.props.dispatch(clearAuth());
+    clearAuthToken();
+    this.props.history.push('/');
   }
 
   render() {
+    let logOutButton;
+    let x;
+
+    if (this.props.loggedIn) {
+      logOutButton = (
+          <button 
+          className="logout-button"
+          onClick={() => this.logOut()}
+          >Log out</button>
+      );
+    }
+
     return (
-      <nav >
+      <nav tabContainer>
         <div className="navWide">
           <div className="wideDiv">
             <Link to="collection">My Collection</Link>
             <Link to="wishlist">My Wishlist</Link>
             <Link to="search">New Search</Link>
+            {logOutButton}
           </div>
         </div>
-        <div className="navNarrow">
-          <i className="fa fa-bars fa-2x" onClick={this.burgerToggle} />
+        <div className="navNarrow" id="icon">
+          {/* <div className="burger" onClick={this.burgerToggle(this)}>
+            <div className="bar1"></div>
+            <div className="bar2"></div>
+            <div className="bar3"></div>
+          </div> */}
+ 
+              <div className="burger" onClick={() => this.menuFunction()}>
+                <div className="bar1"></div>
+                <div className="bar2"></div>
+                <div className="bar3"></div>
+              </div>
+          {/* <i className="fa fa-bars fa-2x" onClick={this.burgerToggle} /> */}
           <div className="narrowLinks" >
             <Link to="collection" onClick={this.burgerToggle}>
             My Collection
@@ -38,10 +78,17 @@ export default class NavComponent extends React.Component {
             <Link to="search" onClick={this.burgerToggle}>
             New Search
             </Link>
+            {logOutButton}
           </div>
         </div>
       </nav>
     );
   }
-  
 };
+
+const mapStateToProps = state => ({
+  currentUser: state.auth.currentUser,
+  loggedIn: state.auth.currentUser !== null
+});
+
+export default connect(mapStateToProps)(NavComponent);
