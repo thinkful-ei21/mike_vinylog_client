@@ -46,14 +46,14 @@ button.logout-button {
 	border: solid 1px rgb(46, 148, 155);
 	font-family: 'Maven Pro', sans-serif;
 	border-radius: 8px;
-	-webkit-border-radius: 8px;
-	-moz-border-radius: 8px;
-	-ms-border-radius: 8px;
-	-o-border-radius: 8px;
+	-webkit-border-radius: 3px;
+	-moz-border-radius: 3px;
+	-ms-border-radius: 3px;
+	-o-border-radius: 3px;
 }
 
 button:hover {
-	background: #111;
+	background-color: rgb(46, 148, 155);
 	color: #eee;
 	border-color: #eee;
 	cursor: pointer;

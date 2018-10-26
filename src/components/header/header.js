@@ -1,4 +1,5 @@
 import React from 'react';
+import {Route, Redirect, Link} from 'react-router-dom';
 import './header.css';
 import {connect} from 'react-redux';
 import {clearAuth} from '../../actions/auth-actions';
@@ -79,7 +80,7 @@ export class Header extends React.Component {
 
     return (
       <header role="banner" aria-live="polite" aria-atomic="true">
-        <h1 className="header-title">Vinylog</h1>
+        <Link to={{pathname: "/"}} style={{textDecorationLine: "none"}}><h1 className="header-title">Vinylog</h1></Link>
         {nav}
         {/* <nav> */}
           {/* <span className="logout-button">
