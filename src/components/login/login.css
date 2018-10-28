@@ -30,7 +30,7 @@ form > h3 {
 }
 
 .login-form {
-	margin: 50px auto 0 auto;
+	margin: 100px auto 0 auto;
 	text-align: center;
 	color: #ccc;
 	width: 280px;
@@ -50,6 +50,7 @@ button.signup-button {
 		border-color: rgb(46, 148, 155);
     border-radius: 3px;
 		font-family: 'Maven Pro', sans-serif;
+		z-index: 2;
 }
 
 .login-form > button:hover,

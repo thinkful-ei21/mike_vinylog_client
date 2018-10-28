@@ -107,6 +107,10 @@ button.add-button:hover {
 	background-color: azure;
 }
 
+.collection-results {
+	margin-top: 100px;
+}
+
 .collection-results h1 {
   color: rgb(46, 148, 155);
 	font-weight: 400;

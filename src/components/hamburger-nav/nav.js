@@ -47,9 +47,9 @@ export class NavComponent extends React.Component {
       <nav>
         <div className="navWide">
           <div className="wideDiv">
-            <Link to="collection">My Collection</Link>
-            <Link to="wishlist">My Wishlist</Link>
-            <Link to="search">New Search</Link>
+            <Link to="collection">Collection</Link>
+            <Link to="wishlist">Wishlist</Link>
+            <Link to="search">Search</Link>
             {logOutButton}
           </div>
         </div>
@@ -61,13 +61,13 @@ export class NavComponent extends React.Component {
           </div>
           <div className="narrowLinks" >
             <Link to="collection" onClick={this.burgerToggle}>
-            My Collection
+            Collection
             </Link>
             <Link to="wishlist" onClick={this.burgerToggle}>
-            My Wishlist
+            Wishlist
             </Link>
             <Link to="search" onClick={this.burgerToggle}>
-            New Search
+            Search
             </Link>
             {logOutButton}
           </div>

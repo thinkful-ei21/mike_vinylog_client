@@ -1,18 +1,9 @@
-h1.landing-title {
-  font-size: 2.5em;
-  color: white;
-  margin: 30px auto;
-  text-align: Center;
-	padding: 0;
-}
 
 h2 {
-	margin: 50px auto;
+  margin: -5px 50px 0;
 	color:  #eee;
 	font-size: 30px;
   font-weight: 400;
-  /* width: 600px; */
-  text-align: center;
 }
 
 /* .landing-page {
@@ -25,7 +16,7 @@ h2 {
 } */
 
 .landing {
-  margin: 30px auto;
+  margin: 130px auto;
   width: 50%;
   padding: 2%;
   border-radius: 5px;
@@ -38,6 +29,8 @@ h2 {
 .landing > h2 {
   color: rgb(46, 148, 155);
   font-size: 225%;
+  width: 600px;
+  margin: 40px 0;
 }
 
 .landing > p.desc {

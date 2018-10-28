@@ -3,11 +3,13 @@ header {
   padding: 15px;
   height: fit-content;
   color: rgb(0, 0, 0);
-  position: relative;
+  position: fixed;
   top: 0;
   right: 0;
 	text-align: center;
-	width: 100%
+	width: 100%;
+	z-index: 1;
+	border-bottom: solid #eee 1px;
 }
 
 h1 {
@@ -30,11 +32,6 @@ h1.welcome {
   word-wrap: break-word;
 }
 
-/* nav {
-	margin-top: -174px;
-	margin-right: 40px;
-} */
-
 button.logout-button {
 	float: right;
 	height: 45px;
@@ -42,7 +39,7 @@ button.logout-button {
 	background: transparent;
 	color: rgb(46, 148, 155);
 	font-size: 18px;
-	margin: 20px 0;
+	margin: -10px 0 20px 40px;
 	border: solid 1px rgb(46, 148, 155);
 	font-family: 'Maven Pro', sans-serif;
 	border-radius: 8px;
@@ -100,15 +97,6 @@ button:hover {
 
 }
 
-
-/* Medium devices (landscape tablets, 768px and up) */
-/* @media only screen and (min-width: 768px) {
-
-	h1 {
-		margin-left: 20px;
-	}
-
-} */
 
 /* Medium devices (landscape tablets, 768px and down) */
 @media only screen and (max-width: 768px) {
