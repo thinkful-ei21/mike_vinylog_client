@@ -48,7 +48,7 @@ input[type="search"] {
 	max-width: 320px;
 	width: 100%;
 	height: 40px;
-  margin: 0 auto;
+  margin: 30px auto 0 auto;
 }
 
 .album-search-list {
@@ -104,11 +104,6 @@ input[type="search"] {
 
 
 /* Extra small devices (phones, 465 and down) */
-@media only screen and (max-width: 360px) {
-
-}
-
-/* Extra small devices (phones, 465 and down) */
 @media only screen and (max-width: 465px) {
 
 	button.search-button {
@@ -137,11 +132,6 @@ input[type="search"] {
 	input[type="search"] {
 		width: 300px;
 	}
-/* 
-  .search-form {
-		margin: 5px 0 0 10px;
-		width: 300px;
-	} */
 }
 
 /* Small devices (phones, 600px and down) */
@@ -157,12 +147,7 @@ input[type="search"] {
 	.search-list-item {
 		width: 280px;
 	}
-	
-  /* .search-form {
-		margin: 5px 0 0 10px;
-		width: 290px;
-	} */
-	
+
 	input[type="search"] {
 		width: 300px;
 	}
@@ -175,24 +160,12 @@ input[type="search"] {
 	}
 }
 
-@media only screen and (max-width: 768px) {
-	/* .search-form {
-		float: right;
-		width: 100%;
-	} */
-}
-
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {
 	.album-search-list {
 		grid-template-columns: repeat(2, 1fr);
   }
-/* 
-  .search-form {
-		margin: 10px 0 0 350px;
-  } */
-
 } 
 
 /* Medium devices (landscape tablets, 860px and up) */

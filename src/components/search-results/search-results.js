@@ -90,12 +90,12 @@ e.preventDefault();
   render() {
 
     return (
-      <div role="search" 
+      <div role="search" className="search"
         aria-live="polite" aria-atomic="true">
         <ToastContainer />
         <h2>New Search</h2>
         <form 
-          className="search-form" 
+          className="search-form"
           onSubmit={e => this.mainSearch(e)}
           aria-label=""
           >
