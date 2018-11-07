@@ -29,16 +29,6 @@ button:hover {
   cursor: pointer;
   }
 
-/* Xtra small devices (landscape tablets, 354 and down) */
-@media only screen and (max-width: 354px) {
-
-	button.logout-button, button.view-collection-button {
-		width: 31%;
-		font-size: 98%;
-		margin-right: 3px;
-	}
-
-}
 
 /* Extra small devices (phones, 465 and down) */
 @media only screen and (min-width: 465) {
@@ -62,12 +52,6 @@ button:hover {
 
 	.album-search-item {
 		width: 289px;
-	}
-
-	button.logout-button {
-		width: 30%;
-		padding: 2% 0;
-		margin-right: 0;
 	}
 
 	button.view-collection-button {
@@ -130,7 +114,6 @@ button:hover {
 }
 
 p {
-  /* margin: 0 10% 40px 28%; */
   width: 50%;
   font-size: 1.5em;
   color: rgb(19, 96, 102);

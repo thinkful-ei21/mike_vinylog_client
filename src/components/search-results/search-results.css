@@ -1,5 +1,5 @@
 button.search-button {
-	width: 320px;
+	width: 280px;
 	height: 45px;
 	padding: 10px;
 	background: #111;
@@ -40,13 +40,12 @@ button.add-button:hover, button.search-button:hover {
   }
 
 .search-form {
-  margin: 100px 100px 0 100px;
+  /* margin: 100px 100px 0 100px; */
 	text-align: center;
 }
 
 input[type="search"] {
-	max-width: 320px;
-	width: 100%;
+	max-width: 280px;
 	height: 40px;
   margin: 30px auto 0 auto;
 }
@@ -103,20 +102,6 @@ input[type="search"] {
 }
 
 
-/* Extra small devices (phones, 465 and down) */
-@media only screen and (max-width: 465px) {
-
-	button.search-button {
-    margin: 20px 0 20px 0;
-    width: 300px;
-	}
-
-	input[type="search"] {
-		width: 300px;
-	}
-}
-
-
 /* Extra small devices (phones, 465 and up) */
 @media only screen and (min-width: 465px) {
 
@@ -124,14 +109,6 @@ input[type="search"] {
 		grid-template-columns: 100%;
 	}
 
-	button.search-button {
-    margin: 20px 0 20px 0;
-    width: 300px;
-	}
-	
-	input[type="search"] {
-		width: 300px;
-	}
 }
 
 /* Small devices (phones, 600px and down) */
@@ -148,18 +125,7 @@ input[type="search"] {
 		width: 280px;
 	}
 
-	input[type="search"] {
-		width: 300px;
-	}
-
 }
-
-@media only screen and (max-width: 700px) {
-	.search-form {
-		margin-left: 70px;
-	}
-}
-
 
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 768px) {

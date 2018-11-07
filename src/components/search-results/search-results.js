@@ -39,7 +39,7 @@ export class SearchResults extends React.Component {
 
   notifyCollection = album => {
     let title = album.title;
-    return toast.info(`${title.toUpperCase()} Added To Collection`, {
+    return toast.info(`${title.toUpperCase()} ADDED TO COLLECTION`, {
     autoClose: 3500,
     hideProgressBar: true
     });
@@ -106,7 +106,7 @@ e.preventDefault();
       <div role="search" className="search"
         aria-live="polite" aria-atomic="true">
         <ToastContainer />
-        <h2>New Search</h2>
+        <h2>Search</h2>
         <form 
           className="search-form"
           onSubmit={e => this.mainSearch(e)}

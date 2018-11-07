@@ -20,7 +20,7 @@ export class LandingPage extends React.Component {
               <Link 
                 to={{pathname: "/login"}}
                 style={{textDecorationLine: "none",
-                        color: "white"
+                        color: "#eee"
                       }}
               >Sign In</Link>
             </button>}

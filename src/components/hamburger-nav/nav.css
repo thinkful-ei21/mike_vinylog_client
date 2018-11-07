@@ -15,7 +15,7 @@ nav .navWide .wideDiv {
 nav .navWide .wideDiv a {
   text-decoration: none;
   display: inline-block;
-  margin: -40px 35px 0 50px;
+  margin: -30px 20px 0 10px;
 }
 
 nav .navWide .wideDiv a:hover {
@@ -24,7 +24,6 @@ nav .navWide .wideDiv a:hover {
 }
 
 nav .navNarrow i {
-  /* float: right; */
   cursor: pointer;
   color: rgb(46, 148, 155);
   margin-right: 100px;
@@ -40,10 +39,7 @@ nav .navNarrow .narrowLinks {
 nav .navNarrow .narrowLinks a {
   text-decoration: none;
   display: block;
-  transition: 0.8s;
-  float: right;
-  clear: both;
-  margin: 10px 100px 30px 0;
+  margin: 0 auto;
   background-color: transparent;
   height: 200%;
   width: 50%;
@@ -76,11 +72,7 @@ nav .navNarrow .narrowLinks a {
   transform: rotate(45deg) translate(-8px, -8px);
 }
 
-
-
 /* Media Queries ++++++++++++++++++++++++++++++++++++++++++++++++++++++++++ */
-
-
 
 @media only screen and (min-width: 690px) {
   nav .navWide {
@@ -89,7 +81,7 @@ nav .navNarrow .narrowLinks a {
     padding: 10px;
     float: right;
     margin-right: 10px;
-    margin-top: -65px;
+    margin-top: -60px;
     font-size: 20px;
   }
 
@@ -102,8 +94,6 @@ nav .navNarrow .narrowLinks a {
     text-decoration: none;
     display: block;
     transition: 0.8s;
-    float: right;
-    clear: left;
     padding: 0.5em 0;
     background-color: #111;
     height: 200%;
@@ -116,25 +106,30 @@ nav .navNarrow .narrowLinks a {
   nav .navNarrow i {
     margin-right: 70px;
   }
-
 }
 
 @media only screen and (max-width: 690px) {
-
-  nav .navWide {
-    /* margin-right: 50px; */
-  }
 
   nav .wideDiv a {
     margin: 5px 0 0 10px;
   }
 
-  nav .navNarrow {
+  nav .navNarrow .narrowLinks a {
+    font-size: 25px;
+    margin-top: 10px;
+    padding: 1%; 
+  }
+
+  nav .navNarrow .narrowLinks {
+    margin: -10px 30px 0 0;
+    float: right;
+  }
+
+  .burger {
     position: absolute;
     top: 20px;
     right: 20px;
   }
-
 
   .bar1, .bar2, .bar3 {
     margin: 8.5px 0;
@@ -155,15 +150,6 @@ nav .navNarrow .narrowLinks a {
 
 }
 
-@media only screen and (max-width: 800px) {
-
-  nav .navWide {
-    /* margin-right: 30px; */
-  }
-
-}
-
-
 @media only screen and (max-width: 550px) {
 
   nav .navWide .wideDiv  {
@@ -174,37 +160,20 @@ nav .navNarrow .narrowLinks a {
 
 @media only screen and (max-width: 600px) {
 
-  nav .navNarrow i {
-    margin-right: 60px;
-    margin-top: 107px;
-  }
-
   nav .narrowLinks {
     margin-top: 35px;
     margin-right: -100px;
     z-index: 2;
   }
 
-  nav .navNarrow .narrowLinks a {
-    width: 80%;
-    margin-right: 55px;
-    font-size: 28px;
-    margin-top: -37px;
-    padding: 5%; 
-    background-color: #111;
-  } 
-
 }
 
 
 
-@media only screen and (max-width: 350px) {
-  .navNarrow {
-    /* margin-right: -20px; */
-  }
+@media only screen and (max-width: 360px) {
 
-  nav .navNarrow i {
-    margin-right: 80px;
+  nav .navNarrow .narrowLinks {
+    margin-top: 20px;
   }
 
 }

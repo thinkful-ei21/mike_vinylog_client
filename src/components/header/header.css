@@ -1,12 +1,11 @@
 header {
   background-color: #111;
-  padding: 15px;
+  padding: 15px 0;
   height: fit-content;
   color: rgb(0, 0, 0);
   position: fixed;
   top: 0;
   right: 0;
-	text-align: center;
 	width: 100%;
 	z-index: 1;
 	border-bottom: solid #eee 1px;
@@ -34,19 +33,14 @@ h1.welcome {
 
 button.logout-button {
 	float: right;
-	height: 45px;
+	/* height: 45px; */
 	padding: 10px;
 	background: transparent;
 	color: rgb(46, 148, 155);
-	font-size: 18px;
-	margin: -10px 0 20px 40px;
-	border: solid 1px rgb(46, 148, 155);
+	font-size: 20px;
+	margin: -10px 0 10px 10px;
+	border: none;
 	font-family: 'Maven Pro', sans-serif;
-	border-radius: 8px;
-	-webkit-border-radius: 3px;
-	-moz-border-radius: 3px;
-	-ms-border-radius: 3px;
-	-o-border-radius: 3px;
 }
 
 button:hover {
@@ -55,31 +49,6 @@ button:hover {
 	border-color: #eee;
 	cursor: pointer;
 }
-
-
-/* Nav break */
-@media only screen and (max-width: 690px) {
-
-	button.logout-button {
-		border: none;
-	}
-
-}
-
-
-/* Xtra small devices (landscape tablets, 354 and down) */
-@media only screen and (max-width: 354px) {
-	header {
-		width: 105%;
-	}
-
-	button.logout-button {
-		width: 25%;
-		font-size: 98%;
-	}
-
-}
-
 
 /* Small devices (phones, 600px and down) */
 @media only screen and (max-width: 600px) {
@@ -91,25 +60,25 @@ button:hover {
 		margin-left: 0;
 	}
 
-	button.logout-button {
-		margin-right: -8px;
-	}
-
 }
 
-
-/* Medium devices (landscape tablets, 768px and down) */
-@media only screen and (max-width: 768px) {
+/* Medium devices (landscape tablets, 690px and down) */
+@media only screen and (max-width: 689px) {
 
 	h1 {
 		margin-left: 5px;
 	}
 
 	h2 {
-		margin: 10px 0;
+		margin: 20px;
+	}
+
+	button.logout-button {
+		padding: 0;
+		margin: 12px 0 0 32px;
+		font-size: 25px;
 	}
 }
-
 
 /* Extra small devices (phones, 400px and down) */
 @media only screen and (max-width: 400px) {

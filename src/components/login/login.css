@@ -40,25 +40,37 @@ form > h3 {
 .login-form > button,
 .landing > button,
 button.signup-button {
-    width: 280px;
-    height: 45px;
-    padding: 10px;
+		width: 280px;
+		height: 45px;
+		padding: 10px;
 		background-color: transparent;
-    color: rgb(46, 148, 155);
-    font-size: 18px;
+		color: rgb(46, 148, 155);
+		font-size: 18px;
 		margin: 20px auto 0 0;
 		border-color: rgb(46, 148, 155);
-    border-radius: 3px;
 		font-family: 'Maven Pro', sans-serif;
+		border-radius: 3px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		-ms-border-radius: 3px;
+		-o-border-radius: 3px;
 		z-index: 2;
+}
+
+.landing > button {
+	border: none;
 }
 
 .login-form > button:hover,
 .landing > button:hover,
 button.signup-button:hover {
 	background-color: rgb(46, 148, 155);
-	color: white;
+	color: #eee;
 	cursor: pointer;
+}
+
+.landing > button:hover {
+	background-color: transparent;
 }
 
 
