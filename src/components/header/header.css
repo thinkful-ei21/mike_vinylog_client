@@ -44,9 +44,7 @@ button.logout-button {
 }
 
 button:hover {
-	background-color: rgb(46, 148, 155);
 	color: #eee;
-	border-color: #eee;
 	cursor: pointer;
 }
 
