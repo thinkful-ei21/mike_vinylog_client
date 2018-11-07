@@ -89,7 +89,6 @@ export const removeFromCollection = albumId => (dispatch, getState) => {
 
 export const addToWishlist = (album, user) => (dispatch, getState) => {
   const state = getState();
-  console.log(album)
   fetch(`${API_BASE_URL}/api/wishlist`, {
     method: 'POST',
     headers: {

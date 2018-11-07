@@ -66,11 +66,11 @@ input[type="search"] {
 	margin: 0 auto;
 }
 
-.title, .genre, .year {
+.artist, .title, .genre, .year {
 	line-height: 175%;
 }
-.title {
-	font-weight: 600;
+.artist {
+	font-weight: bolder;
 	font-size:105%;
   word-wrap: break-word;
 }

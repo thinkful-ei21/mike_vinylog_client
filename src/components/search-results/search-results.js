@@ -19,20 +19,28 @@ export class SearchResults extends React.Component {
     };
   }
   
-  addAlbum(album) {
+  addAlbumToCollection(album) {
     const curUserId = this.props.currentUser._id;
     this.props.dispatch(addToCollection(album, curUserId));
   }
 
   addAlbumToWishlist(album) {
-    console.log('adding to wishlist')
     const curUserId = this.props.currentUser._id;
     this.props.dispatch(addToWishlist(album, curUserId));
   }
 
-  notify = () => {
-    return toast.info("ALBUM ADDED", {
-    autoClose: 2000,
+  notifyWishlist = album => {
+    let title = album.title;
+    return toast.info(`${title.toUpperCase()} ADDED TO WISHLIST`, {
+    autoClose: 3500,
+    hideProgressBar: true
+    });
+  }
+
+  notifyCollection = album => {
+    let title = album.title;
+    return toast.info(`${title.toUpperCase()} Added To Collection`, {
+    autoClose: 3500,
     hideProgressBar: true
     });
   }
@@ -47,20 +55,25 @@ export class SearchResults extends React.Component {
     }
     
     const album = this.props.albums.map((album, index) => {
+      let splitTitle = album.title.split(" - ");
+      let artistName = splitTitle[0];
+      let albumTitle = splitTitle[1];
+
         return (
         <li className="album-search-results"
           key={index}>
           <div className="search-list-item">
             <img className="search-item-image" src={album.thumb} alt={album.title}/>
             <div className="search-item-text">
-              <span className="title">{album.title}</span><br/>
+              <span className="artist">{artistName}</span><br/>
+              <span className="title">{albumTitle}</span><br/>
               <span className="genre">{album.genre}</span><br/>
               <span className="year">{album.year}</span>
             </div>
           </div>
           <button
             onClick={e => {
-              this.notify();
+              this.notifyWishlist(album);
               this.addAlbumToWishlist(album);
               }
             }
@@ -69,8 +82,8 @@ export class SearchResults extends React.Component {
           </button>
           <button
             onClick={e => {
-              this.notify();
-              this.addAlbum(album);
+              this.notifyCollection(album);
+              this.addAlbumToCollection(album);
               }
             }
             className="add-button">

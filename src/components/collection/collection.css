@@ -76,12 +76,12 @@ button.add-button:hover {
 	display: inline-block;
 }
 
-.title, .genre, .year {
+.artist, .title, .genre, .year {
 	line-height: 175%;
 }
-.title {
-	font-weight: 600;
-	font-size:105%;
+.artist {
+	font-weight: bold;
+	font-size: 110%;
 }
 
 .collection-item-text {
