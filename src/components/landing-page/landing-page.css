@@ -1,63 +1,52 @@
-
-h2 {
-  margin: -5px 50px 0;
-	color:  #eee;
-	font-size: 30px;
-  font-weight: 400;
-}
-
-/* .landing-page {
-  width: 100%;
-  background-image: url('https://images.unsplash.com/photo-1483412033650-1015ddeb83d1?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=78082d217e11e7ac46288b6a2624a5ba&auto=format&fit=crop&w=2253&q=80');
-  background-position: bottom center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  z-index: 1;
-} */
-
-.landing {
-  margin: 130px auto;
-  width: 50%;
-  padding: 2%;
-  border-radius: 5px;
-  -webkit-border-radius: 3px;
-  -moz-border-radius: 3px;
-  -ms-border-radius: 3px;
-  -o-border-radius: 3px;
+.landing h1 {
+	font-size: 8em;
+	color: rgb(46, 148, 155);
+  margin: 100px 10px 10px 120px;
+  text-align: start;
+	padding: 0;
+  font-family: 'Righteous', cursive;
 }
 
 .landing > h2 {
-  color: rgb(46, 148, 155);
-  font-size: 225%;
-  width: 600px;
-  margin: 40px 0;
+  border-left: 1px solid #eee;  border-right: 1px solid #eee;border-bottom: 1px solid #eee;
+  color: #eee;;
+  font-size: 40px;
+  margin: -112px 0 20px 120px;
+  width: 480px;
+  padding: 100px 20px  20px 60px;
+  border-radius: 30px;
+  -webkit-border-radius: 30px;
+  -moz-border-radius: 30px;
+  -ms-border-radius: 30px;
+  -o-border-radius: 30px;
 }
 
-.landing > p.desc {
-  color: #ccc;
-  font-size: 175%;
+.desc-block {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
+  margin: 30px auto 0 30px;
 }
 
-p.desc {
-  text-align: start;
-  color: rgb(46, 148, 155);
-  margin: 0 auto;
-  width: 600px;
-  font-size: 30px;
+.desc-item {
+  text-align: center;
+  margin: 30px auto 0 30px;
 }
 
-.left {
-  margin-top: 10px;
-  margin-left: 80px;
-  float: left;
-  width: 45%;
-  clear: right;
+.desc-item > .fas {
+  font-size: 75px;
+  color: #bbb;
+  border-bottom: solid 1px rgb(46, 148, 155);
+  padding: 10%;
 }
 
-.right {
-  margin-right: 25px;
-  float: right;
-  width: 45%;
+.desc-item p {
+  color: #eee;
+  font-weight: lighter;
+  align-items: center;
+  justify-content: space-around;
+  text-align: center;
 }
 
 .landing > button {
@@ -74,7 +63,6 @@ button:hover {
 }
 
 @media only screen and (max-width: 1024px) {
-
   .landing {
     margin: 30px auto;
     width: 90%;

@@ -10,11 +10,24 @@ export class LandingPage extends React.Component {
     return (
         <div className="landing-page" style={{ minHeight: '100%' }}>
           <div className="landing" role="complementary" aria-live="polite" aria-atomic="true">
+            <h1 className="header-title">Vinylog</h1>
             <h2>
-            For music collectors to catalog their collection and create a wishlist.
+              For Music Collectors
             </h2>
-            <p className="desc">Search by album title or artist name to retrieve a list of albums. You can then add them to your collection or wishlist.<br /><br />Once albums are acquired, you can then remove from wishlist and add albums to collection.
-            </p>
+            <section className="desc-block">
+              <div className="desc-item">
+                <i class="fas fa-search"></i>
+                <p className="">Search by album title or artist name</p>
+              </div>
+              <div className="desc-item">
+                <i class="fas fa-folder-plus"></i>
+                <p className="">Add them to your collection or wishlist</p>
+              </div>
+              <div className="desc-item">
+                <i class="fas fa-exchange-alt"></i>
+                <p className="">Move from wishlist to collection</p>
+              </div>
+            </section>
             {this.props.loggedIn ? '' :
             <button>
               <Link 

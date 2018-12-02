@@ -26,11 +26,6 @@ export class Header extends React.Component {
   }
 
   render() {
-
-    // let logOutButton;
-    // let newSearchButton;
-    // let viewCollectionButton;
-    // let viewWishlistButton;
     let user;
     let userWelcome;
     let nav;
@@ -38,35 +33,6 @@ export class Header extends React.Component {
     if (this.props.loggedIn) {
 
       nav = <NavComponent />;
-      // logOutButton = (
-      //     <button 
-      //     className="logout-button"
-      //     onClick={() => this.logOut()}
-      //     >Log out</button>
-      // );
-
-      // viewCollectionButton = (
-      //   <button 
-      //     className="view-collection-button"
-      //     onClick={() => this.goToCollection()}
-      //     >My Collection
-      //   </button>
-      // );
-
-      // viewWishlistButton = (
-      //   <button
-      //     className= "view-collection-button"
-      //     onClick={() => this.goToWishlist()}
-      //     >My Wishlist
-      //   </button>
-      // );
-
-      // newSearchButton = (
-      //   <button onClick={() => this.newSearch()}
-      //     className="view-collection-button">
-      //     New Search
-      //   </button>
-      // );
 
       user =this.props.currentUser.username;
 
@@ -80,22 +46,12 @@ export class Header extends React.Component {
 
     return (
       <header role="banner" aria-live="polite" aria-atomic="true">
-        <Link to={{pathname: "/"}} style={{textDecorationLine: "none"}}><h1 className="header-title">Vinylog</h1></Link>
+        {this.props.loggedIn ? 
+        <Link to={{pathname: "/search"}} style={{textDecorationLine: "none"}}>
+          <h1 className="header-title">Vinylog</h1>
+        </Link>
+        : ''}
         {nav}
-        {/* <nav> */}
-          {/* <span className="logout-button">
-            {logOutButton}
-          </span> */}
-         {/*  <span className="new-search-button">
-            {newSearchButton}
-          </span>
-          <span className="wishlist-button">
-            {viewWishlistButton}
-          </span>
-          <span className="collection-button">
-            {viewCollectionButton}
-          </span>
-        </nav> */}
       </header>
     )
   }

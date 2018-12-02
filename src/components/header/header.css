@@ -8,7 +8,7 @@ header {
   right: 0;
 	width: 100%;
 	z-index: 1;
-	border-bottom: solid #eee 1px;
+	/* border-bottom: solid #eee 1px; */
 }
 
 h1 {
