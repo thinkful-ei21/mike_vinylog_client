@@ -26,12 +26,12 @@
   align-items: center;
   justify-content: space-around;
   text-align: center;
-  margin: 30px auto 0 30px;
+  margin: 30px auto;
 }
 
 .desc-item {
   text-align: center;
-  margin: 30px auto 0 30px;
+  /* margin: 30px auto 0 30px; */
 }
 
 .desc-item > .fas {
@@ -42,11 +42,12 @@
 }
 
 .desc-item p {
-  color: #eee;
+  color: #ccc;
   font-weight: lighter;
   align-items: center;
   justify-content: space-around;
   text-align: center;
+  width: 230px;
 }
 
 .landing > button {
