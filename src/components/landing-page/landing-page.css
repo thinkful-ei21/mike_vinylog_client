@@ -74,13 +74,12 @@ button:hover {
 }
 
 
-/* Small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+/* Small devices (phones, 698px and down) */
+@media only screen and (max-width: 698px) {
   .landing h1 {
     font-size: 20vw;
     margin: 60px auto 20px 30px;
   }
-
 
   .landing > h2 {
     font-size: 7vw;
@@ -91,6 +90,11 @@ button:hover {
   .desc-block {
     width: 95%;
     display: block;
+  }
+
+  .desc-item > .fas {
+    font-size: 50px;
+    padding-bottom: 20px;
   }
 
   .desc-item p {
@@ -109,10 +113,16 @@ button:hover {
 
   .desc-block {
     width: 90%;
+    margin-top: 0;
+  }
+  
+  .desc-item > .fas {
+    font-size: 40px;
   }
 
-  .desc-item > .fas {
-    font-size: 50px;
+  .desc-item p {
+    font-size: 1.25em;
+    margin-top: 10px;
   }
 
 }
