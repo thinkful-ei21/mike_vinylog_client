@@ -98,7 +98,7 @@ button:hover {
   }
 
   .desc-item p {
-    margin: auto;
+    margin: 10px auto 0 auto;
   }
 
 }
@@ -115,7 +115,7 @@ button:hover {
     width: 90%;
     margin-top: 0;
   }
-  
+
   .desc-item > .fas {
     font-size: 40px;
   }
