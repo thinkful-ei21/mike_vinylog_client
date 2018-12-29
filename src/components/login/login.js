@@ -57,7 +57,7 @@ export class LoginForm extends React.Component {
           onSubmit={this.props.handleSubmit(values =>
           this.onSubmit(values)
         )}>
-        <h3>Login</h3>
+        <h3>Sign in</h3>
         {errorMessage}
         {spinner}
         <Field
@@ -81,7 +81,7 @@ export class LoginForm extends React.Component {
           validate={[required, nonEmpty]}
         />
         <button disabled={this.props.pristine || this.props.submitting}>
-        Log in
+        Sign in
         </button>
       </form>
       <div className="signup-note">
