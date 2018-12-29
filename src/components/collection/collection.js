@@ -1,6 +1,5 @@
 import React from 'react';
 import './collection.css';
-import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';

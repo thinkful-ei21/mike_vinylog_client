@@ -1,24 +1,18 @@
 .landing h1 {
 	font-size: 8em;
 	color: rgb(46, 148, 155);
-  margin: 100px 10px 10px 120px;
+  margin: 60px 10px 10px 10%;
   text-align: start;
 	padding: 0;
   font-family: 'Righteous', cursive;
 }
 
 .landing > h2 {
-  border-left: 1px solid #eee;  border-right: 1px solid #eee;border-bottom: 1px solid #eee;
   color: #eee;;
   font-size: 40px;
-  margin: -112px 0 20px 120px;
+  margin: -112px 0 20px 10%;
   width: 480px;
   padding: 100px 20px  20px 60px;
-  border-radius: 30px;
-  -webkit-border-radius: 30px;
-  -moz-border-radius: 30px;
-  -ms-border-radius: 30px;
-  -o-border-radius: 30px;
 }
 
 .desc-block {
@@ -31,7 +25,6 @@
 
 .desc-item {
   text-align: center;
-  /* margin: 30px auto 0 30px; */
 }
 
 .desc-item > .fas {
@@ -54,7 +47,8 @@
   position: absolute;
   top: 0;
   right: 20px;
-  width: 80px!important;
+  width: 120px!important;
+  font-size: 20px!important;
 }
 
 button:hover {
@@ -70,37 +64,55 @@ button:hover {
   }
 }
 
-/* Small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
-  h1.welcome {
-    margin: 0 10px 0 -10px;
-  }
+/* Medium devices (phones, 800px and down) */
+@media only screen and (max-width: 800px) {
 
-  /* p.desc {
-    margin: 0 10px;
-    width: 240px;
-  } */
-
-  .landing, .landing > h2, .landing > p.desc {
-    margin: 30px 0 20px 0;
-    width: 300px;
-    text-align: start;
-    font-size: 25px;
+  .desc-item {
+    width: 95%;
   }
 
 }
 
-  /* Medium and large devices (phones, 600px and up) */
-  @media only screen and (min-width: 600px) {
 
-    /* h1.welcome {
-      margin: -68px 15px 0 -10px;
-      width: 95%;
-    } */
-/*   
-    p.desc{
-      margin: 0 2px;
-      width: 240px;
-    } */
+/* Small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .landing h1 {
+    font-size: 20vw;
+    margin: 60px auto 20px 30px;
   }
-  
+
+
+  .landing > h2 {
+    font-size: 7vw;
+    margin: -30px auto 0 50px;
+    padding: 0;
+  }
+
+  .desc-block {
+    width: 95%;
+    display: block;
+  }
+
+  .desc-item p {
+    margin: auto;
+  }
+
+}
+
+
+/* Small devices (phones, 400px and down) */
+@media only screen and (max-width: 420px) {
+  .landing h1 {
+    font-size: 20vw;
+    margin: 80px auto 25px 30px;
+  }
+
+  .desc-block {
+    width: 90%;
+  }
+
+  .desc-item > .fas {
+    font-size: 50px;
+  }
+
+}

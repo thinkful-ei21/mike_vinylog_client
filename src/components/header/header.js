@@ -1,5 +1,5 @@
 import React from 'react';
-import {Route, Redirect, Link} from 'react-router-dom';
+import {Link} from 'react-router-dom';
 import './header.css';
 import {connect} from 'react-redux';
 import {clearAuth} from '../../actions/auth-actions';
@@ -26,21 +26,21 @@ export class Header extends React.Component {
   }
 
   render() {
-    let user;
-    let userWelcome;
+    // let user;
+    // let userWelcome;
     let nav;
 
     if (this.props.loggedIn) {
 
       nav = <NavComponent />;
 
-      user =this.props.currentUser.username;
+      // user =this.props.currentUser.username;
 
-      userWelcome = (
-        <div className="landing" role="complementary" aria-live="polite" aria-atomic="true">
-          <h1 className="welcome">Welcome {user}!</h1>
-        </div>
-      );
+      // userWelcome = (
+      //   <div className="landing" role="complementary" aria-live="polite" aria-atomic="true">
+      //     <h1 className="welcome">Welcome {user}!</h1>
+      //   </div>
+      // );
 
     }
 

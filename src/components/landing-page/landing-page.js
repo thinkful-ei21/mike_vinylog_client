@@ -16,15 +16,15 @@ export class LandingPage extends React.Component {
             </h2>
             <section className="desc-block">
               <div className="desc-item">
-                <i class="fas fa-search"></i>
+                <i className="fas fa-search"></i>
                 <p className="">Search by album title or artist name</p>
               </div>
               <div className="desc-item">
-                <i class="fas fa-folder-plus"></i>
-                <p className="">Add them to your collection or wishlist</p>
+                <i className="fas fa-folder-plus"></i>
+                <p className="">Add album to your collection or wishlist</p>
               </div>
               <div className="desc-item">
-                <i class="fas fa-exchange-alt"></i>
+                <i className="fas fa-exchange-alt"></i>
                 <p className="">Move from wishlist to collection</p>
               </div>
             </section>
