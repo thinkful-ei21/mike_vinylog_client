@@ -26,21 +26,11 @@ export class Header extends React.Component {
   }
 
   render() {
-    // let user;
-    // let userWelcome;
     let nav;
 
     if (this.props.loggedIn) {
 
       nav = <NavComponent />;
-
-      // user =this.props.currentUser.username;
-
-      // userWelcome = (
-      //   <div className="landing" role="complementary" aria-live="polite" aria-atomic="true">
-      //     <h1 className="welcome">Welcome {user}!</h1>
-      //   </div>
-      // );
 
     }
 

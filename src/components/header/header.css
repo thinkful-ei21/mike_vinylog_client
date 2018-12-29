@@ -32,7 +32,6 @@ h1.welcome {
 
 button.logout-button {
 	float: right;
-	/* height: 45px; */
 	padding: 10px;
 	background: transparent;
 	color: rgb(46, 148, 155);

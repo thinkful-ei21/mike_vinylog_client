@@ -55,7 +55,6 @@ button.remove-button {
 button.remove-button:hover,
 button.add-button:hover {
   background: rgb(46, 148, 155);
-	/* color: rgb(255, 234, 42);*/
 	color: white!important;
 	cursor: pointer;
 	border: solid 2px #111;
