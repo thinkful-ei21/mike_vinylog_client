@@ -37,9 +37,7 @@ export class Header extends React.Component {
     return (
       <header role="banner" aria-live="polite" aria-atomic="true">
         {this.props.loggedIn ? 
-        <Link to={{pathname: "/search"}} style={{textDecorationLine: "none"}}>
           <h1 className="header-title">Vinylog</h1>
-        </Link>
         : ''}
         {nav}
       </header>
