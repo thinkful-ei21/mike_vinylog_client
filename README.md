@@ -3,6 +3,7 @@
 Vinylog is web application that allows users to create a private and secure account to catalog their vinyl collection so when record shopping, they can check to see if they already own that album. By searching for an album title or artists name, users can retrieve a list of album release data including title, album image, genre, and release year. Users will be able to save results to their collection, view their collection, and remove them as well. 
 
 ### Link to App 
+
 [https://vinylog.surge.sh/]
 
 ### Stack
